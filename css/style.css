@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: poppins,sans-serif;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "logo links";
+  margin-top: 50px;
+  font-weight: 700;
+  color: #707070;
+}
+
+.nav .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  font-size: 60px;
+  margin-left: 90px;
+}
+
+.nav .links {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: links;
+  font-size: 35px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 33% 33%;
+      grid-template-columns: 33% 33% 33%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "work case-studies contact";
+  -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.nav .links .work {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: work;
+  text-align: right;
+}
+
+.nav .links .studies {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: case-studies;
+  text-align: center;
+}
+
+.nav .links .contact {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: contact;
+  text-align: left;
+}
+
+.nav .links a {
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  color: #707070;
+}
+
+.nav .links a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.hero-content-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+      grid-template-areas: ". txt .";
+  margin-top: 90px;
+  background-image: url("/assets/hero.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.hero-content-wrapper .hero-content {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: txt;
+  font-weight: 800;
+  font-size: 60px;
+  color: #707070;
+  margin-top: 100px;
+}
+
+.hero-content-wrapper .hero-content-cont {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: txt;
+  font-weight: 800;
+  font-size: 35px;
+  color: #707070;
+  margin-top: 200px;
+  margin-left: 90px;
+}
+
+.bottom-section {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 5vh;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -ms-grid-rows: 100vh;
+      grid-template-rows: 100vh;
+}
+/*# sourceMappingURL=style.css.map */

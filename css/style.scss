@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "logo links";
+    margin-top: 50px;
+    font-weight: 700;
+    color: #707070;
+
+    .logo {
+        grid-area: logo;
+        font-size: 60px;
+        margin-left: 90px;
+    }
+
+    .links {
+        grid-area: links;
+        font-size: 35px;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto;
+        grid-template-areas: "work case-studies contact";
+        align-self: end;
+
+        .work {
+            grid-area: work;
+            text-align: right;
+        }
+
+        .studies {
+            grid-area: case-studies;
+            text-align: center;
+
+        }
+
+        .contact {
+            grid-area: contact;
+            text-align: left;
+        }
+
+        a {
+            display: block;
+            padding: 16px;
+            text-decoration: none;
+            color: #707070;
+            }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}
+
+.hero-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80vh;
+    grid-template-areas: ". txt .";
+    margin-top: 90px;
+    background-image: url("/assets/hero.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+
+    .hero-content {
+        grid-area: txt;
+        font-weight: 800;
+        font-size: 60px;
+        color: #707070;
+        margin-top: 100px;
+    }
+
+    .hero-content-cont {
+        grid-area: txt;
+        font-weight: 800;
+        font-size: 35px;
+        color: #707070;
+        margin-top: 200px;
+        margin-left: 90px;
+    }
+}
+
+.bottom-section {
+    display: grid;
+    margin-top: 5vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100vh;
+}
