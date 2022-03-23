@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    box-sizing: border-box;
-    font-family: poppins,sans-serif;
+    font-family: futura-pt,sans-serif;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -14,24 +14,26 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "logo links";
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-left: 30px;
     font-weight: 700;
-    color: #707070;
 
     .logo {
         grid-area: logo;
-        font-size: 60px;
-        margin-left: 90px;
+        font-size: 50px;
+        // margin-left: 90px;
+        font-weight: 700;
     }
 
     .links {
         grid-area: links;
         font-size: 35px;
         display: grid;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: auto 250px auto;
+        margin-left: 30%;
         grid-template-rows: auto;
         grid-template-areas: "work case-studies contact";
-        align-self: end;
+        // align-self: end;
 
         .work {
             grid-area: work;
@@ -46,14 +48,15 @@ body {
 
         .contact {
             grid-area: contact;
-            text-align: left;
+            // text-align: left;
         }
 
         a {
             display: block;
             padding: 16px;
             text-decoration: none;
-            color: #707070;
+            color: black;
+            font-weight: 700;
             }
 
         a:hover {
@@ -63,38 +66,129 @@ body {
     }
 }
 
-.hero-content-wrapper {
+.main-header {
+    margin-top: 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 80vh;
-    grid-template-areas: ". txt .";
-    margin-top: 90px;
-    background-image: url("/assets/hero.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
+    margin-left: 100px;
+    grid-template-columns: 990px 822px;
+    grid-template-rows: 
+    45px 
+    100px 
+    560px;
+    grid-template-areas: 
+    "label ."
+    "name ."
+    "header-visual desc ";
 
-    .hero-content {
-        grid-area: txt;
-        font-weight: 800;
-        font-size: 60px;
-        color: #707070;
-        margin-top: 100px;
-    }
-
-    .hero-content-cont {
-        grid-area: txt;
-        font-weight: 800;
+    .label {
+        grid-area: label;
         font-size: 35px;
-        color: #707070;
-        margin-top: 200px;
-        margin-left: 90px;
+        font-weight: 300;
+        color: #4215E6;
+    }
+
+    .name {
+        grid-area: name;
+        font-size: 56px;
+        font-weight: 700;
+    }
+
+    img {
+        grid-area: header-visual;
+    }
+
+    .desc {
+        grid-area: desc;
+        align-self: center;
+        margin-left: 300px;
+        margin-right: 65px;
+        
+        .header {
+            font-size: 39px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 35px;
+        }
     }
 }
 
-.bottom-section {
+.case-studies {
+    margin-top: 150px;
+    margin-left: 90px;
+    grid-template-rows: 475px 475px;
+    row-gap: 140px;
+    grid-template-columns: 850px 850px;
     display: grid;
-    margin-top: 5vh;
-    grid-template-columns: auto auto;
-    grid-template-rows: 100vh;
-}
+    grid-template-areas: 
+    "study1 study1"
+    "study2 study2";
+
+    .cell1 {
+        display: grid;
+        grid-template-rows: 70px 50px 240px 1fr;
+        grid-template-columns: 850px 850px;
+        grid-template-areas:
+        "name visual"
+        "label visual"
+        "desc visual"
+        "button visual";
+        row-gap: 10px;
+        // column-gap: 60px;
+    }
+
+    .cell2 {
+        display: grid;
+        grid-template-rows: 70px 50px 240px 1fr;
+        grid-template-columns: 850px 850px;
+        grid-template-areas:
+        "visual name"
+        "visual label"
+        "visual desc"
+        "visual button";
+        row-gap: 10px;
+        column-gap: 150px;
+    }
+
+        .header {
+            grid-area: name;
+            font-size: 50px;
+            font-weight: 700;
+            color: #E6802C;
+        }
+
+        .label {
+            grid-area: label;
+            font-size: 35px;
+            font-weight: 400;
+        }
+
+        .desc {
+            grid-area: desc;
+            font-size: 30px;
+            font-weight: 300;
+            color: #414141;
+            margin-right: 150px;
+        }
+
+        button {
+            grid-area: button;
+            font-size: 30px;
+            padding: 10px;
+            color: white;
+            background-color: #4215E6;
+            border: none;
+            width: 237px;
+            height: 87px;
+            border-radius: 27px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        img {
+            grid-area: visual;
+        }
+    }
