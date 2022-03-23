@@ -14,15 +14,21 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "logo links";
-    margin-top: 20px;
-    margin-left: 30px;
+    // margin-top: 20px;
     font-weight: 700;
+    position: sticky;
+    align-items: center;
+    height: 100px;
+    top: 0px;
+    z-index: 5;
+    transition: box-shadow .5s ease-in-out, backdrop-filter .5s ease-in-out;
 
     .logo {
         grid-area: logo;
         font-size: 50px;
         // margin-left: 90px;
         font-weight: 700;
+        margin-left: 30px;
     }
 
     .links {
@@ -52,29 +58,53 @@ body {
         }
 
         a {
-            display: block;
+            display: inline-block;
+            position: relative;
             padding: 16px;
             text-decoration: none;
             color: black;
             font-weight: 700;
             }
 
-        a:hover {
-            color: black;
-            text-decoration: underline;
+        a:after {
+            content:'';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #4215E6;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        a:hover:after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
         }
     }
 }
 
+html:not([data-scroll='0']) {
+    .nav {
+        // top: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    }
+}
+
+
 .main-header {
-    margin-top: 70px;
+    margin-top: 80px;
     display: grid;
-    margin-left: 100px;
-    grid-template-columns: 990px 822px;
+    margin-left: 250px;
+    grid-template-columns: 823px 572px;
+    // row-gap: 10px;
     grid-template-rows: 
-    45px 
-    100px 
-    560px;
+    34px 
+    58px 
+    446px;
     grid-template-areas: 
     "label ."
     "name ."
@@ -93,33 +123,53 @@ body {
         font-weight: 700;
     }
 
-    img {
-        grid-area: header-visual;
-    }
-
     .desc {
         grid-area: desc;
         align-self: center;
-        margin-left: 300px;
-        margin-right: 65px;
+        margin-left: 170px;
+        // margin-right: 257px;
         
         .header {
-            font-size: 39px;
+            font-size: 32px;
             font-weight: 700;
         }
 
         p {
-            font-size: 35px;
+            font-size: 20px;
         }
+    }
+
+    .visual {
+        grid-area: header-visual;
+        width: 813px;
+        height: 426px;
+        margin-top: 10px;
+        border: 1px solid grey;
+        border-radius: 27px;
+        font-weight: 500;
+        font-size: 26px;
+        transition: box-shadow ease-in-out .5s;
+        box-shadow: none;
+        
+
+        p {
+            text-align: center;
+            text-justify: center;
+            margin-top: 25%;
+        }
+    }
+
+    .visual:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 }
 
 .case-studies {
     margin-top: 150px;
-    margin-left: 90px;
-    grid-template-rows: 475px 475px;
-    row-gap: 140px;
-    grid-template-columns: 850px 850px;
+    margin-left: 250px;
+    grid-template-rows: 388px 388px;
+    row-gap: 115px;
+    grid-template-columns: 704px 704px;
     display: grid;
     grid-template-areas: 
     "study1 study1"
@@ -127,8 +177,8 @@ body {
 
     .cell1 {
         display: grid;
-        grid-template-rows: 70px 50px 240px 1fr;
-        grid-template-columns: 850px 850px;
+        grid-template-rows: 51px 34px auto 1fr;
+        grid-template-columns: 704px 704px;
         grid-template-areas:
         "name visual"
         "label visual"
@@ -140,55 +190,206 @@ body {
 
     .cell2 {
         display: grid;
-        grid-template-rows: 70px 50px 240px 1fr;
-        grid-template-columns: 850px 850px;
+        grid-template-rows: 51px 34px auto 1fr;
+        grid-template-columns: 704px 704px;
         grid-template-areas:
         "visual name"
         "visual label"
         "visual desc"
         "visual button";
         row-gap: 10px;
-        column-gap: 150px;
+        column-gap: 100px;
     }
 
         .header {
             grid-area: name;
-            font-size: 50px;
+            font-size: 40px;
             font-weight: 700;
             color: #E6802C;
         }
 
         .label {
             grid-area: label;
-            font-size: 35px;
+            font-size: 26px;
             font-weight: 400;
         }
 
         .desc {
             grid-area: desc;
-            font-size: 30px;
+            font-size: 22px;
             font-weight: 300;
             color: #414141;
-            margin-right: 150px;
+            margin-right: 110px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
 
         button {
             grid-area: button;
-            font-size: 30px;
+            font-size: 23px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-weight: 400;
             padding: 10px;
-            color: white;
-            background-color: #4215E6;
+            color: black;
+            background-color: white;
             border: none;
-            width: 237px;
-            height: 87px;
+            width: 197px;
+            height: 71px;
             border-radius: 27px;
+            align-self: center;
+            transition: 0.4s;
         }
 
         button:hover {
             cursor: pointer;
+            background-color: #4215E6;
+            color: white;
+            box-shadow: none;
         }
 
-        img {
+        .visual {
             grid-area: visual;
+            width: 704px;
+            height: 388px;
+            align-self: center;
+            border: #414141 1px solid;
+            border-radius: 27px;
+            font-weight: 500px;
+            font-size: 26px;
+            text-align: center;
+            transition: box-shadow ease-in-out .5s;
+            box-shadow: none;
+
+            p {
+                margin-top: 25%;
+            }
+        }
+
+        .visual:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
     }
+
+.about {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: 700px 600px;
+    column-gap: 100px;
+    margin-left: 250px;
+    row-gap: 35px;
+    grid-template-rows: 56px 35px 420px 75px;
+    grid-template-areas: 
+    "visual header"
+    "visual label"
+    "visual desc"
+    "visual button";
+
+    .header {
+        font-size: 44px;
+        font-weight: 700;
+        grid-area: header;
+    }
+
+    .label {
+        font-size: 22px;
+        font-weight: 400;
+        grid-area: label;
+    }
+
+    .desc {
+        font-size: 30px;
+        grid-area: desc;
+    }
+
+    button {
+        grid-area: button;
+        font-size: 23px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        font-weight: 400;
+        padding: 10px;
+        color: black;
+        background-color: white;
+        border: none;
+        width: 197px;
+        height: 71px;
+        border-radius: 27px;
+        align-self: center;
+        transition: 0.4s;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: #4215E6;
+        color: white;
+        box-shadow: none;
+    }
+
+    .visual {
+        height: 587px;
+        width: 455px;
+        border: #414141 1px solid;
+        grid-area: visual;
+        align-self: center;
+        justify-self: center;
+        transition: transform ease-in-out .5s, box-shadow ease-in-out .5s;
+        border-radius: 27px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 26px;
+        
+        box-shadow: none;
+        background-color: white;
+
+        p {
+            margin-top: 50%;
+        }
+    }
+
+    .visual:hover {
+        transform: translateX(-25px) translateY(-25px);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .visual-background {
+        height: 587px;
+        z-index: -1;
+        width: 455px;
+        grid-area: visual;
+        align-self: center;
+        justify-self: center;
+        border-radius: 27px;
+        background-color: #4215E6;
+    }
+}
+
+footer {
+    margin-top: 175px;
+    height: 125px;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "social info";
+
+    p {
+        font-size: 20px;
+        grid-area: info;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .social {
+        grid-area: social;
+        display: grid;
+        width: 30%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "medium linkedin github";
+        justify-self: center;
+        align-self: center;
+
+        img {
+          width: 40px;  
+          height: 40px;  
+        }
+    }
+}
