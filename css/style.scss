@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+::selection {
+    background:#4215E6;
+    color: white;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -144,7 +149,7 @@ html:not([data-scroll='0']) {
         width: 813px;
         height: 426px;
         margin-top: 10px;
-        border: 1px solid grey;
+        // border: 1px solid grey;
         border-radius: 27px;
         font-weight: 500;
         font-size: 26px;
@@ -252,7 +257,7 @@ html:not([data-scroll='0']) {
             width: 704px;
             height: 388px;
             align-self: center;
-            border: #414141 1px solid;
+            // border: #414141 1px solid;
             border-radius: 27px;
             font-weight: 500px;
             font-size: 26px;
@@ -327,7 +332,7 @@ html:not([data-scroll='0']) {
     .visual {
         height: 587px;
         width: 455px;
-        border: #414141 1px solid;
+        border: white 1px solid;
         grid-area: visual;
         align-self: center;
         justify-self: center;
@@ -391,5 +396,75 @@ footer {
           width: 40px;  
           height: 40px;  
         }
+    }
+}
+
+.sidebar {
+    position: fixed;
+    margin-top: 300px;
+    margin-left: 150px;
+    text-align: center;
+
+    ul {
+        list-style: none;
+        // padding: 10px;
+
+        li {
+            padding-bottom: 10px;
+        }
+    }
+}
+
+
+.case-study-main-header {
+    margin-top: 100px;
+    display: grid;
+    margin-left: 545px;
+    grid-template-columns: 380px 460px;
+    // row-gap: 10px;
+    grid-template-rows: 
+    300px
+    300px;
+    grid-template-areas: 
+    "name case-study-visual"
+    "label case-study-visual";
+
+    .name {
+        grid-area: name;
+        font-size: 56px;
+        font-weight: 700;
+        align-self: end;
+        justify-self: center;
+        // position: relative;
+    }
+// 832 - 455
+    .case-study-visual {
+        // margin-left: 370px;
+        // position: relative;
+        height: 587px;
+        width: 455px;
+        border: black 1px solid;
+        grid-area: case-study-visual;
+        align-self: center;
+        justify-self: center;
+        transition: transform ease-in-out .5s, box-shadow ease-in-out .5s;
+        border-radius: 27px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 26px;    
+        box-shadow: none;
+        background-color: white;
+
+        p {
+        margin-top: 50%;
+        }
+    }
+
+    .desc {
+        font-size: 40px;
+        font-weight: 400;
+        grid-area: label;
+        align-self: end;
+        justify-self: end;
     }
 }

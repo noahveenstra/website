@@ -5,6 +5,16 @@
   font-style: normal;
 }
 
+::-moz-selection {
+  background: #4215E6;
+  color: white;
+}
+
+::selection {
+  background: #4215E6;
+  color: white;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -131,7 +141,7 @@ html:not([data-scroll='0']) .nav {
 
 .main-header .label {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: label;
   font-size: 35px;
   font-weight: 300;
@@ -140,7 +150,7 @@ html:not([data-scroll='0']) .nav {
 
 .main-header .name {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: name;
   font-size: 56px;
   font-weight: 700;
@@ -171,7 +181,6 @@ html:not([data-scroll='0']) .nav {
   width: 813px;
   height: 426px;
   margin-top: 10px;
-  border: 1px solid grey;
   border-radius: 27px;
   font-weight: 500;
   font-size: 26px;
@@ -233,7 +242,7 @@ html:not([data-scroll='0']) .nav {
 
 .case-studies .header {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: name;
   font-size: 40px;
   font-weight: 700;
@@ -242,7 +251,7 @@ html:not([data-scroll='0']) .nav {
 
 .case-studies .label {
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: label;
   font-size: 26px;
   font-weight: 400;
@@ -298,7 +307,6 @@ html:not([data-scroll='0']) .nav {
   height: 388px;
   -ms-flex-item-align: center;
       align-self: center;
-  border: #414141 1px solid;
   border-radius: 27px;
   font-weight: 500px;
   font-size: 26px;
@@ -347,7 +355,7 @@ html:not([data-scroll='0']) .nav {
   font-size: 22px;
   font-weight: 400;
   -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: label;
 }
 
@@ -391,7 +399,7 @@ html:not([data-scroll='0']) .nav {
 .about .visual {
   height: 587px;
   width: 455px;
-  border: #414141 1px solid;
+  border: white 1px solid;
   -ms-grid-row: 1;
   -ms-grid-row-span: 4;
   -ms-grid-column: 1;
@@ -486,5 +494,88 @@ footer .social {
 footer .social img {
   width: 40px;
   height: 40px;
+}
+
+.sidebar {
+  position: fixed;
+  margin-top: 300px;
+  margin-left: 150px;
+  text-align: center;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  padding-bottom: 10px;
+}
+
+.case-study-main-header {
+  margin-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  margin-left: 545px;
+  -ms-grid-columns: 380px 460px;
+      grid-template-columns: 380px 460px;
+  -ms-grid-rows: 300px 300px;
+      grid-template-rows: 300px 300px;
+      grid-template-areas: "name case-study-visual" "label case-study-visual";
+}
+
+.case-study-main-header .name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+  font-size: 56px;
+  font-weight: 700;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.case-study-main-header .case-study-visual {
+  height: 587px;
+  width: 455px;
+  border: black 1px solid;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: case-study-visual;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-transition: -webkit-transform ease-in-out .5s, -webkit-box-shadow ease-in-out .5s;
+  transition: -webkit-transform ease-in-out .5s, -webkit-box-shadow ease-in-out .5s;
+  transition: transform ease-in-out .5s, box-shadow ease-in-out .5s;
+  transition: transform ease-in-out .5s, box-shadow ease-in-out .5s, -webkit-transform ease-in-out .5s, -webkit-box-shadow ease-in-out .5s;
+  border-radius: 27px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: white;
+}
+
+.case-study-main-header .case-study-visual p {
+  margin-top: 50%;
+}
+
+.case-study-main-header .desc {
+  font-size: 40px;
+  font-weight: 400;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: label;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 /*# sourceMappingURL=style.css.map */
