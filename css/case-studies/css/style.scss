@@ -1,3 +1,80 @@
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: 15% 1fr 15%;
+    grid-template-rows: auto;
+    grid-template-areas: ". header  ." ".  cells .";
+
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-areas: "title" "filters";
+        grid-template-rows: 3vw 2vw;
+        .title {
+            font-weight: 700;
+            font-size: 45px;
+        }
+        .filters {
+            font-size: 25px;
+            color: #E6802C;
+
+            button {
+                border: none;
+                color: black;
+                background-color: transparent;
+                font-size: 25px;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+        }
+    }
+    .cells {
+        margin-top: 5vw;
+        grid-area: cells;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 25vw 25vw;
+        .one {
+            // align-self: center;
+            // justify-self: center;
+        }
+        .visual {
+            border-radius: 27px;
+            width: 30vw;
+            height: 18vw;
+            transition: box-shadow ease-in-out .5s;
+
+            p {
+                font-size: 30px;
+                text-align: center;
+                justify-self: center;
+                margin-top: 25%;
+            }
+        }
+        .visual:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+        a:hover {
+            cursor: pointer;
+        }
+        .label {
+            margin-top: 3vw;
+            font-weight: 700;
+            font-size: 30px;
+            color: #E6802C;
+        }
+        
+    }
+}
+
+
 .case-study-main-header {
     display: grid;
     grid-template-areas: "sidebar hero ."
@@ -63,20 +140,29 @@
             font-weight: 500;
             font-size: 2.5vw;
             justify-self: center;
+            color: black;
+            
             span {
                 font-weight: 600;
+            }
+            span1 {
+                color: white;
+                text-shadow: 2px 2px 5px black;
             }
         }
 
         .visual {
             grid-area: hero-bottom;
             z-index: -1;
-            border: 1px solid grey;
+            // border: 1px solid grey;
             height: 30vw;
-            width: 23vw;
+            width: 30vw;
             border-radius: 27px;
             justify-self: end;
             align-self: end;
+            background: url('/assets/new-apple-music-hero.png') no-repeat;
+            background-size: contain;
+            background-position: center;
         }
     }
 
@@ -94,22 +180,22 @@
 
         .goal {
             grid-area: goal;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid #4215E6;
             padding-bottom: 7px;
         }
         .goal-info {
             grid-area: goal-info;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid #4215E6;
             text-align: right;
         }
         .time {
             grid-area: time;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid #4215E6;
             padding-bottom: 7px;
         }
         .time-info {
             grid-area: time-info;
-            border-bottom: 1px solid black;
+            border-bottom: 2px solid #4215E6;
             text-align: right;
         }
         .tools {
@@ -255,6 +341,14 @@
                 margin-top: 4vw;
                 grid-area: data1;
                 justify-self: center;
+                img {
+                    margin-top: 4vw;
+                    grid-area: data;
+                    justify-self: center;
+                    align-self: center;
+                    width: 80%;
+                    margin-left: 10%;
+                }
             }
             .data2 {
                 margin-top: 4vw;

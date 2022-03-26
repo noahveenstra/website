@@ -1,3 +1,98 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  -ms-grid-columns: 15% 1fr 15%;
+      grid-template-columns: 15% 1fr 15%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". header  ." ".  cells .";
+}
+
+.container .header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: header;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "title" "filters";
+      grid-template-rows: 3vw 2vw;
+}
+
+.container .header .title {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.container .header .filters {
+  font-size: 25px;
+  color: #E6802C;
+}
+
+.container .header .filters button {
+  border: none;
+  color: black;
+  background-color: transparent;
+  font-size: 25px;
+}
+
+.container .header .filters button:hover {
+  cursor: pointer;
+}
+
+.container .cells {
+  margin-top: 5vw;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: cells;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 25vw 25vw;
+      grid-template-rows: 25vw 25vw;
+}
+
+.container .cells .visual {
+  border-radius: 27px;
+  width: 30vw;
+  height: 18vw;
+  -webkit-transition: -webkit-box-shadow ease-in-out .5s;
+  transition: -webkit-box-shadow ease-in-out .5s;
+  transition: box-shadow ease-in-out .5s;
+  transition: box-shadow ease-in-out .5s, -webkit-box-shadow ease-in-out .5s;
+}
+
+.container .cells .visual p {
+  font-size: 30px;
+  text-align: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin-top: 25%;
+}
+
+.container .cells .visual:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .cells a {
+  text-decoration: none;
+  color: black;
+}
+
+.container .cells a:hover {
+  cursor: pointer;
+}
+
+.container .cells .label {
+  margin-top: 3vw;
+  font-weight: 700;
+  font-size: 30px;
+  color: #E6802C;
+}
+
 .case-study-main-header {
   display: -ms-grid;
   display: grid;
@@ -83,10 +178,16 @@
   font-size: 2.5vw;
   -ms-grid-column-align: center;
       justify-self: center;
+  color: black;
 }
 
 .case-study-main-header .hero h2 span {
   font-weight: 600;
+}
+
+.case-study-main-header .hero h2 span1 {
+  color: white;
+  text-shadow: 2px 2px 5px black;
 }
 
 .case-study-main-header .hero .visual {
@@ -94,15 +195,17 @@
   -ms-grid-column: 2;
   grid-area: hero-bottom;
   z-index: -1;
-  border: 1px solid grey;
   height: 30vw;
-  width: 23vw;
+  width: 30vw;
   border-radius: 27px;
   -ms-grid-column-align: end;
       justify-self: end;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
+  background: url("/assets/new-apple-music-hero.png") no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .case-study-main-header .info {
@@ -123,7 +226,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: goal;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #4215E6;
   padding-bottom: 7px;
 }
 
@@ -131,7 +234,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: goal-info;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #4215E6;
   text-align: right;
 }
 
@@ -139,7 +242,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: time;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #4215E6;
   padding-bottom: 7px;
 }
 
@@ -147,7 +250,7 @@
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: time-info;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid #4215E6;
   text-align: right;
 }
 
@@ -373,6 +476,20 @@
   grid-area: data1;
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.case-study-main-header .content .loves .data1 img {
+  margin-top: 4vw;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: data;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .case-study-main-header .content .loves .data2 {

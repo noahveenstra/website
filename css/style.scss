@@ -545,9 +545,23 @@ html:not([data-scroll='0']) {
             transition: box-shadow ease-in-out .5s;
             box-shadow: none;
 
+            img {
+                width: 100%;
+                height: 20vw;
+                border-radius: 27px;
+                align-self: center;
+
+                @media (max-width: 800px) {
+                    width: 100%;
+                    height: 40vw;
+                    // margin-top: 10vw;
+                }
+            }
+
             @media (max-width: 800px) {
                 width: 100%;
                 height: 40vw;
+                // margin-top: 10vw;
             }
 
             p {
