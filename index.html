@@ -7,14 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/scroll-animation.js"></script>
+    <script src="/mobile-menu.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
     <title>Noah Veenstra — Home</title>
 </head>
 
 <body>
+    <div class="nav-fullscreen">
+        <div class="nav-fullscreen_items">
+            <div class="nav-fullscreen_item">
+                <a href="/work.html">work.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/case-studies.html">case studies.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/contact.html">contact.</a>
+            </div>
+        </div>
+    </div>
+    <button class="menu"
+    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+    aria-label="Main Menu">
+        <svg width="37" height="37" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 60" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+
 
     <div class="nav">
-        <div class="logo">nv.</div>
+        <div class="logo"><a href="/index.html">nv.</a></div>
         <div class="links">
             <div class="work"><a href="/work.html">work.</a></div>
             <div class="studies"><a href="/case-studies.html">case studies.</a></div>
@@ -29,28 +55,25 @@
             <p>header visual</p>
         </div>
         <div class="desc">
-            <div class="header">User Experience Architect <span style="color: #E6802C; font-size: 32px; font-weight: 700;">student</span> at MSU</div>
+            <div class="header">User Experience Architect <span>student</span> at MSU</div>
             <p>Currently, in the second semester of my 1st year at MSU. Go Spartans!</p>
         </div>
     </div>
 
     <div class="case-studies">
         <div class="cell1" style="grid-area: study1;">
-            <div class="header">Knitwrth</div>
+            <div class="header">Study 1</div>
             <div class="label">Case Studies / Websites</div>
-            <div class="desc">Knitwrth is an apparel startup that has amassed a growing audience of 30k+ followers along
-                with appearances in Vouge, Bazaar and Chicago Mag. They approached me in order toget their website off
-                of a third party hosting site. I document my process in figuring out and learningon the way of making
-                an e-commerce site from scratch.
+            <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iusto repudiandae suscipit officia nemo, ad neque sint rerum iure? Assumenda voluptas voluptatem harum, illo laudantium ipsa vitae incidunt repudiandae fugit.
             </div>
             <button>Read More...</button>
             <div class="visual"><p>Case Study Visual</p></div>
             <!-- <img src="/assets/case-study-visual.png" alt=""> -->
         </div>
         <div class="cell2" style="grid-area: study2;">
-            <div class="header">Apple Muisc</div>
+            <div class="header">Study 2</div>
             <div class="label">Case Studies / Mobile Apps</div>
-            <div class="desc">Apple Music has so much potential to be the best on demand music stream service out there. Although, there are a few key features that are just missing for this premier service. I take a look into how some changes will affect its success and popularity using peer reviewed research papers and present my findings in high fidelity mock-ups.</div>
+            <div class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint quas dolorum sunt esse molestias tempore repudiandae quos adipisci. Repellendus deleniti asperiores dicta culpa hic illum aliquam consequuntur modi nisi a.</div>
             <button>Read More...</button>
             <div class="visual"><p>Case Study Visual</p></div>
             <!-- <img src="/assets/case-study-visual.png" alt=""> -->
@@ -64,7 +87,8 @@
         <img src="/assets/top-about.png" alt=""> -->
         <div class="header">Who am I?</div>
         <div class="label">UX Architect <span style="color:#E6802C">/</span> Web Developer <span style="color:#E6802C">/</span> Techie <span style="color:#E6802C">/</span> Sports Enthusiast</div>
-        <div class="desc">Growing up, I kind of knew I would end up somewhere around technology for my career. The course that it took I did not expect. My dad is a senior software engineer and taught me more about technology than most. Not only did this feed my curiosity but it allowed me to delve deeper into it. When I got to high school I was eager to start learning new skills and enrolled in an Intro to HTML class. From there I've been learning more and more about how to efficiently create and design websites and more importantly, craft their experiences.</div>
+        <div class="desc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis numquam saepe facere sint eaque laborum et beatae esse! A consequuntur veniam doloribus voluptatem voluptate sequi aliquid recusandae doloremque eligendi ipsa.</div>
+        <!-- <div class="desc">Growing up, I kind of knew I would end up somewhere around technology for my career. The course that it took I did not expect. My dad is a senior software engineer and taught me more about technology than most. Not only did this feed my curiosity but it allowed me to delve deeper into it. When I got to high school I was eager to start learning new skills and enrolled in an Intro to HTML class. From there I've been learning more and more about how to efficiently create and design websites and more importantly, craft their experiences.</div> -->
         <button>Learn More...</button>
     </div>
 

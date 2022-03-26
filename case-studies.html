@@ -7,14 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <script src="/scroll-animation.js"></script>
+    <script src="/mobile-menu.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
     <title>Noah Veenstra — Case Studies</title>
 </head>
 
 <body>
-
+    <div class="nav-fullscreen">
+        <div class="nav-fullscreen_items">
+            <div class="nav-fullscreen_item">
+                <a href="/index.html">home.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/work.html">work.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/case-studies.html">case studies.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/contact.html">contact.</a>
+            </div>
+        </div>
+    </div>
+    <button class="menu"
+    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+    aria-label="Main Menu">
+        <svg width="37" height="37" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 60" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
     <div class="nav">
-        <div class="logo">nv.</div>
+        <div class="logo"><a href="/index.html">nv.</a></div>
         <div class="links">
             <div class="work"><a href="/work.html">work.</a></div>
             <div class="studies"><a href="/case-studies.html">case studies.</a></div>
@@ -22,26 +49,41 @@
         </div>
     </div>
 
-    <div class="sidebar">
-        <ul>
-            <li>Overview</li>
-            <li>Topic 1</li>
-            <li>Topic 2</li>
-            <li>Topic 3</li>
-            <li>Conclusion</li>
-        </ul>
-    </div>
-
-    <div class="case-study-main-header">
-        <div class="name">Knitwrth</div>
-        <div class="case-study-visual">
-            <p>Knitwrth visual</p>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                Case Studies
+            </div>
+            <div class="filters">
+                <span>Tags /</span> <button>All</button> <span>/</span> <button>Mobile Apps</button> <span>/</span> <button>Websites</button>
+            </div>
         </div>
-        <div class="desc">
-            <p>Recreating a brand's website</p>
+        <div class="cells">
+            <div class="one">
+                <a href="/case-studies/apple-music.html">
+                    <div class="visual">
+                        <p>Case visual</p>
+                </div>
+            </a>
+            <a href="/case-studies/apple-music.html">
+                <div class="label">Apple Music</div>
+            </a>
+            </div>
+            <div class="two">
+                <div class="visual">
+                    <p>Case visual</p>
+                </div>
+                <div class="label">Personal Website</div>
+            </div>
+            <div class="three">
+                <div class="visual">
+                    <p>Case visual</p>
+                </div>
+                <div class="label">Case Study #3</div>
+            </div>
         </div>
     </div>
-
+    
     <footer>
         <p>Coded by hand © Noah Veenstra 2022. </p>
         <div class="social">
