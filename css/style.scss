@@ -312,6 +312,7 @@ html:not([data-scroll='0']) {
         @media (max-width: 1000px) {
             margin-left: 0;
             margin-top: 5vw;
+            margin-bottom: 10vw;
         }
 
         span {
@@ -363,6 +364,7 @@ html:not([data-scroll='0']) {
             width: 35vw;
             height: auto;       
             font-size: 4vw;
+            display: none;
         }
         
 
@@ -391,6 +393,10 @@ html:not([data-scroll='0']) {
     grid-template-rows: auto auto;
     row-gap: 10vw;
 
+    @media (max-width: 1000px) {
+        margin-top: 30vw;
+    }
+
     @media (max-width: 800px) {
         grid-template-areas: ". study1 ."
         ". study2 .";    
@@ -398,7 +404,6 @@ html:not([data-scroll='0']) {
         margin-left: 0; 
         grid-template-rows: auto auto;
         row-gap: 10vw;
-        margin-top: 10vw;
     }
 
     .cell1 {
