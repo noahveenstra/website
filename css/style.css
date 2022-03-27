@@ -43,7 +43,7 @@ body {
   transition: box-shadow .5s ease-in-out, backdrop-filter .5s ease-in-out, -webkit-box-shadow .5s ease-in-out, -webkit-backdrop-filter .5s ease-in-out;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .nav {
         grid-template-areas: "logo burger";
   }
@@ -158,7 +158,7 @@ body {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .menu {
     grid-area: burger;
     background-color: transparent;
@@ -242,7 +242,7 @@ body {
       grid-template-areas: "work case-studies contact";
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .links {
     display: none;
   }
@@ -478,7 +478,7 @@ html:not([data-scroll='0']) .nav {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies {
         grid-template-areas: ". study1 ." ". study2 .";
     -ms-grid-columns: 15% 70% 15%;
@@ -501,7 +501,7 @@ html:not([data-scroll='0']) .nav {
   row-gap: 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies .cell1 {
     -ms-grid-rows: 5vw 4vw auto 7vw auto;
         grid-template-rows: 5vw 4vw auto 7vw auto;
@@ -524,7 +524,7 @@ html:not([data-scroll='0']) .nav {
           column-gap: 100px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies .cell2 {
     -ms-grid-rows: 5vw 4vw auto 7vw auto;
         grid-template-rows: 5vw 4vw auto 7vw auto;
@@ -555,6 +555,38 @@ html:not([data-scroll='0']) .nav {
   grid-area: label;
   font-size: 26px;
   font-weight: 400;
+}
+
+.case-studies .label a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.case-studies .label a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4215E6;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.case-studies .label a:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 
 @media (max-width: 700px) {
@@ -620,7 +652,7 @@ html:not([data-scroll='0']) .nav {
   transition: 0.4s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies button {
     width: 25vw;
     height: 10vw;
@@ -667,17 +699,18 @@ html:not([data-scroll='0']) .nav {
       align-self: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies .visual img {
     width: 100%;
     height: 40vw;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .case-studies .visual {
     width: 100%;
     height: 40vw;
+    margin-top: 5vw;
   }
 }
 
@@ -725,7 +758,7 @@ html:not([data-scroll='0']) .nav {
   grid-area: header;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .about .header {
     font-size: 6vw;
   }
@@ -739,7 +772,7 @@ html:not([data-scroll='0']) .nav {
   grid-area: label;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .about .label {
     font-size: 4vw;
   }
@@ -752,7 +785,7 @@ html:not([data-scroll='0']) .nav {
   grid-area: desc;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .about .desc {
     font-size: 4vw;
   }
@@ -780,7 +813,7 @@ html:not([data-scroll='0']) .nav {
   transition: 0.4s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 767px) {
   .about button {
     width: 25vw;
     height: 10vw;
@@ -828,6 +861,7 @@ html:not([data-scroll='0']) .nav {
     height: 90vw;
     max-width: 455px;
     max-height: 587px;
+    margin-top: 5vw;
   }
 }
 
@@ -865,6 +899,7 @@ html:not([data-scroll='0']) .nav {
     height: 90vw;
     max-width: 455px;
     max-height: 587px;
+    margin-top: 5vw;
   }
 }
 
@@ -872,6 +907,7 @@ footer {
   margin-top: 175px;
   height: 125px;
   width: 100%;
+  bottom: 0;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: -ms-grid;
@@ -932,5 +968,15 @@ footer .social img {
     width: 25px;
     height: 25px;
   }
+}
+
+.transition-fade {
+  opacity: 1;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */

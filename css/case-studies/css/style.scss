@@ -3,27 +3,49 @@
     height: 100vh;
     width: 100%;
     grid-template-columns: 15% 1fr 15%;
-    grid-template-rows: auto;
-    grid-template-areas: ". header  ." ".  cells .";
+    grid-template-rows: 10vw 60vw 20vw;
+    grid-template-areas: ". header  ." ".  cells ." "footer footer footer";
+
+    @media (max-width:767px) {
+        grid-template-rows: 10vw 160vw 20vw;
+        grid-template-columns: 5% 90% 5%;
+    }
 
     .header {
         grid-area: header;
         display: grid;
         grid-template-areas: "title" "filters";
         grid-template-rows: 3vw 2vw;
+        row-gap: 2vw;
+
+        @media (max-width:1000px) {
+            row-gap: 5vw;
+        }
         .title {
             font-weight: 700;
             font-size: 45px;
+
+            @media (max-width:767px) {
+                font-size: 6vw;
+            }
         }
         .filters {
             font-size: 25px;
             color: #E6802C;
+
+            @media (max-width:767px) {
+                font-size: 3vw;
+            }
 
             button {
                 border: none;
                 color: black;
                 background-color: transparent;
                 font-size: 25px;
+
+                @media (max-width:767px) {
+                    font-size: 3vw;
+                }
             }
             button:hover {
                 cursor: pointer;
@@ -36,35 +58,52 @@
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 25vw 25vw;
+        row-gap: 5vw;
+        grid-template-areas: "cell1 cell2"
+        "cell3 cell4";
+        
+        @media (max-width:767px) {
+            grid-template-areas: "cell1"
+            "cell2"
+            "cell3"
+            "cell4";
+            grid-template-columns: 100%;
+            grid-template-rows: 50vw 50vw 50vw;
+            row-gap: 15vw;
+        }
         .one {
-            // align-self: center;
-            // justify-self: center;
+            grid-area: cell1;
         }
-        .visual {
-            border-radius: 27px;
-            width: 30vw;
-            height: 18vw;
-            transition: box-shadow ease-in-out .5s;
+        .two {
+            grid-area: cell2;
+        }
+        .three {
+            grid-area: cell3;
+        }
+        .four {
+            grid-area: cell4;
+        }
 
-            p {
-                font-size: 30px;
-                text-align: center;
-                justify-self: center;
-                margin-top: 25%;
-            }
-        }
-        .visual:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
         a {
+            justify-self: center;
             text-decoration: none;
             color: black;
-
+            
+            .label {
+               @media (max-width:1000px) {
+                font-size: 3vw;
+            } 
+               @media (max-width:767px) {
+                font-size: 5vw;
+            } 
+            }
+            
         }
         a:hover {
             cursor: pointer;
         }
         .label {
+            justify-self: center;
             margin-top: 3vw;
             font-weight: 700;
             font-size: 30px;
@@ -72,7 +111,64 @@
         }
         
     }
+
+    footer {
+        grid-area: footer;
+    }
 }
+
+.visual {
+    justify-self: center;
+    grid-area: visual;
+    width: 90%;
+    height: 20vw;
+    left: 0;
+    align-self: center;
+    border-radius: 27px;
+    font-weight: 500px;
+    font-size: 26px;
+    text-align: center;
+    transition: box-shadow ease-in-out .5s;
+    box-shadow: none;
+
+    // img {
+    //     width: 100%;
+    //     height: 20vw;
+    //     border-radius: 27px;
+    //     align-self: center;
+
+    //     @media (max-width: 800px) {
+    //         width: 100%;
+    //         height: 40vw;
+    //         // margin-top: 10vw;
+    //     }
+    // }
+
+    @media (max-width: 1000px) {
+        margin-top: 5vw;
+    }
+
+    @media (max-width: 767px) {
+        height: 45vw;
+    }
+
+    p {
+        margin-top: 25%;
+    }
+}
+
+.visual:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor:pointer;
+}
+
+// footer {
+//     margin-top: 600px;
+//     @media (max-width:800px) {
+//         margin-top: 500px;
+//     }
+    
+// }
 
 
 .case-study-main-header {
@@ -83,12 +179,22 @@
     grid-template-columns: 15vw 70vw 15vw;
     grid-template-rows: auto;
 
+    @media (max-width: 767px) {
+        grid-template-areas: ". hero ."
+        ". info ."
+        ". content .";
+    }
+
     .sidebar {
         position: fixed;
         grid-area: sidebar;
         margin-top: 30vh;
-        margin-left: 4vw;
+        // left: 2vw;
         text-align: center;
+
+        @media (max-width: 1049px) {
+            display: none;
+        }
 
         ul {
             list-style: none;
@@ -126,6 +232,10 @@
         row-gap: 2vw;
         grid-template-areas: ". hero-top ." ". hero-bottom .";
 
+        @media (max-width: 767px) {
+            grid-template-columns: 5% 80% 15%;
+        }
+
         h1 {
             grid-area: hero-top;
             font-weight: 700;
@@ -133,6 +243,10 @@
             align-self: end;
             justify-self: center;
             color: #E6802C;
+
+            @media (max-width: 767px) {
+                font-size: 6vw;
+            }
         }
 
         h2 {
@@ -141,6 +255,10 @@
             font-size: 2.5vw;
             justify-self: center;
             color: black;
+
+            @media (max-width: 767px) {
+                font-size: 3.5vw;
+            }
             
             span {
                 font-weight: 600;
@@ -148,6 +266,11 @@
             span1 {
                 color: white;
                 text-shadow: 2px 2px 5px black;
+                
+                @media (max-width: 767px) {
+                    // color: black;
+                    // text-shadow: none;
+                }
             }
         }
 
@@ -178,10 +301,15 @@
         row-gap: 7px;
         font-size: 22px;
 
+        @media (max-width:767px) {
+            font-size: 2.5vw;
+        }
+
         .goal {
             grid-area: goal;
             border-bottom: 2px solid #4215E6;
             padding-bottom: 7px;
+            align-self: end;
         }
         .goal-info {
             grid-area: goal-info;
@@ -209,22 +337,57 @@
 
     .content {
         grid-area: content;
+
+        h1 {
+            grid-area: header;
+            font-weight: 700;
+            font-size: 44px;
+
+            @media (max-width: 767px) {
+                font-size: 6vw;
+            }
+        }
+        p {
+            margin-top: 4vw;
+            grid-area: par;
+            font-size: 25px;
+
+            @media (max-width: 767px) {
+                font-size: 4vw;
+            }
+        }
+        p2 {
+            margin-top: 4vw;
+            grid-area: par1;
+            font-size: 25px;
+            @media (max-width: 767px) {
+                font-size: 4vw;
+            }
+        }
+        p3 {
+            margin-top: 4vw;
+            grid-area: par2;
+            font-size: 25px;
+            @media (max-width: 767px) {
+                font-size: 4vw;
+            }
+        }
         .overview {
             display: grid;
             margin-top: 10vw;
             grid-template-rows: auto auto;
             grid-template-areas: ". header ." ". par .";
             grid-template-columns: 10% 80% 10%;
-            h1 {
-                grid-area: header;
-                font-weight: 700;
-                font-size: 44px;
-            }
-            p {
-                margin-top: 4vw;
-                grid-area: par;
-                font-size: 25px;
-            }
+            // h1 {
+            //     grid-area: header;
+            //     font-weight: 700;
+            //     font-size: 44px;
+            // }
+            // p {
+            //     margin-top: 4vw;
+            //     grid-area: par;
+            //     font-size: 25px;
+            // }
         }
         .age {
             display: grid;
@@ -236,61 +399,71 @@
             ". data ."
             ". par1 .";
             grid-template-columns: 10% 80% 10%;
-            h1 {
-                grid-area: header;
-                font-weight: 700;
-                font-size: 44px;
-            }
-            p {
-                margin-top: 4vw;
-                grid-area: par;
-                font-size: 25px;
-            }
-            p2 {
-                margin-top: 4vw;
-                grid-area: par1;
-                font-size: 25px;
-            }
+            // h1 {
+            //     grid-area: header;
+            //     font-weight: 700;
+            //     font-size: 44px;
+            // }
+            // p {
+            //     margin-top: 4vw;
+            //     grid-area: par;
+            //     font-size: 25px;
+            // }
+            // p2 {
+            //     margin-top: 4vw;
+            //     grid-area: par1;
+            //     font-size: 25px;
+            // }
             svg {
                 grid-area: data;
                 margin-top: 4vw;
                 width: 50%;
                 height: auto;
                 margin-left: 25%;
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-left: 0;
+                }
             }
         }
         .survey {
             display: grid;
             margin-top: 10vw;
             grid-template-rows: auto;
-            grid-template-areas: ". header ." ". par ." ". data ." ". subtext ." ". par2 ." ". data2 ." ". par3 .";
+            grid-template-areas: ". header ." ". par ." ". data ." ". subtext ." ". par1 ." ". data2 ." ". par2 .";
             grid-template-columns: 10% 80% 10%;
-            h1 {
-                grid-area: header;
-                font-weight: 700;
-                font-size: 44px;
-            }
-            p {
-                margin-top: 4vw;
-                grid-area: par;
-                font-size: 25px;
-            }
-            p2 {
-                margin-top: 4vw;
-                grid-area: par2;
-                font-size: 25px;
-            }
-            p3 {
-                margin-top: 4vw;
-                grid-area: par3;
-                font-size: 25px;
-            }
+            // h1 {
+            //     grid-area: header;
+            //     font-weight: 700;
+            //     font-size: 44px;
+            // }
+            // p {
+            //     margin-top: 4vw;
+            //     grid-area: par;
+            //     font-size: 25px;
+            // }
+            // p2 {
+            //     margin-top: 4vw;
+            //     grid-area: par1;
+            //     font-size: 25px;
+            // }
+            // p3 {
+            //     margin-top: 4vw;
+            //     grid-area: par2;
+            //     font-size: 25px;
+            // }
             img {
                 margin-top: 4vw;
                 grid-area: data;
                 justify-self: center;
                 align-self: center;
                 width: 70%;
+
+                @media (max-width: 767px) {
+                    width: 100%;
+                    margin-left: 0;
+                }
             }
             sub {
                 grid-area: subtext;
@@ -312,11 +485,18 @@
                     h1 {
                         font-weight: 500;
                         font-size: 35px;
+
+                        @media (max-width: 767px) {
+                            font-size: 4vw;
+                        }
                     }
                     li {
                         list-style: none;
                         font-size: 20px;
                         padding: 7px;
+                        @media (max-width: 767px) {
+                            font-size: 2.5vw;
+                        }
                     }
                 }
             }
@@ -325,18 +505,18 @@
             display: grid;
             margin-top: 10vw;
             grid-template-rows: auto auto;
-            grid-template-areas: ". header ." ". par ." ". data1 ." ". par2 ." ". data2 ." ". par3 .";
+            grid-template-areas: ". header ." ". par ." ". data1 ." ". par1 ." ". data2 ." ". par2 .";
             grid-template-columns: 10% 80% 10%;
-            h1 {
-                grid-area: header;
-                font-weight: 700;
-                font-size: 44px;
-            }
-            p {
-                margin-top: 4vw;
-                grid-area: par;
-                font-size: 25px;
-            }
+            // h1 {
+            //     grid-area: header;
+            //     font-weight: 700;
+            //     font-size: 44px;
+            // }
+            // p {
+            //     margin-top: 4vw;
+            //     grid-area: par;
+            //     font-size: 25px;
+            // }
             .data1 {
                 margin-top: 4vw;
                 grid-area: data1;
@@ -348,6 +528,11 @@
                     align-self: center;
                     width: 80%;
                     margin-left: 10%;
+
+                    @media (max-width: 767px) {
+                        width: 100%;
+                        margin-left: 0;
+                    }
                 }
             }
             .data2 {
@@ -355,16 +540,16 @@
                 grid-area: data2;
                 justify-self: center;
             }
-            p2 {
-                margin-top: 4vw;
-                grid-area: par2;
-                font-size: 25px;
-            }
-            p3 {
-                margin-top: 4vw;
-                grid-area: par3;
-                font-size: 25px;
-            }
+            // p2 {
+            //     margin-top: 4vw;
+            //     grid-area: par1;
+            //     font-size: 25px;
+            // }
+            // p3 {
+            //     margin-top: 4vw;
+            //     grid-area: par2;
+            //     font-size: 25px;
+            // }
         }
     }
 }
