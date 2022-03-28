@@ -654,7 +654,7 @@ html:not([data-scroll='0']) {
         font-size: 30px;
         grid-area: desc;
 
-        @media (max-width: 767px) {
+        @media (max-width: 800px) {
             font-size: 4vw;
         }
     }
@@ -674,7 +674,7 @@ html:not([data-scroll='0']) {
         align-self: center;
         transition: 0.4s;
 
-        @media (max-width: 767px) {
+        @media (max-width: 800px) {
             width: 25vw;
             height: 10vw; 
             font-size: 3.5vw; 

@@ -785,7 +785,7 @@ html:not([data-scroll='0']) .nav {
   grid-area: desc;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .about .desc {
     font-size: 4vw;
   }
@@ -813,7 +813,7 @@ html:not([data-scroll='0']) .nav {
   transition: 0.4s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
   .about button {
     width: 25vw;
     height: 10vw;

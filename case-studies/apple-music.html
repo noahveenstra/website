@@ -71,14 +71,18 @@
                     </li>
                     <hr>
                     <li>
-                        <a href="">Conclusion</a>
+                        <a href="#group">Two's Company</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a href="#conclusion">Conclusion</a>
                     </li>
                 </ul>
             </div>
 
             <div class="hero">
                 <h1>Apple Music</h1>
-                <h2>I wish I could use <span1> Apple Music, so I</span1> <span>redesigned</span> it.</h2>
+                <h2>I wish I could<span1> use  Apple Music, </span1><span></span><br>so I  redesigned</span> it.</h2>
                 <div class="visual">
                 </div>
             </div>
@@ -157,35 +161,15 @@
                         I looked at these differences and tried to put them in priority order from most to least important. Then, I decided to also create a list of most achievable desired feature from most desired to least. These lists being from Apple's point of view.
                     </p>
                     <div class="data2">
-                        <div class="importance">
-                            <h1>Importance</h1>
-                            <ul>
-                                <li>Podcasts built in</li>
-                                <li>Easily keep track of songs you like and discover</li>
-                                <li>Discovery</li>
-                                <li>Playlists more curated and play what you expect based on titles</li>
-                                <li>Group sessions</li>
-                                <li>Daily playlists for different moods</li>
-                                <li>Spotify wrapped playlist</li>
-                                <li>Better UI that encourages listening and finding new songs</li>
-                                <li>Easier to share songs/albums</li>
-                            </ul>
+                        <div class="importance" style="grid-area: importance;">
+                            <img src="/assets/importance.png" alt="">
                         </div>
-                        <div class="achievability">
-                            <h1>Achievability</h1>
-                            <ul>
-                                <li>Playlists more curated and play what you expect based on titles</li>
-                                <li>Daily playlists for different moods</li>
-                                <li>Podcasts built in</li>
-                                <li>Easily keep track of songs you like and discover</li>
-                                <li>Group sessions</li>
-                                <li> Better UI that encourages listening and finding new songs</li>
-                                <li>Discovery</li>
-                            </ul>
+                        <div class="achievability" style="grid-area: achievability;">
+                            <img src="/assets/achievability.png" alt="">
                         </div>
                     </div>
                     <p3>
-                        Using these two lists, I created a system that allowed me to determine which problems to tackle in this study. Per list each item receives points based on how far up or down they are on the list. The first item gets 1 point, second item gets 2 points and so on. After each item received their points, you subtract the items that have the same name and the items that were closest to 0 were the most important and most achievable objectives, so I worked on the first three: Podcasts, Likes and Group Sessions.
+                        Using these two lists, I created a system that allowed me to determine which problems to tackle in this study. Per list each item receives points based on how far up or down they are on the list. The first item gets 1 point, second item gets 2 points and so on. After each item received their points, you subtract the items that have the same name and the items that were closest to 0 were the most important and most achievable objectives, so I worked on the first two: Likes and Group Sessions.
                     </p>
                 </div>
                 <a name="love"></a>
@@ -198,11 +182,69 @@
                         <img src="/assets/apple-music-tabs.png" alt="">
                     </div>
                     <p2>
-                        The solution I devised for this problem was to create a new bottom row tab called 'Loves.' No longer would the user be clueless about where their mysterious loved songs went. This gave a clear home for everything that you love inside Apple Music. Now what happens to the radio section that was just wiped away from our user's home bar? It moves into the browse page. When you think about looking for music to listen to, sometimes you want that radio. Keeping it in the app and putting it in a subcategory that fits it is why it was moved. Of course all the same algorithmicly generated suggestions for radio in 'Listen Now' will be present. Now that our Radio friend is taken care of, let's look more into the new 'Loves' tab. 
+                        The solution I devised for this problem was to create a new bottom row tab called 'Loves.' No longer would the user be clueless about where their mysterious loved songs went. This gave a clear home for everything that you love inside Apple Music. Now what happens to the radio section that was just wiped away from our user's home bar? It moves into the browse page. And there is a clear back button so the user doesn't get stuck or confused in this new page. When you think about looking for music to listen to, sometimes you want that radio. Keeping it in the app and putting it in a subcategory that fits it is why it was moved. Of course, all the same algorithmicly generated suggestions for radio in 'Listen Now' will be present. 
                     </p>
-                    <div class="data2">Hello, this is a data space :)</div>
+                    <div class="grid">
+                        <div class="data2">
+                        <img src="/assets/browse-radio-render.png" alt="">
+                        </div>
+                        <div class="data3">
+                            <img src="/assets/radio-tab.png" alt="">
+                        </div>
+                        </div>
+                    
+                    
                     <p3>
-                        
+                        Now that our Radio friend is taken care of, let's look more into the new 'Loves' tab. Thinking solely about the user and what they would want right at their finger tips, the first suggestion they get is the 'On Rotaion' playlist. This playlist is procedurally generated from songs that they've loved and continue to come back to multiple times. This lets the user not only have a playlist that they will very likely love to listen to, but it will give an easy way to find songs that they want to play again without going to search.
+                    </p3>
+                    <br><br>
+                    <p4>
+                        Digging through any UI, even the beautifuly designed ones, is everyone's worst nightmare. Within a music app, users want to find music they want to listen to then close it and be done. That's why this next section is devoted to the most recently loved items. Whether it be Songs, Playlists, Albums or Artists, they will show up in the carousel of 'Recently Loved.' This gives the user the ability to find what has been relevant to them recently and gives somewhat of a timeline of their recent prefrences. Having the section within one click also keeps the decision path simple. A user wants to find a song they loved just a couple days ago? Great, all it take is a tap or a swipe of the carousel and they've found it. 
+                    </p4>
+                        <div class="grid2">
+
+                            <div class="data2"><img src="/assets/Loves - Default.png" alt="">
+                            </div><div class="data3"><img src="/assets/Loves - Scroll.png" alt="">
+                        </div></div>
+                    <p5>
+                        One shortcoming of Apple Music has been the lackluster features. This brings us to the 'Loved by Mood' area. This area will create procedurally generated playlists to coenside with an array of different moods. It would determine these mostly from scanning for the song's beats per minute (BPM). The BPM of a song is usally a good indicator of its mood and energy. The higher the BPM, the quicker the song feels, and most of the time more energetic. The playlists would contain songs the user has loved that fit the category as well as new songs that have similar attributes. This way the user has the ability to discover new songs within the category they are listening to and possibly add to their library of loved songs.
+                    </p5>
+                </div>
+                <a name="group"></a>
+                <div class="group">
+                    <h1>Two's Company, Three's a Crowd</h1>
+                    <p>Driving in a car with a group of people or maybe just with a partner is a great way to connect. More often than not someone else wants to play music from their Library to the current speaker. In order to realistically do this, the first person has to disconnect from the speaker, then the second person has to pair and connect to it. Such a cumbersome and complicated process that it rarely ever happens. The solution I concluded was to add an iteration of SharePlay directly inside the Music app. 
+                    </p>
+                    <p2>
+                        💡 ICYMI, SharePlay was released on iOS 15.1 in December 2021. It allows users to share their screen, tv show or music all through FaceTime. It is mostly known for its screensharing ability after coming at the end of a video call (Zoom dominated) year. Nonetheless, Apple did present it with the other features of music and select tv show sharing capabilites.
+                    </p2>
+                    <p3>
+                        Currently, SharePlay is already built into the music menu. The only issue that if you try to add someone to your SharePlay it says that the media type is unable to SharePlay. Although this is not the truth, what they want you to do is be on a FaceTime Audio or Video call in order to use this feature. 
+                    </p3>
+                    <p4>
+                        The implementation that I would have built allows for users to create a SharePlay session, no matter the context, and share it with up to 15 people. If you weren't the source user, you would be able to add songs to the queue but not skip or reverse songs. This still allows for control over what the source user's phone is playing and eliminates a potential headache for all the users. If everyone was given the ability to switch songs, human nature would kick in and there would be a race to get to the song they added. 
+                    </p4>
+                    <div class="grid">
+                        <div class="data2">
+                            <img src="/assets/shareplay-source.png" alt="">
+                        </div>
+                        <div class="data3">
+                            <img src="/assets/shareplay-user.png" alt="">
+                        </div>
+                    </div>
+                    <p5>
+                        When creating a new system that relies so heavily on the song queue, you have to reconsider how it looks and feels. When looking at the queue, all users are able to see the names of who added which song. Adding a bit of personalization to the queue will create a sense of community and bonding. The queue for the users that don't have the source phone, will be slightly different. Their queue will show a three dotted menu next to each song in order to get more information on it, add it to their library and, of course, love it. Non-souce users are also not able to change the order of the queue. This gives a fair chance for each user to play the song they like and have it heard. But, the queue for the source user will look the same and be the 'admin' in a sense, able to change the order of songs, delete them from the queue and remove users from the SharePlay session if need be.
+                    </p5>
+                </div>
+                <a name="conclusion"></a>
+                <div class="conclusion">
+                    <h1>Conclusion</h1>
+                    <p>
+                        From these proposed changes, I hope more thought is provoked around Apple Music and its potential to overtake Spotify and its dominance. I truly believe that these changes would have a positive impact on everyone that uses Apple Music and elevate their interactive expereince with the service. Unfortunatley it seems like Apple has become complacent with requests from users since the service has launched back in 2015 just because they can and people will still subscribe. These findings and solutions have been created to showcase my own ability to problem solve and go through the process of the decisions I felt were necessary. 
+                        <br><br>
+                        <sub style="color: grey;">
+                            If you'd like to take a closer look at all assets made for this Case Study, find them <a href="https://drive.google.com/drive/folders/1RzXB2DrYao-EvgNwBs5toWMQSySbgFQk?usp=sharing" target="_blank">here</a>.
+                        </sub>
                     </p>
                 </div>
             </div>
