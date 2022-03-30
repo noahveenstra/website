@@ -312,6 +312,7 @@ html:not([data-scroll='0']) .nav {
 .main-header {
   display: -ms-grid;
   display: grid;
+<<<<<<< HEAD
   margin-bottom: 50px;
   background-size: cover;
   -ms-grid-columns: 15vw 50vw 25vw;
@@ -319,10 +320,20 @@ html:not([data-scroll='0']) .nav {
   -ms-grid-rows: 80px 34px  58px  30vw 50px;
       grid-template-rows: 80px 34px  58px  30vw 50px;
       grid-template-areas: ". . ." ". label ." ". name ." ". header-visual descrip " ". . .";
+=======
+  margin-left: 15vw;
+  margin-bottom: 100px;
+  -ms-grid-columns: 50vw 25vw;
+      grid-template-columns: 50vw 25vw;
+  -ms-grid-rows: 34px  58px  30vw;
+      grid-template-rows: 34px  58px  30vw;
+      grid-template-areas: "label ." "name ." "header-visual descrip ";
+>>>>>>> b39e9e8b936aed22825123ebc8b09019d5bc4ceb
 }
 
 @media (max-width: 1000px) {
   .main-header {
+<<<<<<< HEAD
         grid-template-areas: ". . ." ". label ."  ". name ." ". descrip ." ". header-visual ." ". . .";
     -ms-grid-columns: 15vw 70vw 15vw;
         grid-template-columns: 15vw 70vw 15vw;
@@ -330,6 +341,15 @@ html:not([data-scroll='0']) .nav {
     -ms-grid-rows: 5vw 5vw 6vw 20vw 45vw 0vw;
         grid-template-rows: 5vw 5vw 6vw 20vw 45vw 0vw;
     margin-bottom: 0;
+=======
+        grid-template-areas: ". label ."  ". name ." ". descrip .";
+    -ms-grid-columns: 15vw 70vw 15vw;
+        grid-template-columns: 15vw 70vw 15vw;
+    margin-left: 0;
+    -ms-grid-rows: 5vw 6vw 15vw;
+        grid-template-rows: 5vw 6vw 15vw;
+    margin-top: 5vw;
+>>>>>>> b39e9e8b936aed22825123ebc8b09019d5bc4ceb
   }
 }
 
@@ -468,7 +488,7 @@ html:not([data-scroll='0']) .nav {
 .case-studies {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: ". study1 study1 ." ". study2 study2 .";
+      grid-template-areas: ". study1 study1 ." ". study2 study2 .";
   -ms-grid-columns: 15vw 35vw 35vw 15vw;
       grid-template-columns: 15vw 35vw 35vw 15vw;
   -ms-grid-rows: auto auto;
@@ -484,7 +504,7 @@ html:not([data-scroll='0']) .nav {
 
 @media (max-width: 767px) {
   .case-studies {
-        grid-template-areas: ". study1 ." ". study2 .";
+        grid-template-areas: ". study1 ." ". study2 .";
     -ms-grid-columns: 15% 70% 15%;
         grid-template-columns: 15% 70% 15%;
     margin-left: 0;
@@ -501,7 +521,7 @@ html:not([data-scroll='0']) .nav {
       grid-template-rows: 51px 34px auto 1fr;
   -ms-grid-columns: 35vw 35vw;
       grid-template-columns: 35vw 35vw;
-      grid-template-areas: "name visual" "label visual" "desc visual" "button visual";
+      grid-template-areas: "name visual" "label visual" "desc visual" "button visual";
   row-gap: 10px;
 }
 
@@ -511,7 +531,7 @@ html:not([data-scroll='0']) .nav {
         grid-template-rows: 5vw 4vw auto 7vw auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-        grid-template-areas: "name" "label" "desc" "button" "visual";
+        grid-template-areas: "name" "label" "desc" "button" "visual";
   }
 }
 
@@ -522,7 +542,7 @@ html:not([data-scroll='0']) .nav {
       grid-template-rows: 51px 34px auto 1fr;
   -ms-grid-columns: 35vw 35vw;
       grid-template-columns: 35vw 35vw;
-      grid-template-areas: "visual name" "visual label" "visual desc" "visual button";
+      grid-template-areas: "visual name" "visual label" "visual desc" "visual button";
   row-gap: 10px;
   -webkit-column-gap: 100px;
           column-gap: 100px;
@@ -534,7 +554,7 @@ html:not([data-scroll='0']) .nav {
         grid-template-rows: 5vw 4vw auto 7vw auto;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-        grid-template-areas: "name" "label" "desc" "button" "visual";
+        grid-template-areas: "name" "label" "desc" "button" "visual";
   }
 }
 
@@ -591,6 +611,12 @@ html:not([data-scroll='0']) .nav {
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+
+@media (max-width: 850px) {
+  .case-studies .label {
+    font-size: 3vw;
+  }
 }
 
 @media (max-width: 700px) {
@@ -736,12 +762,12 @@ html:not([data-scroll='0']) .nav {
   row-gap: 35px;
   -ms-grid-rows: 56px 35px 420px 75px;
       grid-template-rows: 56px 35px 420px 75px;
-      grid-template-areas: ". visual header ." ". visual label ." ". visual desc ." ". visual button .";
+      grid-template-areas: ". visual header ." ". visual label ." ". visual desc ." ". visual button .";
 }
 
 @media (max-width: 1000px) {
   .about {
-        grid-template-areas: ". header . " ". label ." ". desc ." ". button ." ". visual . ";
+        grid-template-areas: ". header . " ". label ." ". desc ." ". button ." ". visual . ";
     margin-left: 0;
     margin-top: 10vw;
     -ms-grid-columns: 15% 70% 15%;
