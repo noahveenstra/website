@@ -246,34 +246,48 @@ html:not([data-scroll='0']) {
 
 
 .main-header {
-    margin-top: 80px;
+    // box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2), 0 6px 20px -20px rgba(0, 0, 0, 0.19);
     display: grid;
-    margin-left: 15vw;
-    margin-bottom: 100px;
-    grid-template-columns: 50vw 25vw;
+    margin-bottom: 50px;
+    background-size: cover;
+    grid-template-columns: 15vw 50vw 25vw;
     // row-gap: 10px;
     grid-template-rows: 
+    80px
     34px 
     58px 
-    30vw;
+    30vw
+    50px;
     grid-template-areas: 
-    "label ."
-    "name ."
-    "header-visual descrip ";
+    ". . ."
+    ". label ."
+    ". name ."
+    ". header-visual descrip "
+    ". . .";
 
     @media (max-width: 1000px) {
         grid-template-areas:
+        ". . ."
         ". label ." 
         ". name ."
-        ". descrip .";
+        ". descrip ."
+        ". header-visual ."
+        ". . .";
         grid-template-columns: 15vw 70vw 15vw;
         margin-left: 0;
         grid-template-rows: 
         5vw
+        5vw
         6vw
-        15vw;
-        margin-top: 5vw;
+        20vw
+        45vw
+        0vw;
+        margin-bottom: 0;
 
+    }
+
+    iframe {
+        grid-area: header-visual;
     }
 
     .label {
@@ -306,13 +320,11 @@ html:not([data-scroll='0']) {
 
     .desc {
         grid-area: descrip;
-        // align-self: center;
-        // margin-left: 170px;
 
         @media (max-width: 1000px) {
             margin-left: 0;
             margin-top: 5vw;
-            margin-bottom: 10vw;
+            // margin-bottom: 10vw;
         }
 
         span {
@@ -321,7 +333,7 @@ html:not([data-scroll='0']) {
             font-weight: 500;
 
             @media (max-width: 1000px) {
-                font-size: 5vw;      
+                font-size: 4vw;      
                 // display: none; 
             }
         }
@@ -331,7 +343,7 @@ html:not([data-scroll='0']) {
             font-weight: 700;
 
             @media (max-width: 1000px) {
-                font-size: 5vw;  
+                font-size: 4vw;  
                 font-weight: 500;  
                 // display: none;   
             }
@@ -342,7 +354,7 @@ html:not([data-scroll='0']) {
             font-weight: 400;
 
             @media (max-width: 1000px) {
-                font-size: 5vw;   
+                font-size: 3vw;   
                 // display: none;    
             }
         }
@@ -394,7 +406,7 @@ html:not([data-scroll='0']) {
     row-gap: 10vw;
 
     @media (max-width: 1000px) {
-        margin-top: 30vw;
+        margin-top: 20vw;
     }
 
     @media (max-width: 767px) {

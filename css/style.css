@@ -310,28 +310,33 @@ html:not([data-scroll='0']) .nav {
 }
 
 .main-header {
-  margin-top: 80px;
   display: -ms-grid;
   display: grid;
-  margin-left: 15vw;
-  margin-bottom: 100px;
-  -ms-grid-columns: 50vw 25vw;
-      grid-template-columns: 50vw 25vw;
-  -ms-grid-rows: 34px  58px  30vw;
-      grid-template-rows: 34px  58px  30vw;
-      grid-template-areas: "label ." "name ." "header-visual descrip ";
+  margin-bottom: 50px;
+  background-size: cover;
+  -ms-grid-columns: 15vw 50vw 25vw;
+      grid-template-columns: 15vw 50vw 25vw;
+  -ms-grid-rows: 80px 34px  58px  30vw 50px;
+      grid-template-rows: 80px 34px  58px  30vw 50px;
+      grid-template-areas: ". . ." ". label ." ". name ." ". header-visual descrip " ". . .";
 }
 
 @media (max-width: 1000px) {
   .main-header {
-        grid-template-areas: ". label ."  ". name ." ". descrip .";
+        grid-template-areas: ". . ." ". label ."  ". name ." ". descrip ." ". header-visual ." ". . .";
     -ms-grid-columns: 15vw 70vw 15vw;
         grid-template-columns: 15vw 70vw 15vw;
     margin-left: 0;
-    -ms-grid-rows: 5vw 6vw 15vw;
-        grid-template-rows: 5vw 6vw 15vw;
-    margin-top: 5vw;
+    -ms-grid-rows: 5vw 5vw 6vw 20vw 45vw 0vw;
+        grid-template-rows: 5vw 5vw 6vw 20vw 45vw 0vw;
+    margin-bottom: 0;
   }
+}
+
+.main-header iframe {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: header-visual;
 }
 
 .main-header .label {
@@ -369,8 +374,8 @@ html:not([data-scroll='0']) .nav {
 }
 
 .main-header .desc {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
   grid-area: descrip;
 }
 
@@ -378,7 +383,6 @@ html:not([data-scroll='0']) .nav {
   .main-header .desc {
     margin-left: 0;
     margin-top: 5vw;
-    margin-bottom: 10vw;
   }
 }
 
@@ -390,7 +394,7 @@ html:not([data-scroll='0']) .nav {
 
 @media (max-width: 1000px) {
   .main-header .desc span {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 
@@ -401,7 +405,7 @@ html:not([data-scroll='0']) .nav {
 
 @media (max-width: 1000px) {
   .main-header .desc .header {
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 500;
   }
 }
@@ -413,13 +417,13 @@ html:not([data-scroll='0']) .nav {
 
 @media (max-width: 1000px) {
   .main-header .desc p {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 }
 
 .main-header .visual {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: header-visual;
   width: 45vw;
   height: 25vw;
@@ -474,7 +478,7 @@ html:not([data-scroll='0']) .nav {
 
 @media (max-width: 1000px) {
   .case-studies {
-    margin-top: 30vw;
+    margin-top: 20vw;
   }
 }
 
