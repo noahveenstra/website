@@ -405,27 +405,12 @@
             ". data ."
             ". par1 .";
             grid-template-columns: 10% 80% 10%;
-            // h1 {
-            //     grid-area: header;
-            //     font-weight: 700;
-            //     font-size: 44px;
-            // }
-            // p {
-            //     margin-top: 4vw;
-            //     grid-area: par;
-            //     font-size: 25px;
-            // }
-            // p2 {
-            //     margin-top: 4vw;
-            //     grid-area: par1;
-            //     font-size: 25px;
-            // }
             svg {
                 grid-area: data;
                 margin-top: 4vw;
-                width: 50%;
+                width: 100%;
                 height: auto;
-                margin-left: 25%;
+                // margin-left: 15%;
 
                 @media (max-width: 767px) {
                     width: 100%;
