@@ -253,29 +253,29 @@ html:not([data-scroll='0']) {
     // box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2), 0 6px 20px -20px rgba(0, 0, 0, 0.19);
     display: grid;
     margin-bottom: 50px;
+    row-gap: 10px;
     background-size: cover;
-    grid-template-columns: 15vw 50vw 25vw;
+    grid-template-columns: 15vw 70vw 15vw;
     // row-gap: 10px;
     grid-template-rows: 
     80px
+    58px
     34px 
-    58px 
-    30vw
+    auto
     50px;
     grid-template-areas: 
     ". . ."
-    ". label ."
     ". name ."
-    ". header-visual descrip "
+    ". label ."
+    ". descrip . "
     ". . .";
 
     @media (max-width: 1000px) {
         grid-template-areas:
         ". . ."
-        ". label ." 
         ". name ."
+        ". label ." 
         ". descrip ."
-        ". header-visual ."
         ". . .";
         grid-template-columns: 15vw 70vw 15vw;
         margin-left: 0;
@@ -284,7 +284,7 @@ html:not([data-scroll='0']) {
         5vw
         6vw
         20vw
-        45vw
+        auto
         0vw;
         margin-bottom: 0;
 
@@ -296,14 +296,19 @@ html:not([data-scroll='0']) {
 
     .label {
         grid-area: label;
-        font-size: 35px;
-        font-weight: 300;
-        color: #4215E6;
+        font-size: 25px;
+        align-self: center;
+        // font-weight: 300;
+        color: black;
+
+        span {
+            color: #E6802C;
+        }
 
         
     @media (max-width: 1000px) {   
-        font-size: 3.25vw; 
-        font-weight: 500;   
+        font-size: 2.5vw; 
+        // font-weight: 500;   
     }
 
     }
@@ -314,7 +319,9 @@ html:not([data-scroll='0']) {
         font-weight: 500;
 
         span {
-            font-weight: 700;
+            // font-weight: 700;
+            color: #4215E6;
+            font-weight: 500;
         }
 
         @media (max-width: 1000px) {
@@ -327,7 +334,7 @@ html:not([data-scroll='0']) {
 
         @media (max-width: 1000px) {
             margin-left: 0;
-            margin-top: 5vw;
+            // margin-top: 5vw;
             // margin-bottom: 10vw;
         }
 
@@ -341,24 +348,13 @@ html:not([data-scroll='0']) {
                 // display: none; 
             }
         }
-        
-        .header {
-            font-size: 32px;
-            font-weight: 700;
-
-            @media (max-width: 1000px) {
-                font-size: 4vw;  
-                font-weight: 500;  
-                // display: none;   
-            }
-        }
 
         p {
-            font-size: 20px;
-            font-weight: 400;
+            font-size: 35px;
+            // font-weight: 400;
 
             @media (max-width: 1000px) {
-                font-size: 3vw;   
+                font-size: 3.5vw;   
                 // display: none;    
             }
         }
