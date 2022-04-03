@@ -29,6 +29,53 @@
                 font-size: 6vw;
             }
         }
+
+        #buttons {
+            // grid-area: select;
+            // justify-self: center;
+            // align-self: center;
+            // text-align: center;
+            color: #E6802C;
+            font-size: 25px;
+
+            span {
+                color: black;
+                padding: 1em;
+            }
+            .btn {
+                background: none;
+                padding: 1em;
+                border: none;
+                font-size: 25px;
+                display: inline-block;
+                position: relative;
+                text-decoration: none;
+                color: black;
+
+            }
+
+            .btn:after {
+                content:'';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #4215E6;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+
+            .btn:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+
+
+
+
         .filters {
             font-size: 25px;
             color: #E6802C;
@@ -807,4 +854,8 @@
             }
         }
     }
+}
+
+.show {
+    display:block;
 }

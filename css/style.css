@@ -486,6 +486,23 @@ html:not([data-scroll='0']) .nav {
   }
 }
 
+.case-studies .coming-soon {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .case-studies .coming-soon {
+    font-size: 4vw;
+  }
+}
+
 .case-studies .cell1 {
   display: -ms-grid;
   display: grid;
@@ -732,8 +749,8 @@ html:not([data-scroll='0']) .nav {
   -ms-grid-columns: 15vw 35vw 35vw 15vw;
       grid-template-columns: 15vw 35vw 35vw 15vw;
   row-gap: 35px;
-  -ms-grid-rows: 56px 35px 420px 75px;
-      grid-template-rows: 56px 35px 420px 75px;
+  -ms-grid-rows: 56px 35px auto 75px;
+      grid-template-rows: 56px 35px auto 75px;
       grid-template-areas: ". visual header ." ". visual label ." ". visual desc ." ". visual button .";
 }
 

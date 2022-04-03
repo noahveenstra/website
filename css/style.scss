@@ -418,6 +418,18 @@ html:not([data-scroll='0']) {
         row-gap: 10vw;
     }
 
+    .coming-soon {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        font-size: 30px;
+        font-weight: 700;
+
+        @media (max-width: 767px) {
+            font-size: 4vw;
+        }
+    }
+
     .cell1 {
         display: grid;
         grid-template-rows: 51px 34px auto 1fr;
@@ -624,7 +636,7 @@ html:not([data-scroll='0']) {
     grid-template-columns: 15vw 35vw 35vw 15vw;
     // column-gap: 100px;
     row-gap: 35px;
-    grid-template-rows: 56px 35px 420px 75px;
+    grid-template-rows: 56px 35px auto 75px;
     grid-template-areas: 
     ". visual header ."
     ". visual label ."

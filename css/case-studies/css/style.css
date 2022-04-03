@@ -47,6 +47,52 @@
   }
 }
 
+.container .header #buttons {
+  color: #E6802C;
+  font-size: 25px;
+}
+
+.container .header #buttons span {
+  color: black;
+  padding: 1em;
+}
+
+.container .header #buttons .btn {
+  background: none;
+  padding: 1em;
+  border: none;
+  font-size: 25px;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.container .header #buttons .btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4215E6;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.container .header #buttons .btn:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
 .container .header .filters {
   font-size: 25px;
   color: #E6802C;
@@ -1014,5 +1060,9 @@
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
+}
+
+.show {
+  display: block;
 }
 /*# sourceMappingURL=style.css.map */
