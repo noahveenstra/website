@@ -1,223 +1,3 @@
-.container {
-    display: grid;
-    height: 100vh;
-    width: 100%;
-    grid-template-columns: 15% 1fr 15%;
-    grid-template-rows: 10vw 60vw 20vw;
-    grid-template-areas: ". header  ." ".  cells ." "footer footer footer";
-
-    @media (max-width:767px) {
-        grid-template-rows: 10vw 160vw 20vw;
-        grid-template-columns: 5% 90% 5%;
-    }
-
-    .header {
-        grid-area: header;
-        display: grid;
-        grid-template-areas: "title" "filters";
-        grid-template-rows: 3vw 2vw;
-        row-gap: 2vw;
-
-        @media (max-width:1000px) {
-            row-gap: 5vw;
-        }
-        .title {
-            font-weight: 700;
-            font-size: 45px;
-
-            @media (max-width:767px) {
-                font-size: 6vw;
-            }
-        }
-
-        #buttons {
-            // grid-area: select;
-            // justify-self: center;
-            // align-self: center;
-            // text-align: center;
-            color: #E6802C;
-            font-size: 25px;
-
-            span {
-                color: black;
-                padding: 1em;
-            }
-            .btn {
-                background: none;
-                padding: 1em;
-                border: none;
-                font-size: 25px;
-                display: inline-block;
-                position: relative;
-                text-decoration: none;
-                color: black;
-
-            }
-
-            .btn:after {
-                content:'';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #4215E6;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            }
-
-            .btn:hover:after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
-        }
-
-
-
-
-        .filters {
-            font-size: 25px;
-            color: #E6802C;
-
-            @media (max-width:767px) {
-                font-size: 3vw;
-            }
-
-            button {
-                border: none;
-                color: black;
-                background-color: transparent;
-                font-size: 25px;
-
-                @media (max-width:767px) {
-                    font-size: 3vw;
-                }
-            }
-            button:hover {
-                cursor: pointer;
-            }
-        }
-    }
-    .cells {
-        margin-top: 5vw;
-        grid-area: cells;
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 25vw 25vw;
-        row-gap: 5vw;
-        grid-template-areas: "cell1 cell2"
-        "cell3 cell4";
-        
-        @media (max-width:767px) {
-            grid-template-areas: "cell1"
-            "cell2"
-            "cell3"
-            "cell4";
-            grid-template-columns: 100%;
-            grid-template-rows: 50vw 50vw 50vw;
-            row-gap: 15vw;
-        }
-        .one {
-            grid-area: cell1;
-        }
-        .two {
-            grid-area: cell2;
-        }
-        .three {
-            grid-area: cell3;
-        }
-        .four {
-            grid-area: cell4;
-        }
-
-        a {
-            justify-self: center;
-            text-decoration: none;
-            color: black;
-            
-            .label {
-               @media (max-width:1000px) {
-                font-size: 3vw;
-            } 
-               @media (max-width:767px) {
-                font-size: 5vw;
-            } 
-            }
-            
-        }
-        a:hover {
-            cursor: pointer;
-        }
-        .label {
-            justify-self: center;
-            margin-top: 3vw;
-            font-weight: 700;
-            font-size: 30px;
-            color: #E6802C;
-        }
-        
-    }
-
-    footer {
-        grid-area: footer;
-    }
-}
-
-.visual {
-    justify-self: center;
-    grid-area: visual;
-    width: 90%;
-    height: 20vw;
-    left: 0;
-    align-self: center;
-    border-radius: 27px;
-    font-weight: 500px;
-    font-size: 26px;
-    text-align: center;
-    transition: box-shadow ease-in-out .5s;
-    box-shadow: none;
-
-    // img {
-    //     width: 100%;
-    //     height: 20vw;
-    //     border-radius: 27px;
-    //     align-self: center;
-
-    //     @media (max-width: 800px) {
-    //         width: 100%;
-    //         height: 40vw;
-    //         // margin-top: 10vw;
-    //     }
-    // }
-
-    @media (max-width: 1000px) {
-        margin-top: 5vw;
-    }
-
-    @media (max-width: 767px) {
-        height: 45vw;
-    }
-
-    p {
-        margin-top: 25%;
-    }
-}
-
-.visual:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    cursor:pointer;
-}
-
-// footer {
-//     margin-top: 600px;
-//     @media (max-width:800px) {
-//         margin-top: 500px;
-//     }
-    
-// }
-
-
 .case-study-main-header {
     display: grid;
     grid-template-areas: "sidebar hero ."
@@ -571,7 +351,7 @@
                 grid-template-columns: auto;
                 grid-template-areas: "im1 im2";
                 @media (max-width: 767px) {
-                    grid-template-areas: "im1""im2";
+                    grid-template-areas: "im1" "im2";
                 }
 
                 .data2 {
@@ -624,7 +404,7 @@
                 grid-template-columns: auto;
                 grid-template-areas: "im1 im2";
                 @media (max-width: 767px) {
-                    grid-template-areas: "im1""im2";
+                    grid-template-areas: "im1" "im2";
                 }
             
 
@@ -739,7 +519,7 @@
                 grid-template-columns: auto;
                 grid-template-areas: "im1 im2";
                 @media (max-width: 767px) {
-                    grid-template-areas: "im1""im2";
+                    grid-template-areas: "im1" "im2";
                 }
 
             }
@@ -858,4 +638,75 @@
 
 .show {
     display:block;
+}
+
+
+.case-studies-container {
+    display: grid;
+    grid-template-columns: 15vw 35vw 35vw 15vw;
+    row-gap: 2vw;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    ". header . ."
+    ". filters . ." 
+    ". study study ."
+    ". study study .";
+
+    h1 {
+        font-weight: 700;
+        font-size: 40px;
+        grid-area: header;
+    }
+
+    #buttons {
+        grid-area: filters;
+        justify-self: left;
+        align-self: center;
+        text-align: left;
+        font-size: 25px;
+        color: #E6802C;
+    }
+
+    .btn {
+        border: none;
+        background: none;
+        padding: 1rem;
+        font-size: 25px;
+    }
+
+    .objects {
+        grid-area: study;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        grid-template-areas: "apple-music website"
+        ". .";
+    
+        .apple-music {
+            grid-area: apple-music;
+            .visual {
+                background-image: url("/assets/apple-music-visual.png");
+            }
+        }
+        
+        .website {
+            grid-area: website;
+        }
+
+        .visual {
+            border-radius: 27px;
+            // width: 50%;
+            height: 23vw;
+            transition: box-shadow ease-in-out .5s;
+        }
+
+        .visual:hover {
+            
+        }
+    }
+
+    .show {
+        display: none;
+    }
+
 }

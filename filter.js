@@ -1,12 +1,10 @@
-filterObjects("all");
-
 function filterObjects (c) {
     var x, i;
     x = document.getElementsByClassName("study");
     if (c == "all") c = "";
     for (i = 0; i < x.length; i++) {
-        removeClass(x[i], "cells");
-        if(x[i].className.indexOf(c) > -1) addClass(x[i], "cells")
+        addClass(x[i], "show");
+        if(x[i].className.indexOf(c) > -1) removeClass(x[i], "show")
     }
 }
 
