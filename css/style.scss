@@ -42,9 +42,9 @@ body {
             color: black;margin-left: 30px;
             font-weight: 700;font-size: 50px;
 
-            span {
-                color: #4215E6;
-            }
+                span {
+                    color: #4215E6;
+                }
             }
 
         a:after {
@@ -252,7 +252,7 @@ html:not([data-scroll='0']) {
 .main-header {
     // box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2), 0 6px 20px -20px rgba(0, 0, 0, 0.19);
     display: grid;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     row-gap: 10px;
     background-size: cover;
     grid-template-columns: 15vw 70vw 15vw;
@@ -618,6 +618,9 @@ html:not([data-scroll='0']) {
                 width: 100%;
                 height: 40vw;
                 margin-top: 5vw;
+                background-position: center;
+                background-size: contain;
+                
             }
 
             p {
@@ -631,7 +634,7 @@ html:not([data-scroll='0']) {
     }
 
 .about {
-    margin-top: 300px;
+    // margin-top: 300px;
     display: grid;
     grid-template-columns: 15vw 35vw 35vw 15vw;
     // column-gap: 100px;
@@ -719,7 +722,7 @@ html:not([data-scroll='0']) {
     .visual {
         height: 45vw;
         width: 30vw;
-        border: white 1px solid;
+        // border: white 1px solid;
         grid-area: visual;
         align-self: center;
         justify-self: center;
@@ -730,6 +733,9 @@ html:not([data-scroll='0']) {
         font-size: 26px;
         box-shadow: none;
         background-color: white;
+        background: url('/assets/about.jpeg') no-repeat;
+        background-position: center center;
+        background-size: cover;
 
         @media (max-width: 1000px){
             width: 70vw;

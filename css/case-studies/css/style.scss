@@ -645,17 +645,53 @@
     display: grid;
     grid-template-columns: 15vw 35vw 35vw 15vw;
     row-gap: 2vw;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-areas: 
     ". header . ."
     ". filters . ." 
     ". study study ."
-    ". study study .";
+    ". study study ."
+    ". more more .";
+
+    @media (max-width: 767px) {
+        grid-template-areas: 
+        ". header header ."
+        ". filters filters ."
+        ". study study ."
+        ". study study ."
+        ". more more .";
+    }
 
     h1 {
         font-weight: 700;
         font-size: 40px;
         grid-area: header;
+
+        @media (max-width: 767px) {
+            font-size: 5vw;
+        }
+
+        a {
+            text-decoration: none;
+            color: #E6802C;
+        }
+    }
+
+    .coming-soon {
+        grid-area: more;
+        margin-top: 40px;
+        align-self: center;
+        justify-self: center;
+
+        h1 {
+            font-weight: 700;
+            align-self: center;
+            justify-self: center;
+
+            @media (max-width: 767px) {
+                font-size: 4vw;
+            }
+        }
     }
 
     #buttons {
@@ -665,6 +701,10 @@
         text-align: left;
         font-size: 25px;
         color: #E6802C;
+
+        @media (max-width: 767px) {
+            font-size: 3.5vw;
+        }
     }
 
     .btn {
@@ -672,6 +712,10 @@
         background: none;
         padding: 1rem;
         font-size: 25px;
+
+        @media (max-width: 767px) {
+            font-size: 3.5vw;
+        }
     }
 
     .objects {
@@ -681,11 +725,22 @@
         grid-template-rows: auto auto;
         grid-template-areas: "apple-music website"
         ". .";
+
+        @media (max-width: 767px) {
+            grid-template-areas: "apple-music"
+            "website";
+            grid-template-columns: 100%;
+
+        }
     
         .apple-music {
             grid-area: apple-music;
             .visual {
                 background-image: url("/assets/apple-music-visual.png");
+                
+                @media (max-width: 767px) {
+                    height: 45vw;
+                }
             }
         }
         
@@ -695,14 +750,46 @@
 
         .visual {
             border-radius: 27px;
-            // width: 50%;
+            // width: 50%; 
             height: 23vw;
             transition: box-shadow ease-in-out .5s;
         }
 
         .visual:hover {
-            
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
+
+        h1 {
+            
+            a {
+                display: inline-block;
+                position: relative;
+                padding: 16px;
+                text-decoration: none;
+                color: #E6802C;
+                font-size: 50px;
+                font-weight: 700;
+            }
+            a:after {
+                content:'';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #4215E6;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+    
+            a:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+        }
+
+        
     }
 
     .show {
