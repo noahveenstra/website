@@ -41,59 +41,67 @@
         </svg>
     </button>
 
-
-    <div class="nav">
+    <!-- <nav> -->
+    <section class="nav">
         <div class="logo"><a href="/index.html">nv<span>.</span></a></div>
         <div class="links">
             <div class="work"><a href="/about.html">about.</a></div>
             <div class="studies"><a href="/case-studies.html">case studies.</a></div>
             <div class="contact"><a href="/contact.html">contact.</a></div>
         </div>
-    </div>
-            <div class="main-header">
-                <div class="label">ux architect <span>/</span> ui designer</div>
-                <div class="name">hey, I'm <span>Noah</span>.</div>
-                <div class="desc">
-                        Currently, I'm studying how to craft user experiences at Michigan State University, pursuing a B. S. in User Experience Architecture with a focus on Web Development and UI Design. I'm passionate about bringing positive user experiences to all users and being able to flex my creativity.
-                </div>
-            </div>
-            <div class="case-studies">
-                <div class="cell1" style="grid-area: study1;">
-                    <div class="name" id="case">Apple Music</div>
-                    <div class="label">
-                        <a href="/case-studies.html">Case Studies</a>
-                        <span>/</span> Mobile Apps
-                    </div>
-                    <div class="desc">I've always wanted to use Apple Music as my main music player, but there are just too many shortcomings to justify this commitment. Through this case study, I explore how Apple can remedy its issues and bring changes to its service that will benefit all users.
-                    </div>
-                    <button class="btns" onclick="window.location.href = '/case-studies/apple-music.html';">Read More...</button>
-                        <div class="visual" id="apple-music">
-                        </div>
-                        <!-- <div class="visual" id="apple-music" style="background: url('/assets/new-apple-music-hero.png') no-repeat; background-size: contain; height: 40vw; width: 30vw; background-position: center;">
-                        </div> -->
-                </div>
+    </section>
+    <!-- </nav> -->
+    <section class="main-header">
+        <header class="name">hey, I'm <span>Noah</span>.</header>
+        <summary class="label">ux architect <span>/</span> ui designer</summary>
+        <main class="desc">
+            Currently, I'm studying how to craft user experiences at Michigan State University, pursuing a B. S. in User
+            Experience Architecture with a focus on Web Development and UI Design. I'm passionate about bringing
+            positive user experiences to all users and being able to flex my creativity.
+        </main>
+    </section>
+    <section class="case-studies">
+        <article class="cell1" style="grid-area: study1;">
+            <header class="name" id="case">Apple Music</header>
+            <summary class="label">
+                <a href="/case-studies.html">Case Studies</a>
+                <span>/</span> Mobile Apps
+            </summary>
+            <p class="desc">I've always wanted to use Apple Music as my main music player, but there are just too many
+                shortcomings to justify this commitment. Through this case study, I explore how Apple can remedy its
+                issues and bring changes to its service that will benefit all users.
+            </p>
+            <button class="btns" onclick="window.location.href = '/case-studies/apple-music.html';">Read
+                More...</button>
+            <figure class="visual" id="apple-music">
+            </figure>
+        </article>
+    </section>
+    <section class="about">
+        <header class="name">Who am I?</header>
+        <summary class="label" id="about-label">UX Architect <span style="color:#E6802C">/</span> UI Designer <span style="color: #E6802C;">/</span> Web Developer <span style="color:#E6802C">/</span> Techie <span style="color:#E6802C">/</span> Sports Enthusiast
+        </summary>
+        <p class="desc">
+            Growing up, I kind of knew I would end up somewhere around technology for the rest of my life. My dad worked
+            as a software developer therefore I was exposed to new technology very early. I still remember the first
+            time he showed me the original iPhone. I was in awe of its new technology but most of all the screen. Even
+            now, a screen is what connects us to everything and everyone we love and how we interact with them is
+            immensely important. This is why I'm interested in UX Architecture. Creating experiences that will be useful
+            and impact others positively is my goal.
+        </p>
+        <button class="btns" onclick="window.location.href = '/404.html';">Learn More...</button>
+        <figure class="visual" id="about-visual"></figure>
+        <figure class="visual-background"></figure>
+    </section>
+    <footer>
+        <p>UX crafted by hand © Noah Veenstra 2022. </p>
+        <div class="social">
+            <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img src="/assets/linkedin-logo.png"
+                    alt=""></a>
+            <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png" alt=""></a>
         </div>
-        <div class="about">
-            <div class="visual" id="about-visual"></div>
-            <div class="visual-background"></div>
-            <div class="name">Who am I?</div>
-            <div class="label" id="about-label">UX Architect <span style="color:#E6802C">/</span> UI Designer <span style="color: #E6802C;">/</span> Web Developer <span
-                    style="color:#E6802C">/</span> Techie <span style="color:#E6802C">/</span> Sports Enthusiast
-            </div>
-            <div class="desc">
-                Growing up, I kind of knew I would end up somewhere around technology for the rest of my life. My dad worked as a software developer therefore I was exposed to new technology very early. I still remember the first time he showed me the original iPhone. I was in awe of its new technology but most of all the screen. Even now, a screen is what connects us to everything and everyone we love and how we interact with them is immensely important. This is why I'm interested in UX Architecture. Creating experiences that will be useful and impact others positively is my goal.
-            </div>
-            <button class="btns" onclick="window.location.href = '/404.html';">Learn More...</button>
-        </div>
-        <footer>
-            <p>UX crafted by hand © Noah Veenstra 2022. </p>
-            <div class="social">
-                <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png" alt=""></a>
-                <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img src="/assets/linkedin-logo.png"
-                        alt=""></a>
-                <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png" alt=""></a>
-            </div>
-        </footer>
+    </footer>
 
 </body>
 
