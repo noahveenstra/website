@@ -1,3 +1,5 @@
+// General Formatting
+
 * {
     margin: 0;
     font-family: futura-pt,sans-serif;
@@ -10,11 +12,16 @@
     color: white;
 }
 
-body {
-    overflow-x: hidden;
+html:not([data-scroll='0']) {
+    .nav {
+        // top: 20px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
+    }
 }
 
-//breaks at 1585px
+// Sections
+
 .nav {
     display: grid;
     width: 100%;
@@ -35,743 +42,65 @@ body {
 
     .logo {
         grid-area: logo;
+        margin-left: 30px;
+        font-weight: 700;
+        font-size: 50px;
+
         a {
-            display: inline-block;
-            position: relative;
-            text-decoration: none;
-            color: black;margin-left: 30px;
-            font-weight: 700;font-size: 50px;
-
-                span {
-                    color: #4215E6;
-                }
-            }
-
-        a:after {
-            content:'';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #4215E6;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-
-        a:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    }
-}
-
-.nav-fullscreen {
-    position: absolute;
-    display: flex;
-    z-index: 10;
-    line-height: 80px;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: white; 
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s, visibility 0.4s;
-    &_items {
-        a {
-            display: inline-block;
-            position: relative;
-            padding: 16px;
-            text-decoration: none;
-            color: black;
+            font-weight: 700;
             font-size: 50px;
-            font-weight: 700;
-        }
-        a:after {
-            content:'';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #4215E6;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
 
-        a:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    }
-    &--open {
-        opacity: 1;
-        visibility: visible;
-        position:fixed;
-    }
-}
-
-.menu {
-    display: none;
-    @media (max-width: 767px) {
-        grid-area: burger;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        position: fixed;
-        display: flex;
-        z-index: 10;
-        padding: 0;
-        top: 25px;
-        right: 45px;
-        width: 37px;
-        height: 37px;
-    
-    }
-}
-      .line {
-        fill: none;
-        stroke: black;
-        stroke-width: 6;
-        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .line1 {
-        stroke-dasharray: 60 207;
-        stroke-width: 6;
-        stroke: black;
-      }
-      .line2 {
-        stroke-dasharray: 60 207;
-        stroke-width: 6;
-        stroke: black;
-      }
-      .line3 {
-        stroke-dasharray: 60 207;
-        stroke-width: 6;
-        stroke: black;
-      }
-      .opened .line1 {
-        stroke-dasharray: 90 207;
-        stroke-dashoffset: -134;
-        stroke-width: 6;
-        stroke:black;
-        z-index: 5;
-      }
-      .opened .line2 {
-        stroke-dasharray: 1 60;
-        stroke-dashoffset: -30;
-        stroke-width: 6;
-        stroke:black;
-        z-index: 5;
-      }
-      .opened .line3 {
-        stroke-dasharray: 90 207;
-        stroke-dashoffset: -134;
-        stroke-width: 6;
-        stroke:black;
-        z-index: 5;
-      }    
-
-    .links {
-        grid-area: links;
-        font-size: 35px;
-        width:100%;
-        display: grid;
-        grid-template-columns: auto 250px 200px;
-        // margin-left: 30%;
-        grid-template-rows: auto;
-
-        grid-template-areas: "work case-studies contact";
-        // align-self: end;
-
-        @media (max-width: 767px) {
-                display: none;
-                // font-size: 3vw;
-                // grid-template-columns: 10vw 25vw 10vw;
+            span {
+                color: #4215E6;
             }
-        .work {
-            grid-area: work;
-            text-align: right;
         }
 
-        .studies {
-            grid-area: case-studies;
-            text-align: center;
-
-        }
-
-        .contact {
-            grid-area: contact;
-            // text-align: left;
-        }
-
-        a {
-            display: inline-block;
-            position: relative;
-            padding: 16px;
-            text-decoration: none;
-            color: black;
-            font-weight: 700;
-            }
-
-        a:after {
-            content:'';
-            position: absolute;
-            width: 100%;
-            transform: scaleX(0);
-            height: 2px;
-            bottom: 0;
-            left: 0;
-            background-color: #4215E6;
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-        }
-
-        a:hover:after {
-            transform: scaleX(1);
-            transform-origin: bottom left;
-        }
-    }
-
-
-html:not([data-scroll='0']) {
-    .nav {
-        // top: 20px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 .5em rgba(0, 0, 0, .5);
     }
 }
-
 
 .main-header {
-    // box-shadow: 0 4px 8px -8px rgba(0, 0, 0, 0.2), 0 6px 20px -20px rgba(0, 0, 0, 0.19);
     display: grid;
-    // margin-bottom: 50px;
+    margin-top: 7vw;
     row-gap: 10px;
-    background-size: cover;
-    grid-template-columns: 15vw 70vw 15vw;
-    // row-gap: 10px;
-    grid-template-rows: 
-    80px
-    58px
-    34px 
-    auto
-    50px;
-    grid-template-areas: 
-    ". . ."
-    ". name ."
-    ". label ."
-    ". descrip . "
-    ". . .";
-
-    @media (max-width: 1000px) {
-        grid-template-areas:
-        ". . ."
-        ". name ."
-        ". label ." 
-        ". descrip ."
-        ". . .";
-        grid-template-columns: 15vw 70vw 15vw;
-        margin-left: 0;
-        grid-template-rows: 
-        5vw
-        5vw
-        6vw
-        20vw
-        auto
-        0vw;
-        margin-bottom: 0;
-
-    }
-
-    iframe {
-        grid-area: header-visual;
-    }
-
-    .label {
-        grid-area: label;
-        font-size: 25px;
-        align-self: center;
-        // font-weight: 300;
-        color: black;
-
-        span {
-            color: #E6802C;
-        }
-
-        
-    @media (max-width: 1000px) {   
-        font-size: 2.5vw; 
-        // font-weight: 500;   
-    }
-
-    }
-
-    .name {
-        grid-area: name;
-        font-size: 56px;
-        font-weight: 500;
-
-        span {
-            // font-weight: 700;
-            color: #4215E6;
-            font-weight: 500;
-        }
-
-        @media (max-width: 1000px) {
-            font-size: 6vw;       
-        }
-    }
-
-    .desc {
-        grid-area: descrip;
-
-        @media (max-width: 1000px) {
-            margin-left: 0;
-            // margin-top: 5vw;
-            // margin-bottom: 10vw;
-        }
-
-        span {
-            color: #E6802C;
-            font-size: 32px;
-            font-weight: 500;
-
-            @media (max-width: 1000px) {
-                font-size: 4vw;      
-                // display: none; 
-            }
-        }
-
-        p {
-            font-size: 35px;
-            // font-weight: 400;
-
-            @media (max-width: 1000px) {
-                font-size: 3.5vw;   
-                // display: none;    
-            }
-        }
-    }
-
-    .visual {
-        grid-area: header-visual;
-        width: 45vw;
-        height: 25vw;       
-        font-size: 2vw;
-        margin-top: 10px;
-        // border: 1px solid grey;
-        border-radius: 27px;
-        font-weight: 500;
-        transition: box-shadow ease-in-out .5s;
-        box-shadow: none;
-
-        @media (max-width: 1000px) {
-            width: 35vw;
-            height: auto;       
-            font-size: 4vw;
-            display: none;
-        }
-        
-
-        p {
-            text-align: center;
-            text-justify: center;
-            margin-top: 25%;
-
-            @media (max-width: 1000px) {
-                margin-top: 45%;       
-            }
-        }
-    }
-
-    .visual:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: ". name ." ". label ." ". desc .";
+    padding-bottom: 5vw;
 }
 
 .case-studies {
-    display:grid;
-    grid-template-areas: 
-    ". study1 study1 ."
-    ". study2 study2 .";
-    grid-template-columns: 15vw 35vw 35vw 15vw;
-    grid-template-rows: auto auto;
-    row-gap: 10vw;
-
-    @media (max-width: 1000px) {
-        margin-top: 20vw;
-    }
-
-    @media (max-width: 767px) {
-        grid-template-areas: ". study1 ."
-        ". study2 .";    
-        grid-template-columns: 15% 70% 15%;  
-        margin-left: 0; 
-        grid-template-rows: auto auto;
-        row-gap: 10vw;
-    }
-
-    .coming-soon {
-        display: grid;
-        justify-self: center;
-        align-self: center;
-        font-size: 30px;
-        font-weight: 700;
-
-        @media (max-width: 767px) {
-            font-size: 4vw;
-        }
-    }
+    display: grid;
+    grid-template-areas: ". study1 ." ". study2 .";
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
+    row-gap: 10vw; 
 
     .cell1 {
         display: grid;
-        grid-template-rows: 51px 34px auto 1fr;
-        grid-template-columns: 35vw 35vw;
-        grid-template-areas:
-        "name visual"
-        "label visual"
-        "desc visual"
-        "button visual";
+        grid-template-rows: 51px 34px auto auto;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "name visual" "label visual" "desc visual" "button visual";
         row-gap: 10px;
 
-        @media (max-width: 767px) {
-            grid-template-rows: 5vw 4vw auto 7vw auto;  
+        @media (max-width: 1000px) {
             grid-template-columns: 100%;
-            // row-gap: 5vw;
-            grid-template-areas: "name"
-            "label"
-            "desc"
-            "button"
-            "visual";     
+            grid-template-rows: 5vw 4vw auto 7vw 70vw;
+            grid-template-areas: "name" "label" "desc" "button" "visual";
         }
     }
-
-    .cell2 {
-        display: grid;
-        grid-template-rows: 51px 34px auto 1fr;
-        grid-template-columns: 35vw 35vw;
-        grid-template-areas:
-        "visual name"
-        "visual label"
-        "visual desc"
-        "visual button";
-        row-gap: 10px;
-        column-gap: 100px;
-
-        @media (max-width: 767px) {
-            grid-template-rows: 5vw 4vw auto 7vw auto;  
-            grid-template-columns: 100%;
-            grid-template-areas: "name"
-            "label"
-            "desc"
-            "button"
-            "visual";     
-        }
-    }
-
-        .header {
-            grid-area: name;
-            font-size: 40px;
-            font-weight: 700;
-            color: #E6802C;
-
-            @media (max-width: 700px) {
-                font-size: 5vw;     
-            }
-        }
-
-        .label {
-            grid-area: label;
-            font-size: 26px;
-            font-weight: 400;
-
-            a {
-                display: inline-block;
-                position: relative;
-                text-decoration: none;
-                color: black;
-                // margin-left: 30px;
-                // font-weight: 700;font-size: 50px;
-                }
-    
-            a:after {
-                content:'';
-                position: absolute;
-                width: 100%;
-                transform: scaleX(0);
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #4215E6;
-                transform-origin: bottom right;
-                transition: transform 0.25s ease-out;
-            }
-    
-            a:hover:after {
-                transform: scaleX(1);
-                transform-origin: bottom left;
-            }
-
-            @media (max-width: 850px) {
-                font-size: 3vw;
-            }
-
-            @media (max-width: 700px) {
-                font-size: 4vw;       
-            }
-        }
-
-        .desc {
-            grid-area: desc;
-            font-size: 22px;
-            font-weight: 300;
-            color: #414141;
-            margin-right: 10vw;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-            @media (max-width: 1000px) {
-                // font-size: 3.5vw;    
-                font-size: 2.7vw;
-                padding-top: 0;
-                margin-right: 5vw;
-            }
-
-            @media (max-width: 700px) {
-                // font-size: 3.5vw;    
-                font-size: 3.5vw;
-                padding-top: 0;
-                margin-right: 0;
-            }
-
-            @media (max-width: 600px) {
-                font-size: 4vw;
-                padding-top: 0; 
-                margin-right: 0;      
-            }
-            
-        }
-
-        button {
-            grid-area: button;
-            font-size: 23px;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            font-weight: 400;
-            padding: 10px;
-            color: black;
-            background-color: white;
-            border: none;
-            width: 197px;
-            height: 71px;
-            border-radius: 27px;
-            align-self: center;
-            transition: 0.4s;
-
-            @media (max-width: 767px) {
-                width: 25vw;
-                height: 10vw; 
-                font-size: 3.5vw;      
-            }
-        }
-
-        button:hover {
-            cursor: pointer;
-            background-color: #4215E6;
-            color: white;
-            box-shadow: none;
-        }
-
-        .visual {
-            grid-area: visual;
-            width: 100%;
-            height: 20vw;
-            left: 0;
-            align-self: center;
-            border-radius: 27px;
-            font-weight: 500px;
-            font-size: 26px;
-            text-align: center;
-            transition: box-shadow ease-in-out .5s;
-            box-shadow: none;
-
-            img {
-                width: 100%;
-                height: 20vw;
-                border-radius: 27px;
-                align-self: center;
-
-                @media (max-width: 767px) {
-                    width: 100%;
-                    height: 40vw;
-                    // margin-top: 10vw;
-                }
-            }
-
-            @media (max-width: 767px) {
-                width: 100%;
-                height: 40vw;
-                margin-top: 5vw;
-                background-position: center;
-                background-size: contain;
-                
-            }
-
-            p {
-                margin-top: 25%;
-            }
-        }
-
-        .visual:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-    }
+}
 
 .about {
-    // margin-top: 300px;
     display: grid;
-    grid-template-columns: 15vw 35vw 35vw 15vw;
-    // column-gap: 100px;
+    grid-template-columns: 15% 35% 35% 15%;
     row-gap: 35px;
     grid-template-rows: 56px 35px auto 75px;
-    grid-template-areas: 
-    ". visual header ."
-    ". visual label ."
-    ". visual desc ."
-    ". visual button .";
+    grid-template-areas: ". visual name ." ". visual label ." ". visual desc ." ". visual button.";
 
-    @media (max-width: 1000px) {
-        grid-template-areas: 
-        ". header . "
-        ". label ."
-        ". desc ."
-        ". button ."
-        ". visual . ";
-        margin-left: 0;
-        margin-top: 10vw;
+    @media (max-width:1000px) {
         grid-template-columns: 15% 70% 15%;
-        column-gap: 0;
-        row-gap: 5vw;
-        grid-template-rows: auto auto auto auto;
-    }
-
-    .header {
-        font-size: 44px;
-        font-weight: 700;
-        grid-area: header;
-
-        @media (max-width: 767px) {
-            font-size: 6vw;   
-        }
-    }
-
-    .label {
-        font-size: 22px;
-        font-weight: 400;
-        grid-area: label;
-
-        @media (max-width: 767px) {
-            font-size: 4vw;   
-        }
-    }
-
-    .desc {
-        font-size: 30px;
-        grid-area: desc;
-
-        @media (max-width: 800px) {
-            font-size: 4vw;
-        }
-    }
-
-    button {
-        grid-area: button;
-        font-size: 23px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        font-weight: 400;
-        padding: 10px;
-        color: black;
-        background-color: white;
-        border: none;
-        width: 197px;
-        height: 71px;
-        border-radius: 27px;
-        align-self: center;
-        transition: 0.4s;
-
-        @media (max-width: 800px) {
-            width: 25vw;
-            height: 10vw; 
-            font-size: 3.5vw; 
-        }
-    }
-
-    button:hover {
-        cursor: pointer;
-        background-color: #4215E6;
-        color: white;
-        box-shadow: none;
-    }
-
-    .visual {
-        height: 45vw;
-        width: 30vw;
-        // border: white 1px solid;
-        grid-area: visual;
-        align-self: center;
-        justify-self: center;
-        transition: transform ease-in-out .5s, box-shadow ease-in-out .5s;
-        border-radius: 27px;
-        text-align: center;
-        font-weight: 500;
-        font-size: 26px;
-        box-shadow: none;
-        background-color: white;
-        background: url('/assets/about.jpeg') no-repeat;
-        background-position: center center;
-        background-size: cover;
-
-        @media (max-width: 1000px){
-            width: 70vw;
-            height: 90vw;
-            max-width: 455px;
-            max-height: 587px;
-            margin-top: 5vw;
-        }
-
-        p {
-            margin-top: 50%;
-        }
-    }
-
-    .visual:hover {
-        transform: translateX(-25px) translateY(-25px);
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    .visual-background {
-        z-index: -1;
-        height: 45vw;
-        width: 30vw;
-        grid-area: visual;
-        align-self: center;
-        justify-self: center;
-        border-radius: 27px;
-        background-color: #4215E6;
-
-        @media (max-width: 1000px){
-            width: 70vw;
-            height: 90vw;
-            max-width: 455px;
-            max-height: 587px;
-            margin-top: 5vw;
-        }
+        grid-template-areas: ". name ." ". label ." ". desc ." ". button ." ". visual .";
+        row-gap: 4vw;
     }
 }
 
@@ -780,7 +109,6 @@ footer {
     height: 125px;
     width: 100%;
     bottom: 0;
-    // position: absolute;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -820,12 +148,647 @@ footer {
     }
 }
 
-.transition-fade {
-    opacity: 1;
-    transition: 500ms;
+// Global classes
 
-}
-
-html.is-animating .transition-fade {
+.nav-fullscreen {
+    position: absolute;
+    display: flex;
+    z-index: 10;
+    line-height: 80px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white; 
     opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0.4s;
+    &_items {
+        font-size: 50px;
+        font-weight: 700; 
+    }
+    &--open {
+        opacity: 1;
+        visibility: visible;
+        position:fixed;
+    }
 }
+
+.links {
+        grid-area: links;
+        font-size: 35px;
+        width:100%;
+        display: grid;
+        grid-template-columns: auto 250px 200px;
+        grid-template-rows: auto;
+        grid-template-areas: "work case-studies contact";
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+
+        .work {
+            grid-area: work;
+            text-align: right;
+        }
+
+        .studies {
+            grid-area: case-studies;
+            text-align: center;
+        }
+
+        .contact {
+            grid-area: contact;
+        }
+
+        a {
+            font-weight: 700;
+        }
+}
+
+.name {
+    grid-area: name;
+    font-size: 56px;
+    font-weight: 500;
+
+    span {
+        color: #4215E6;
+        font-weight: 500;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 6vw;
+    }
+}
+
+.label {
+    font-size: 22px;
+    font-weight: 400;
+    grid-area: label;
+
+    @media (max-width: 1000px) {
+        font-size: 4vw;   
+    }
+
+    span {
+        color: #E6802C;
+    }
+
+}
+
+.desc {
+    font-size: 30px;
+    grid-area: desc;
+
+    @media (max-width: 1000px) { 
+        font-size: 2.7vw;
+        padding-top: 0;
+    }
+
+    @media (max-width: 700px) { 
+        font-size: 4vw;
+        padding-top: 0;
+        margin-right: 0;
+    }
+}
+
+.btns {
+    grid-area: button;
+    font-size: 23px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-weight: 400;
+    padding: 10px;
+    color: black;
+    background-color: white;
+    border: none;
+    width: 197px;
+    height: 71px;
+    border-radius: 27px;
+    align-self: center;
+    transition: 0.4s;
+    margin-top: 20px;
+
+    @media (max-width: 767px) {
+        width: 25vw;
+        height: 10vw; 
+        font-size: 3.5vw;      
+    }
+}
+
+.btns:hover {
+    cursor: pointer;
+    background-color: #4215E6;
+    color: white;
+    box-shadow: none;
+}
+
+.visual {
+    grid-area: visual;
+    width: 100%;
+    height: 50vw;
+    left: 0;
+    align-self: center;
+    justify-self: center;
+    border-radius: 27px;
+    font-weight: 500px;
+    font-size: 26px;
+    text-align: center;
+    transition: box-shadow ease-in-out .5s;
+    box-shadow: none;
+
+    @media (max-width: 767px) {
+        margin-top: 5vw;
+        background-position: center;
+        background-size: contain;
+        
+    }
+}
+
+.visual:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.visual-background {
+    z-index: -1;
+    height: 45vw;
+    width: 30vw;
+    grid-area: visual;
+    align-self: center;
+    justify-self: center;
+    border-radius: 27px;
+    background-color: #4215E6;
+
+    @media (max-width: 1000px){
+        width: 70vw;
+        height: 90vw;
+        max-width: 455px;
+        max-height: 587px;
+        margin-top: 5vw;
+    }
+}
+
+a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: black;
+}
+
+a:after {
+    content:'';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4215E6;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+// Mobile menu elements
+
+.menu {
+    display: none;
+    @media (max-width: 767px) {
+        grid-area: burger;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        display: flex;
+        z-index: 10;
+        padding: 0;
+        top: 25px;
+        right: 45px;
+        width: 37px;
+        height: 37px;
+    
+    }
+}
+
+.line {
+        fill: none;
+        stroke: black;
+        stroke-width: 6;
+        transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+        stroke: black;
+}
+.line2 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+        stroke: black;
+}
+.line3 {
+        stroke-dasharray: 60 207;
+        stroke-width: 6;
+        stroke: black;
+}
+.opened .line1 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+        stroke:black;
+        z-index: 5;
+}
+.opened .line2 {
+        stroke-dasharray: 1 60;
+        stroke-dashoffset: -30;
+        stroke-width: 6;
+        stroke:black;
+        z-index: 5;
+}
+.opened .line3 {
+        stroke-dasharray: 90 207;
+        stroke-dashoffset: -134;
+        stroke-width: 6;
+        stroke:black;
+        z-index: 5;
+}    
+
+// Index IDs
+
+#case {
+    color: #E6802C;
+    font-weight: 700;
+    font-size: 40px;
+
+    @media (max-width: 1000px) {
+        font-size: 5vw;
+    }
+}
+
+#apple-music {
+    background: url('/assets/new-apple-music-hero.png') no-repeat;
+    background-size: contain;
+    height: 30vw;
+    width: 20vw;
+    background-position: center;
+
+    @media (max-width: 1000px) {
+        height: 60vw;
+        width: 50vw;
+    }
+}
+
+#about-label {
+    @media (max-width: 1000px) {
+        font-size: 2.5vw;
+    }
+    
+    @media (max-width: 800px) {
+        font-size: 3vw;
+    }
+    
+    @media (max-width: 700px) {
+        font-size: 3.5vw;
+    }
+    
+    @media (max-width: 550px) {
+        font-size: 4vw;
+    }
+}
+
+#about-visual {
+    background: url('/assets/about.jpeg') no-repeat;
+    background-size: contain;
+    height: 45vw;
+    width: 30vw;
+    background-position: center center;
+    background-size: cover;
+    align-self: center;
+    justify-self: center;
+    transition: transform ease-in-out .5s, box-shadow ease-in-out .5s;
+    border-radius: 27px;
+
+    @media (max-width: 1000px){
+        width: 70vw;
+        height: 90vw;
+        max-width: 455px;
+        max-height: 587px;
+        margin-top: 5vw;
+    }
+}
+
+#about-visual:hover {
+    transform: translateX(-25px) translateY(-25px);
+}
+
+// -----------------------------------------------------------------------
+// Case Study Page
+
+// Sections
+
+.header {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: ". name ." ". label .";
+    
+    @media (max-width: 767px) {
+        grid-template-columns: 5% 90% 5%;
+    }
+}
+
+.objects {
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". apple-music website ." ". more more .";
+
+    @media (max-width: 767px) {
+        grid-template-areas: ". apple-music ."
+        ". website ." ". more .";
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 60vw 10vw 20vw auto;
+    }
+
+    .apple-music {
+        grid-area: apple-music;
+    }
+}
+
+// Classes
+
+.btn {
+    border: none;
+    background: none;
+    padding: 1rem;
+    font-size: 25px;
+
+    @media (max-width: 767px) { 
+        font-size: 3.5vw;
+    }
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #555555;
+}
+
+.title {
+    a {
+        font-weight: 700;
+        font-size: 40px;  
+        color: #E6802C;
+
+        @media (max-width: 676px) {
+            font-size: 6vw;
+        }
+    }
+}
+
+.coming-soon {
+    grid-area: more;
+    margin-top: 40px;
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    font-size: 40px;
+
+    @media (max-width: 767px) {
+        font-size: 4vw;
+    }
+}
+
+// IDs
+
+#buttons {
+    grid-area: label;
+    justify-self: left;
+    align-self: center;
+    text-align: left;
+    font-size: 25px;
+    color: #E6802C;
+
+    @media (max-width: 767px) {
+        font-size: 3.5vw;
+    }
+}
+
+#study-apple {
+    border-radius: 27px;
+    height: 23vw;
+    transition: box-shadow ease-in-out .5s;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 27px;
+    }
+
+    @media (max-width: 767px) {
+       height: 60vw;
+    }
+
+    a:hover:after {
+        transform: scaleX(0);
+    }
+}
+
+#study-apple:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// ------------------------------------------------------------------
+// Apple Music Study Page
+
+// Sections
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 15% 5% 60% 5% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: "sidebar hero hero hero ." "sidebar info info info ." "sidebar . content . .";
+
+    // @media (max-width: 1000px ) {
+    //     grid-template-columns: 10% 90% 20%;
+    //     grid-template-areas: ". hero . " ". info ." ". content .";
+    // }
+
+    @media (max-width: 1000px) {
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: ". hero ." ". info ." ". content .";
+    }
+}
+
+.hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: 15vw 15vw;
+    row-gap: 2vw;
+    grid-template-areas: ". hero-top ." ". hero-bottom .";
+
+    @media (max-width: 767px) {
+        grid-template-rows: 30vw 30vw;
+    }
+
+    .visual {
+        grid-area: hero-bottom;
+        z-index: -1;
+        height: 40vw;
+        width: 40vw;
+        border-radius: 27px;
+        justify-self: end;
+        align-self: end;
+        background: url('/assets/new-apple-music-hero.png') no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media (max-width: 767px) {
+            height: 70vw;
+            width: 70vw;
+            justify-self: start;
+        }
+    }
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: fixed;
+    margin-top: 30vh;
+    text-align: center;
+    z-index: 2;
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+    
+        li {
+            padding-bottom: 7px;
+            padding-top: 7px;
+        }
+
+        hr {
+            height: 1px;
+            background-color: #555555;
+        }
+    }
+}
+
+.info {
+    grid-area: info;
+    display: grid;
+    margin-top: 5vw;
+    grid-template-columns: 15% 1fr 3fr 15%;
+    grid-template-areas: ". goal goal-info ." ". time time-info ." ". tools tools-info .";
+    row-gap: 7px;
+    font-size: 22px;
+
+    @media (max-width: 767px) {
+        font-size: 2.5vw;
+    }
+}
+
+.content {
+    grid-area: content;
+
+    h1 {
+        font-size: 44px;
+        color: black;
+        margin-top: 10vw;
+
+        @media (max-width: 767px) {
+            font-size: 6vw;
+        }
+    }
+
+    p {
+        margin-top: 4vw;
+        margin-bottom: 4vw;
+        font-size: 25px;
+
+        @media (max-width: 767px) {
+            font-size: 4vw;
+        }
+    }
+}
+
+// Classes
+
+h1 {
+    grid-area: hero-top;
+    font-size: 5vw;
+    align-self: end;
+    justify-self: center;
+    color: #E6802C;
+    font-weight: 700;
+
+    @media (max-width: 767px) {
+        font-size: 6vw;
+    }
+}
+
+h2 {
+    grid-area: hero-bottom;
+    font-weight: 500;
+    font-size: 2.5vw;
+    justify-self: center;
+    margin-right: 10vw;
+
+    @media (max-width: 767px) {
+        font-size: 3vw;
+    }
+    
+    span {
+        color: white;
+        text-shadow: 2px 2px 5px black;
+    }
+}
+
+sub {
+    text-align: center;
+    font-style: italic;
+    color:#555555 ;
+}
+
+    // Info classes
+    .goal {
+    grid-area: goal;
+    border-bottom: 2px solid #4215E6;
+    padding-bottom: 7px;
+    align-self: end;
+    }
+    .goal-info {
+    grid-area: goal-info;
+    border-bottom: 2px solid #4215E6;
+    text-align: right;
+    }
+    .time {
+    grid-area: time;
+    border-bottom: 2px solid #4215E6;
+    padding-bottom: 7px;
+    }
+    .time-info {
+    grid-area: time-info;
+    border-bottom: 2px solid #4215E6;
+    text-align: right;
+    }
+    .tools {
+    grid-area: tools;
+    }
+    .tools-info {
+    grid-area: tools-info;
+    text-align: right;
+    }
+
+// IDs

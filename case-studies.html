@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/case-studies/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/case-studies/css/style.css"> -->
     <script src="/scroll-animation.js"></script>
     <script src="/mobile-menu.js"></script>
     <script src="/filter.js"></script>
@@ -52,90 +53,44 @@
         </div>
     </div>
 
-    <div class="case-studies-container">
-        <h1>Case Studies</h1>
+    <div class="header">
+        <div class="name">
+            Case Studies
+        </div>
         <div id="buttons">
             Filters /
             <button class="btn" onclick="filterObjects('all')">All</button> /
             <button class="btn" onclick="filterObjects('mobile')">Mobile Apps</button> /
             <button class="btn" onclick="filterObjects('website')">Websites</button>
         </div>
-        <div class="objects">
-            <div class="study apple-music mobile">
+    </div>
+    <div class="objects">
+        <div class="study apple-music mobile">
+            <div class="visual" id="study-apple">
                 <a href="/case-studies/apple-music.html">
-                    <div class="visual">
-                        <img src="/assets/apple-music-visual.png" alt="" style="width: 100%; height: 100%; border-radius: 27px;">
-                    </div>
+                    <img src="/assets/apple-music-visual.png" alt="">
                 </a>
-                <h1>
-                    <a href="/case-studies/apple-music.html">
-                        Apple Music
-                    </a>
-                </h1>
             </div>
-            <!-- <div class=" study website">
-                hello world!
-            </div> -->
+            <div class="title">
+                <a href="/case-studies/apple-music.html">
+                    Apple Music
+                </a>
+            </div>
         </div>
         <div class="coming-soon">
-            <h1>
-                More Studies Coming Soon...
-            </h1>
+            More coming soon...
         </div>
     </div>
 
-
-
-    <!-- <div class="container">
-        <div class="header">
-            <div class="title">
-                Case Studies
-            </div>
-            <div id="buttons">
-                <span>Filters</span>/
-                <button class="btn" onclick="filterObjects('all')">All</button> /
-                <button class="btn" onclick="filterObjects('mobile')">Mobile Apps</button> /
-                <button class="btn" onclick="filterObjects('web')">Websites</button>
-            </div>
+    <footer>
+        <p>UX crafted by hand © Noah Veenstra 2022. </p>
+        <div class="social">
+            <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img src="/assets/linkedin-logo.png"
+                    alt=""></a>
+            <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png" alt=""></a>
         </div>
-            <div class="cells">
-                <div class="study mobile cells">
-                    <a href="/case-studies/apple-music.html">
-                        <div class="visual"
-                            style="background: url('/assets/apple-music-visual.png') no-repeat; background-size: cover; background-position: center;">
-                        </div>
-                    </a>
-                    <a href="/case-studies/apple-music.html">
-                        <div class="label">Apple Music</div>
-                    </a>
-                </div>
-                <div class="study websites cells">
-                    <div class="visual"
-                        style="background: url('/assets/place-holder-1.jpg') no-repeat; background-size: cover; background-position: center;">
-                    </div>
-                    <a href="/case-studies.html">
-                        <div class="label">Case Study #2</div>
-                    </a>
-                </div>
-                <div class="study cells">
-                    <div class="visual"
-                        style="background: url('/assets/place-holder-2.jpg') no-repeat; background-size: cover; background-position: center;">
-                    </div>
-                    <a href="/case-studies.html">
-                        <div class="label">Case Study #3</div>
-                    </a>
-                </div>
-            </div> -->
-        <footer>
-            <p>UX crafted by hand © Noah Veenstra 2022. </p>
-            <div class="social">
-                <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
-                        alt=""></a>
-                <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img src="/assets/linkedin-logo.png"
-                        alt=""></a>
-                <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png" alt=""></a>
-            </div>
-        </footer>
+    </footer>
     </div>
 
 
