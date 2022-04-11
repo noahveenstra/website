@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/case-studies/css/style.css">
     <script defer src="/scroll-animation.js"></script>
     <script defer src="/mobile-menu.js"></script>
-    <script defer src="/tooltips.js"></script>
+    <script defer src="/copy-email.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
     <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
     <title>Noah Veenstra — Home</title>
@@ -55,29 +54,35 @@
     </section>
     <section class="main-header">
         <header class="name">let's connect<span>.</span></header>
-        <summary class="label">veenstranoah@gmail.com 
-            <div class="tooltip">
-                <button onclick="">
-
-                </button>
-            </div>
-            <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 33">
-                <g id="Group_12" data-name="Group 12" transform="translate(-164 -114)">
-                  <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(164 120)" fill="none" stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <rect width="19" height="27" stroke="none"/>
-                    <rect x="1" y="1" width="17" height="25" fill="none"/>
-                  </g>
-                  <g id="Rectangle_27" data-name="Rectangle 27" transform="translate(170 114)" fill="none" stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                    <rect width="19" height="29" stroke="none"/>
-                    <rect x="1" y="1" width="17" height="27" fill="none"/>
-                  </g>
-                </g>
-              </svg>
-            <span>/</span> <img src="/assets/linkedin-logo.png" alt="" style="width: 35px; vertical-align: middle;"></summary>
-        <main class="desc">
-            Currently, I'm studying how to craft user experiences at Michigan State University, pursuing a B. S. in User
-            Experience Architecture with a focus on Web Development and UI Design. I'm passionate about bringing
-            positive user experiences to all users and being able to flex my creativity.
+        <summary style="margin-top: 2vw;" class="label">veenstranoah@gmail.com
+            <button onclick="copy()" id="copy" style="vertical-align: middle;">
+                <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                    viewBox="0 0 25 33">
+                    <g id="Group_12" data-name="Group 12" transform="translate(-164 -114)">
+                        <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(164 120)" fill="none"
+                            stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <rect width="19" height="27" stroke="none" />
+                            <rect x="1" y="1" width="17" height="25" fill="none" />
+                        </g>
+                        <g id="Rectangle_27" data-name="Rectangle 27" transform="translate(170 114)" fill="none"
+                            stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                            <rect width="19" height="29" stroke="none" />
+                            <rect x="1" y="1" width="17" height="27" fill="none" />
+                        </g>
+                    </g>
+                </svg>
+            </button>
+            <input id=email value="veenstranoah@gmail.com">
+            <span>/</span>
+            <figure id="linkedin">
+                <a href="https://linkedin.com/in/noahveenstra" target="_blank">
+                    <img src="/assets/linkedin-logo.png" alt="" style="width: 35px; vertical-align: middle;">
+                </a>
+            </figure>
+        </summary>
+        <main style="margin-top: 5vw; margin-bottom: 25vw; height: 30vh" class="desc">
+            The best way to get in touch with me is through email. But, if you'd like to connect with me on LinkedIn
+            please feel free!
         </main>
     </section>
     <footer>

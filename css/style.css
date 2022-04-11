@@ -206,43 +206,23 @@ footer .social img {
   }
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
+footer .social a:hover:after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
 }
 
-.tooltip .tooltipnext {
-  visibility: hidden;
-  width: 140px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 150%;
-  left: 50%;
-  margin-left: -75px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+button {
+  background: none;
+  border: none;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+button:hover {
+  cursor: pointer;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+input {
+  margin: -1000%;
+  position: fixed;
 }
 
 h3 {
@@ -694,6 +674,15 @@ a:hover:after {
           transform: translateX(-25px) translateY(-25px);
 }
 
+#linkedin {
+  display: inline-block;
+}
+
+#linkedin a:hover:after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -723,7 +712,7 @@ a:hover:after {
 
 @media (max-width: 767px) {
   .objects {
-        grid-template-areas: ". apple-music ." ". website ." ". more .";
+        grid-template-areas: ". apple-music ." ". website ." ". more .";
     -ms-grid-columns: 5% 90% 5%;
         grid-template-columns: 5% 90% 5%;
     -ms-grid-rows: 60vw 10vw 20vw auto;

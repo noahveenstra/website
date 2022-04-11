@@ -148,49 +148,30 @@ footer {
           @media (max-width: 1000px) {
             width: 25px;
             height: 25px;
+            }
         }
+
+        a:hover:after {
+            transform: scaleX(0);
         }
     }
 }
 
 // Global classes
 
-.tooltip {
-    position: relative;
-    display: inline-block;
-
-    .tooltipnext {
-        visibility: hidden;
-        width: 140px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 150%;
-        left: 50%;
-        margin-left: -75px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
+button {
+    background: none;
+    border: none;
 }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    margin: -1000%;
+    position: fixed;
+    // display: none;
 }
 
 h3 {
@@ -544,6 +525,13 @@ a:hover:after {
 
 #about-visual:hover {
     transform: translateX(-25px) translateY(-25px);
+}
+
+#linkedin {
+    display: inline-block;
+    a:hover:after {
+        transform: scaleX(0);
+    }
 }
 
 // -----------------------------------------------------------------------
