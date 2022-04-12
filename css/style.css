@@ -911,7 +911,7 @@ a:hover:after {
   -ms-grid-rows: 15vw 15vw;
       grid-template-rows: 15vw 15vw;
   row-gap: 2vw;
-      grid-template-areas: ". hero-top ." ". hero-bottom .";
+      grid-template-areas: ". hero-top ." ". hero-bottom hero-bottom";
 }
 
 @media (max-width: 767px) {
@@ -924,6 +924,7 @@ a:hover:after {
 .hero .visual {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: hero-bottom;
   z-index: -1;
   height: 40vw;
@@ -1038,8 +1039,8 @@ h1 {
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column-align: left;
+      justify-self: left;
   color: #E6802C;
   font-weight: 700;
 }
@@ -1053,11 +1054,12 @@ h1 {
 h2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: hero-bottom;
   font-weight: 500;
   font-size: 2.5vw;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -ms-grid-column-align: left;
+      justify-self: left;
   margin-right: 10vw;
 }
 
@@ -1068,8 +1070,7 @@ h2 {
 }
 
 h2 span {
-  color: white;
-  text-shadow: 2px 2px 5px black;
+  font-weight: 700;
 }
 
 sub {

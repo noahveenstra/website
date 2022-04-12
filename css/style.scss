@@ -705,11 +705,6 @@ a:hover:after {
     grid-template-rows: auto;
     grid-template-areas: "sidebar hero hero hero ." "sidebar info info info ." "sidebar . content . .";
 
-    // @media (max-width: 1000px ) {
-    //     grid-template-columns: 10% 90% 20%;
-    //     grid-template-areas: ". hero . " ". info ." ". content .";
-    // }
-
     @media (max-width: 1000px) {
         grid-template-columns: 1fr 8fr 1fr;
         grid-template-rows: auto;
@@ -723,7 +718,7 @@ a:hover:after {
     grid-template-columns: 15% 70% 15%;
     grid-template-rows: 15vw 15vw;
     row-gap: 2vw;
-    grid-template-areas: ". hero-top ." ". hero-bottom .";
+    grid-template-areas: ". hero-top ." ". hero-bottom hero-bottom";
 
     @media (max-width: 767px) {
         grid-template-rows: 30vw 30vw;
@@ -819,7 +814,7 @@ h1 {
     grid-area: hero-top;
     font-size: 5vw;
     align-self: end;
-    justify-self: center;
+    justify-self: left;
     color: #E6802C;
     font-weight: 700;
 
@@ -832,7 +827,7 @@ h2 {
     grid-area: hero-bottom;
     font-weight: 500;
     font-size: 2.5vw;
-    justify-self: center;
+    justify-self: left;
     margin-right: 10vw;
 
     @media (max-width: 767px) {
@@ -840,8 +835,7 @@ h2 {
     }
     
     span {
-        color: white;
-        text-shadow: 2px 2px 5px black;
+        font-weight: 700;
     }
 }
 
