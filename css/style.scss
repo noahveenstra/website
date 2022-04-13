@@ -160,6 +160,28 @@ footer {
 
 // Global classes
 
+figure {
+    display: inline-block;
+    padding: 1rem; 
+    // justify-content: center;
+
+    img {
+        // vertical-align: top;
+        // justify-content: center;
+        width: 100%; 
+        height: auto;
+    }
+
+    svg {
+        width: 100%;
+        height: auto;
+    }
+
+    figcaption {
+        text-align: center;
+    }
+}
+
 button {
     background: none;
     border: none;
@@ -173,12 +195,6 @@ input {
     margin: -1000%;
     position: fixed;
     // display: none;
-}
-
-h3 {
-    font-size: 30px;
-    font-weight: 500;
-    text-align: center;
 }
 
 h4 {
@@ -576,6 +592,34 @@ a:hover:after {
     padding-bottom: 15.5rem;
 }
 
+#importance-achievability {
+    margin-bottom: 10vw;
+
+    @media (max-width:1000px) {
+        margin-bottom: 20vw;
+    }
+    
+    @media (max-width:600px) {
+        margin-bottom: 30vw;
+    }
+
+    #importance {
+        float: left;
+        width: 50%;
+    }
+
+    #header {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    ul {
+        list-style-type: none;
+        text-align: center;
+        padding: 0;
+    }
+}
+
 // -----------------------------------------------------------------------
 // Case Study Page
 
@@ -708,7 +752,7 @@ a:hover:after {
     @media (max-width: 1000px) {
         grid-template-columns: 1fr 8fr 1fr;
         grid-template-rows: auto;
-        grid-template-areas: ". hero ." ". info ." ". content .";
+        grid-template-areas: ". hero ." ". info ." "content content content";
     }
 }
 
@@ -719,10 +763,6 @@ a:hover:after {
     grid-template-rows: 15vw 15vw;
     row-gap: 2vw;
     grid-template-areas: ". hero-top ." ". hero-bottom hero-bottom";
-
-    @media (max-width: 767px) {
-        grid-template-rows: 30vw 30vw;
-    }
 
     .visual {
         grid-area: hero-bottom;
@@ -735,12 +775,6 @@ a:hover:after {
         background: url('/assets/new-apple-music-hero.png') no-repeat;
         background-position: center;
         background-size: contain;
-
-        @media (max-width: 767px) {
-            height: 70vw;
-            width: 70vw;
-            justify-self: start;
-        }
     }
 }
 
@@ -795,12 +829,41 @@ a:hover:after {
         @media (max-width: 767px) {
             font-size: 6vw;
         }
+
+        @media (max-width: 1000px) {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+    }
+
+    h2 {
+        @media (max-width: 1000px) {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+    }
+    h3 {
+        @media (max-width: 1000px) {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
+    }
+    h4 {
+        @media (max-width: 1000px) {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
     }
 
     p {
         margin-top: 4vw;
         margin-bottom: 4vw;
         font-size: 25px;
+
+        @media (max-width: 1000px) {
+            margin-right: 15%;
+            margin-left: 15%;
+        }
 
         @media (max-width: 767px) {
             font-size: 4vw;
@@ -895,3 +958,5 @@ input[type=text], select, textarea {
     border: none;
     border-radius: 4px;
   }
+
+//Image Zoom

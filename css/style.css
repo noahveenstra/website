@@ -212,6 +212,25 @@ footer .social a:hover:after {
           transform: scaleX(0);
 }
 
+figure {
+  display: inline-block;
+  padding: 1rem;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figure svg {
+  width: 100%;
+  height: auto;
+}
+
+figure figcaption {
+  text-align: center;
+}
+
 button {
   background: none;
   border: none;
@@ -224,12 +243,6 @@ button:hover {
 input {
   margin: -1000%;
   position: fixed;
-}
-
-h3 {
-  font-size: 30px;
-  font-weight: 500;
-  text-align: center;
 }
 
 h4 {
@@ -732,6 +745,38 @@ a:hover:after {
   padding-bottom: 15.5rem;
 }
 
+#importance-achievability {
+  margin-bottom: 10vw;
+}
+
+@media (max-width: 1000px) {
+  #importance-achievability {
+    margin-bottom: 20vw;
+  }
+}
+
+@media (max-width: 600px) {
+  #importance-achievability {
+    margin-bottom: 30vw;
+  }
+}
+
+#importance-achievability #importance {
+  float: left;
+  width: 50%;
+}
+
+#importance-achievability #header {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#importance-achievability ul {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -895,7 +940,7 @@ a:hover:after {
         grid-template-columns: 1fr 8fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: ". hero ." ". info ." ". content .";
+        grid-template-areas: ". hero ." ". info ." "content content content";
   }
 }
 
@@ -912,13 +957,6 @@ a:hover:after {
       grid-template-rows: 15vw 15vw;
   row-gap: 2vw;
       grid-template-areas: ". hero-top ." ". hero-bottom hero-bottom";
-}
-
-@media (max-width: 767px) {
-  .hero {
-    -ms-grid-rows: 30vw 30vw;
-        grid-template-rows: 30vw 30vw;
-  }
 }
 
 .hero .visual {
@@ -938,15 +976,6 @@ a:hover:after {
   background: url("/assets/new-apple-music-hero.png") no-repeat;
   background-position: center;
   background-size: contain;
-}
-
-@media (max-width: 767px) {
-  .hero .visual {
-    height: 70vw;
-    width: 70vw;
-    -ms-grid-column-align: start;
-        justify-self: start;
-  }
 }
 
 .sidebar {
@@ -1019,10 +1048,45 @@ a:hover:after {
   }
 }
 
+@media (max-width: 1000px) {
+  .content h1 {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content h2 {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content h3 {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content h4 {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+}
+
 .content p {
   margin-top: 4vw;
   margin-bottom: 4vw;
   font-size: 25px;
+}
+
+@media (max-width: 1000px) {
+  .content p {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
 }
 
 @media (max-width: 767px) {
