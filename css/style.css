@@ -1095,6 +1095,41 @@ a:hover:after {
   }
 }
 
+.content .quote {
+  font-size: 1.4em;
+  width: 60%;
+  margin: 50px auto;
+  font-style: italic;
+  color: #555555;
+  padding: 1.2em 30px 1.2em 75px;
+  border-left: 8px solid #4215E6;
+  line-height: 1.6;
+  position: relative;
+  background: #EDEDED;
+}
+
+.content .quote::before {
+  font-family: Arial;
+  content: "\201C";
+  color: #4215E6;
+  font-size: 4em;
+  position: absolute;
+  left: 10px;
+  top: -10px;
+}
+
+.content .quote::after {
+  content: '';
+}
+
+.content .quote span {
+  display: block;
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
 h1 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
