@@ -212,6 +212,18 @@ footer .social a:hover:after {
           transform: scaleX(0);
 }
 
+.certifications {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 15% 70% 15%;
+      grid-template-columns: 15% 70% 15%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". header ." ". certs .";
+  padding-bottom: 10vw;
+}
+
 figure {
   display: inline-block;
   padding: 1rem;
@@ -777,6 +789,28 @@ a:hover:after {
   padding: 0;
 }
 
+#circular-text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: certs;
+  font-size: 1.25rem;
+  background-image: url("/assets/codecademy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  color: #000;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+#circular-text span {
+  position: absolute;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -806,7 +840,7 @@ a:hover:after {
 
 @media (max-width: 767px) {
   .objects {
-        grid-template-areas: ". apple-music ." ". website ." ". more .";
+        grid-template-areas: ". apple-music ." ". website ." ". more .";
     -ms-grid-columns: 5% 90% 5%;
         grid-template-columns: 5% 90% 5%;
     -ms-grid-rows: 60vw 10vw 20vw auto;
