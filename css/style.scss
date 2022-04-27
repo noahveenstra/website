@@ -157,6 +157,15 @@ footer {
   }
 }
 
+.certifications {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 15% 70% 15%;
+    grid-template-rows: auto;
+    grid-template-areas: '. header .''. certs .';
+    padding-bottom: 10vw;
+}
+
 // Global classes
 
 figure {
@@ -616,6 +625,27 @@ a:hover:after {
   }
 }
 
+#circular-text {
+    // position: relative;
+    // justify-self: center;
+    // font-weight: 700;
+    grid-area: certs;
+    font-size: 1.25rem ;
+    // background: #fff;
+    background-image: url('/assets/codecademy.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    color: #000;
+    border-radius: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+  }
+  
+  #circular-text span {
+    position: absolute;
+    transform-origin: top left;
+  }
 // -----------------------------------------------------------------------
 // Case Study Page
 
