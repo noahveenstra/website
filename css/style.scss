@@ -157,15 +157,6 @@ footer {
   }
 }
 
-.certifications {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 15% 70% 15%;
-    grid-template-rows: auto;
-    grid-template-areas: '. header .''. certs .';
-    padding-bottom: 10vw;
-}
-
 // Global classes
 
 figure {
@@ -625,27 +616,58 @@ a:hover:after {
   }
 }
 
-#circular-text {
-    // position: relative;
-    // justify-self: center;
-    // font-weight: 700;
-    grid-area: certs;
-    font-size: 1.25rem ;
-    // background: #fff;
-    background-image: url('/assets/codecademy.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 40%;
-    color: #000;
-    border-radius: 100%;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
-    padding: 20px;
+#cert-head {
+  margin-left: 15%;
+  margin-bottom: 20px;
+      @media (max-width: 1000px) {
+        margin-left: 5%;
+      }
+}
+
+#certifications {
+  // padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 4.688%;
+  @media (max-width: 1000px) {
+    padding-left: 10px;
+    padding-right: 10px;
   }
-  
-  #circular-text span {
+  a {
+    bottom: 15px;
+    right: 3%;
     position: absolute;
-    transform-origin: top left;
+    color: white;
+    font-size: 25px;
+        @media (max-width: 1000px) {
+          font-size: 3vw;
+          right: 10%;
+        }
   }
+  h1 {
+    font-weight: 600;
+    font-size: 30pt;
+    color: black;
+
+    @media (max-width: 1000px) {
+      font-size: 4vw;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 25pt;
+    color: #4d4d4d;
+
+        @media (max-width: 1000px) {
+          font-size: 3vw;
+        }
+  }
+}
 // -----------------------------------------------------------------------
 // Case Study Page
 
