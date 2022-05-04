@@ -157,7 +157,7 @@ footer {
 
 footer p {
   font-size: 20px;
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: info;
@@ -879,7 +879,7 @@ a:hover:after {
 
 @media (max-width: 767px) {
   .objects {
-        grid-template-areas: ". apple-music ." ". website ." ". more .";
+        grid-template-areas: ". apple-music ." ". website ." ". more .";
     -ms-grid-columns: 5% 90% 5%;
         grid-template-columns: 5% 90% 5%;
     -ms-grid-rows: 60vw 10vw 20vw auto;
@@ -1004,7 +1004,7 @@ a:hover:after {
       grid-template-columns: 15% 5% 60% 5% 15%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "sidebar hero hero hero ." "sidebar info info info ." "sidebar . content . .";
+      grid-template-areas: "sidebar hero hero hero ." "sidebar tags tags tags ." "sidebar info info info ."  "sidebar . content . .";
 }
 
 @media (max-width: 1000px) {
@@ -1013,7 +1013,7 @@ a:hover:after {
         grid-template-columns: 1fr 8fr 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: ". hero ." ". info ." "content content content";
+        grid-template-areas: ". hero ." ". tags ." ". info ."  "content content content";
   }
 }
 
@@ -1053,7 +1053,7 @@ a:hover:after {
 
 .sidebar {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
+  -ms-grid-row-span: 4;
   -ms-grid-column: 1;
   grid-area: sidebar;
   position: fixed;
@@ -1083,7 +1083,7 @@ a:hover:after {
 }
 
 .info {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: info;
@@ -1103,8 +1103,35 @@ a:hover:after {
   }
 }
 
+.tags {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: tags;
+  margin-left: 15%;
+}
+
+.tags .tag {
+  font-weight: 500;
+  font-size: 1.5rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), color-stop(50%, #f1f1f1), color-stop(50%, #4215e6), to(#4215e6));
+  background: linear-gradient(#f1f1f1, #f1f1f1 50%, #4215e6 50%, #4215e6);
+  background-size: 100% 200%;
+  -webkit-transition: background .5s, color .5s ease-in-out;
+  transition: background .5s, color .5s ease-in-out;
+  border-radius: 15px;
+  float: left;
+  padding: .75rem;
+  margin-right: .5rem;
+}
+
+.tags .tag:hover {
+  background-position: 100% 100%;
+  color: white;
+}
+
 .content {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 3;
   grid-area: content;
 }

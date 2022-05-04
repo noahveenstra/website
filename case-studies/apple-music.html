@@ -1,553 +1,747 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <!-- <link rel="stylesheet" href="/css/case-studies/css/style.css"> -->
     <script src="/scroll-animation.js"></script>
     <script src="/mobile-menu.js"></script>
     <script src="/image-zoom.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
-    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
+    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
     <title>Noah Veenstra — Apple Music</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav-fullscreen">
-        <div class="nav-fullscreen_items">
-            <div class="nav-fullscreen_item">
-                <a href="/index.html">home.</a>
-            </div>
-            <div class="nav-fullscreen_item">
-                <a href="/about.html">about.</a>
-            </div>
-            <div class="nav-fullscreen_item">
-                <a href="/case-studies.html">case studies.</a>
-            </div>
-            <div class="nav-fullscreen_item">
-                <a href="/contact.html">contact.</a>
-            </div>
+      <div class="nav-fullscreen_items">
+        <div class="nav-fullscreen_item">
+          <a href="/index.html">home.</a>
         </div>
+        <div class="nav-fullscreen_item">
+          <a href="/about.html">about.</a>
+        </div>
+        <div class="nav-fullscreen_item">
+          <a href="/case-studies.html">case studies.</a>
+        </div>
+        <div class="nav-fullscreen_item">
+          <a href="/contact.html">contact.</a>
+        </div>
+      </div>
     </div>
-    <button class="menu"
-        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-        aria-label="Main Menu">
-        <svg width="37" height="37" viewBox="0 0 100 100">
-            <path class="line line1"
-                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-            <path class="line line2" d="M 20,50 H 60" />
-            <path class="line line3"
-                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-        </svg>
+    <button
+      class="menu"
+      onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+      aria-label="Main Menu"
+    >
+      <svg width="37" height="37" viewBox="0 0 100 100">
+        <path
+          class="line line1"
+          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+        />
+        <path class="line line2" d="M 20,50 H 60" />
+        <path
+          class="line line3"
+          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+        />
+      </svg>
     </button>
     <div id="page-container">
-        <div id="content-wrap">
-            <section class="nav">
-                <div class="logo"><a href="/index.html">nv.</a></div>
-                <div class="links">
-                    <div class="work"><a href="/about.html">about.</a></div>
-                    <div class="studies"><a href="/case-studies.html">case studies<span>.</span></a></div>
-                    <div class="contact"><a href="/contact.html">contact.</a></div>
-                </div>
-            </section>
-            <section class="wrapper">
-                <article class="hero">
-                    <h1>Apple Music</h1>
-                    <h2>I wish I could use Apple <br> Music, so I <span>redesigned</span> it.</h2>
-                    <figure class="visual">
-                    </figure>
+      <div id="content-wrap">
+        <section class="nav">
+          <div class="logo"><a href="/index.html">nv.</a></div>
+          <div class="links">
+            <div class="work"><a href="/about.html">about.</a></div>
+            <div class="studies">
+              <a href="/case-studies.html">case studies<span>.</span></a>
+            </div>
+            <div class="contact"><a href="/contact.html">contact.</a></div>
+          </div>
+        </section>
+        <section class="wrapper">
+          <article class="hero">
+            <h1>Apple Music</h1>
+            <h2>
+              I wish I could use Apple <br />
+              Music, so I <span>redesigned</span> it.
+            </h2>
+            <figure class="visual"></figure>
+          </article>
+          <aside class="sidebar">
+            <ul>
+              <li>
+                <a href="#Overview">Overview</a>
+              </li>
+
+              <li>
+                <a href="#age">Problem</a>
+              </li>
+
+              <li>
+                <a href="#people">Process</a>
+              </li>
+
+              <li>
+                <a href="#love">Solution</a>
+              </li>
+              <li>
+                <a href="#conclusion">Conclusion</a>
+              </li>
+            </ul>
+          </aside>
+          <summary class="info">
+            <p class="goal">Goal</p>
+            <p class="goal-info">
+              Create a new design for Apple Music that will correct its
+              lackluster feature set.
+            </p>
+            <p class="time">Time Frame</p>
+            <p class="time-info">2 weeks</p>
+            <p class="tools">Tools</p>
+            <p class="tools-info">MSU Library, Adobe Xd, Adobe Illustrator</p>
+          </summary>
+
+          <summary class="tags">
+            <div class="tag">#Apple Music</div>
+            <div class="tag">#Mobile UI</div>
+            <div class="tag">#App ReDesign</div>
+          </summary>
+
+          <main class="content">
+            <a name="Overview"></a>
+            <article>
+              <h1>Overview</h1>
+              <p>
+                My primary motivation to create this case study was the
+                frustration I felt when using Apple Music compared to Spotify. I
+                had used both before and gone through a bit of an on and off
+                cycle with both products. Throughout this time I noticed many
+                differences between them that made one better than the other.
+                Unfortunately, Spotify was the service I preferred. This is
+                unfortunate only because I am a die-hard Apple fan and user.
+                I've wanted so badly to use Apple Music because of its tight
+                integration with iOS but I can't overlook its downfalls when put
+                head to head with the competition.
+
+                <br />
+                <br />
+
+                Along with this, among peers and friends, Spotify was the
+                preferred choice. I didn't have to look hard to find someone
+                using Spotify who was also using an iPhone. Just walking down
+                any hallway all I needed to do was glance at someone who was on
+                their phone listening to music and 8 out of 10 times it would be
+                Spotify. This made me wonder why would someone, who bought into
+                the Apple ecosystem with an iPhone, still chose a music service
+                that required multiple steps to set up and pay for outside of
+                the native Music app.
+
+                <br />
+                <br />
+
+                Throughout this study, I'll look for answers to issues that
+                Apple has created with their On-Demand Music service Apple
+                Music. Along with how Apple can create features to entice more
+                of the 18 - 24 year old age group to switch from Spotify.
+              </p>
+            </article>
+            <a name="age"></a>
+            <article>
+              <h1>Problem</h1>
+              <h4>The Age Disparity</h4>
+              <p>
+                The most obvious metric that shows concern is the number of
+                users that are between 18 and 24 using Apple Music. According to
+                Statista, in 2018 Apple Music had a total of 49.5 million users
+                in the US and only 17% of those users were in this age bracket.
+              </p>
+              <svg
+                style="width: 100% - 1rem; padding: 1rem"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1257.554 371.897"
+              >
+                <g id="newchart" transform="translate(-237 -2595.103)">
+                  <rect
+                    id="Rectangle_25"
+                    data-name="Rectangle 25"
+                    width="983"
+                    height="27"
+                    transform="translate(409 2751)"
+                    fill="#1db954"
+                  ></rect>
+                  <rect
+                    id="Rectangle_24"
+                    data-name="Rectangle 24"
+                    width="81"
+                    height="27"
+                    transform="translate(409 2665.999)"
+                    fill="#fc3c44"
+                  ></rect>
+                  <path
+                    id="Path_17"
+                    data-name="Path 17"
+                    d="M4354,4628.1v268.926H5439.554"
+                    transform="translate(-3945 -2033)"
+                    fill="none"
+                    stroke="#707070"
+                    stroke-width="1"
+                  ></path>
+                  <text
+                    id="Apple_Music"
+                    data-name="Apple Music"
+                    transform="translate(312 2689)"
+                    font-size="30"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-74.865" y="0">Apple Music</tspan>
+                  </text>
+                  <text
+                    id="Spotify"
+                    transform="translate(345 2774)"
+                    font-size="30"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-42.345" y="0">Spotify</tspan>
+                  </text>
+                  <text
+                    id="Amount_of_Users_Ages_18_-_24_in_2018_millions_"
+                    data-name="Amount of Users Ages 18 - 24 in 2018 (millions)"
+                    transform="translate(926 2958)"
+                    font-size="30"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-285.24" y="0">
+                      Amount of Users Ages 18 - 24 in 2018 (millions)
+                    </tspan>
+                  </text>
+                  <text
+                    id="_10.5"
+                    data-name="10.5"
+                    transform="translate(526 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-18.69" y="0">10.5</tspan>
+                  </text>
+                  <text
+                    id="_13"
+                    data-name="13"
+                    transform="translate(585 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-10.36" y="0">13</tspan>
+                  </text>
+                  <text
+                    id="_8"
+                    data-name="8"
+                    transform="translate(467 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-5.68" y="0">8</tspan>
+                  </text>
+                  <text
+                    id="_5.5"
+                    data-name="5.5"
+                    transform="translate(417 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-13.76" y="0">5.5</tspan>
+                  </text>
+                  <text
+                    id="_15.5"
+                    data-name="15.5"
+                    transform="translate(643 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-18.31" y="0">15.5</tspan>
+                  </text>
+                  <text
+                    id="_18"
+                    data-name="18"
+                    transform="translate(701 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-10.24" y="0">18</tspan>
+                  </text>
+                  <text
+                    id="_20.5"
+                    data-name="20.5"
+                    transform="translate(760 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.44" y="0">20.5</tspan>
+                  </text>
+                  <text
+                    id="_23"
+                    data-name="23"
+                    transform="translate(820 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.36" y="0">23</tspan>
+                  </text>
+                  <text
+                    id="_25.5"
+                    data-name="25.5"
+                    transform="translate(880 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.21" y="0">25.5</tspan>
+                  </text>
+                  <text
+                    id="_28"
+                    data-name="28"
+                    transform="translate(940 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.01" y="0">28</tspan>
+                  </text>
+                  <text
+                    id="_30.5"
+                    data-name="30.5"
+                    transform="translate(1000 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.44" y="0">30.5</tspan>
+                  </text>
+                  <text
+                    id="_33"
+                    data-name="33"
+                    transform="translate(1060 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.36" y="0">33</tspan>
+                  </text>
+                  <text
+                    id="_35.5"
+                    data-name="35.5"
+                    transform="translate(1120 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.44" y="0">35.5</tspan>
+                  </text>
+                  <text
+                    id="_38"
+                    data-name="38"
+                    transform="translate(1180 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.36" y="0">38</tspan>
+                  </text>
+                  <text
+                    id="_40.5"
+                    data-name="40.5"
+                    transform="translate(1240 2893)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.44" y="0">40.5</tspan>
+                  </text>
+                  <text
+                    id="_43"
+                    data-name="43"
+                    transform="translate(1300 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.36" y="0">43</tspan>
+                  </text>
+                  <text
+                    id="_45.5"
+                    data-name="45.5"
+                    transform="translate(1360 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-19.44" y="0">45.5</tspan>
+                  </text>
+                  <text
+                    id="_48"
+                    data-name="48"
+                    transform="translate(1420 2892)"
+                    font-size="20"
+                    font-family="FuturaPT-Medium, Futura PT"
+                    font-weight="500"
+                  >
+                    <tspan x="-11.36" y="0">48</tspan>
+                  </text>
+                </g>
+              </svg>
+              <p>
+                This is a small percentage, especially compared to Spotify's
+                26%, of users each month that are not being properly catered to.
+                To be more precise, for Apple Music, this number from 2018 comes
+                to around 8.42 million users. For Spotify in that same year, the
+                numbers boil down to 46.8 million users in this age bracket.
+                This is over 5x the amount of young Spotify users compared Apple
+                Music users. While it looks like Spotify's growth in this age
+                range is not slowing down, there are a few simple solutions that
+                can be implemented to put Apple ahead.
+              </p>
+              <h4>Where'd All the Features Go?</h4>
+              <p>
+                Let's be honest, if you've ever used Apple Music, you've noticed
+                the absence of new features that enhance the user experience.
+                The service launched way back in 2015. Since then, features have
+                been taken away instead of added. When it launched, one of its
+                headlining features was 'Connect.'
+              </p>
+              <div class="quote">
+                It's going to be very powerful for musicians. Can you imagine
+                being an up and coming artist and being able to share your music
+                on the biggest platform in the world that people already have?
+                <span>Jimmy Iovine — Apple WWDC 2015</span>
+              </div>
+              <p>
+                A way for you to easily keep up to date with your favorite
+                artists. It was pretty much a social media just for artists.
+                Only a year later, the feature was replaced by the browse tab,
+                pulled, and never seen again. This seemed like such a knee-jerk
+                reaction. Putting so much emphasis on a feature during the
+                keynote and pulling it just because in one year it wasn't seeing
+                the engagement or numbers Apple expected. It is definitely
+                concerning. Even though there have been UI shuffles, new
+                features have been few and far between. The only notable feature
+                that I can even think of from using Apple Music for the past 7+
+                years is the introduction of spacial and lossless audio, and
+                that's only if you have compatible headphones and good enough
+                bandwidth. That's it.
+              </p>
+            </article>
+            <a name="people"></a>
+            <article>
+              <h1>Process</h1>
+              <h4>Hearing from the People</h4>
+              <p>
+                I asked friends and peers that use both services to compare the
+                two services on a Google Jamboard so they could freely add
+                whatever they felt was prevalent. After about a week I got a
+                board that outlined key differences between the two.
+              </p>
+              <figure>
+                <img
+                  src="/assets/Apple Music vs. Spotify Case Study 1.png"
+                  alt=""
+                /><br />
+                <figcaption>
+                  Screenshot of completed Jamboard (<a
+                    href="https://jamboard.google.com/d/1XSMhXNB6id-eNYo5ODZKLDVMP6YpNGx9kFHpw6Fzh8s/edit?usp=sharing"
+                    target="_blank"
+                    >source</a
+                  >)
+                </figcaption>
+              </figure>
+              <p>
+                I looked at these differences and tried to put them in priority
+                order from most to least important. Then, I decided to also
+                create a list of the most achievable desired features from most
+                desired to least. These lists are from Apple's point of view.
+              </p>
+
+              <section id="importance-achievability">
+                <article id="importance">
+                  <ul>
+                    <li id="header">Importance</li>
+                    <li>Podcasts built in</li>
+                    <li>Easily keep track of songs you like and discover</li>
+                    <li>Discovery</li>
+                    <li>
+                      Playlists more curated and play what you expect based on
+                      titles
+                    </li>
+                    <li>Group sessions</li>
+                    <li>Daily playlists for different moods</li>
+                    <li>Spotify wrapped playlist</li>
+                    <li>
+                      Better UI that encourages listening and finding new songs
+                    </li>
+                    <li>Easieer to share songs/albums</li>
+                  </ul>
                 </article>
-                <aside class="sidebar">
-                    <ul>
+                <article id="achievability">
+                  <ul>
+                    <li id="header">Achievability</li>
+                    <li>
+                      Playlists more curated and play what you expect based on
+                      titles
+                    </li>
+                    <li>Daily playlists for different moods</li>
+                    <li>Podcasts built in</li>
+                    <li>Easily keep track of songs you like and discover</li>
+                    <li>Group sessions</li>
+                    <li>
+                      Better UI that encourages listening and finding new songs
+                    </li>
+                    <li>Discovery</li>
+                  </ul>
+                </article>
+              </section>
+              <p>
+                Using these two lists, I created a system that allowed me to
+                determine which problems to tackle in this study. Per list, each
+                item receives points based on how far up or down they are on the
+                list. The first item gets 1 point, the second item gets 2
+                points, and so on. After each item received its points, you
+                subtract the items that have the same name, and the items that
+                were closest to 0 were the most important and most achievable
+                objectives, so I worked on the first two: Likes and Group
+                Sessions.
+              </p>
+            </article>
+            <a name="love"></a>
+            <article>
+              <h1>Solution</h1>
+              <h4>Where's the Love?</h4>
+              <p>
+                In this day and age of social media, we are constantly liking
+                and loving posts from a wide range of accounts. On pretty much
+                every platform you can view your liked posts and look back
+                through them. Now, Apple Music does allow you to 'Love' a song,
+                album, or playlist, but there is nowhere to view everything you
+                loved. This is a major miss for its users as some leave just for
+                this one feature.
+              </p>
+              <figure>
+                <img
+                  src="/assets/apple-music-tabs.png"
+                  alt=""
+                  style="width: 100%"
+                />
+                <img src="/assets/ipad-listenNow.png" alt="" />
+              </figure>
+              <p>
+                The solution I devised for this problem was to create a new
+                bottom row tab called 'Loves.' No longer would the user be
+                clueless about where their mysterious loved songs went. This
+                gave a clear home for everything that you love inside Apple
+                Music. Now, what happens to the radio section that was just
+                wiped away from our user's home bar? It moves into the browse
+                page. And there is a clear back button so the user doesn't get
+                stuck or confused on this new page. When you think about looking
+                for music to listen to, sometimes you want that radio. Keeping
+                it in the app and putting it in a subcategory that fits it is
+                why it was moved. Of course, all the same, algorithmically
+                generated suggestions for radio in 'Listen Now' will be present.
+              </p>
+              <figure>
+                <img
+                  src="/assets/browse-radio-render.png"
+                  alt=""
+                  style="float: left; width: 50%; margin-top: 25%"
+                />
+                <img src="/assets/radio-tab.png" alt="" style="width: 50%" />
+              </figure>
 
-                        <li>
-                            <a href="#Overview">Overview</a>
-                        </li>
+              <p>
+                Now that our Radio friend is taken care of, let's look more into
+                the new 'Loves' tab. Thinking solely about the user and what
+                they would want right at their fingertips, the first suggestion
+                they get is the 'On Rotation playlist. This playlist is
+                procedurally generated from songs that they've loved and
+                continue to come back to multiple times. This lets the user not
+                only have a playlist that they will very likely love to listen
+                to, but it will give an easy way to find songs that they want to
+                play again without going to search.
+              </p>
+              <p>
+                Digging through any UI, even the beautifully designed ones, is
+                everyone's worst nightmare. Within a music app, users want to
+                find music they want to listen to then close it and be done.
+                That's why this next section is devoted to the most recently
+                loved items. Whether it be Songs, Playlists, Albums, or Artists,
+                they will show up in the carousel of 'Recently Loved.' This
+                gives the user the ability to find what has been relevant to
+                them recently and gives somewhat of a timeline of their recent
+                preferences. Having the section within one click also keeps the
+                decision path simple. Does a user want to find a song they loved
+                just a couple of days ago? Great, all it takes is a tap or a
+                swipe of the carousel and they've found it.
+              </p>
 
-                        <li>
-                            <a href="#age">Problem</a>
-                        </li>
+              <figure>
+                <img
+                  src="/assets/Loves - Default.png"
+                  alt=""
+                  style="width: 60%; float: left"
+                />
+                <img
+                  src="/assets/Loves - Scroll.png"
+                  alt=""
+                  style="width: 40%; display: block; margin-top: 20%"
+                />
+              </figure>
 
-                        <li>
-                            <a href="#people">Process</a>
-                        </li>
-
-                        <li>
-                            <a href="#love">Solution</a>
-                        </li>
-                        <li>
-                            <a href="#conclusion">Conclusion</a>
-                        </li>
-                    </ul>
-                </aside>
-                <summary class="info">
-                    <p class="goal">Goal</p>
-                    <p class="goal-info">Create a new design for Apple Music that will correct its lackluster feature
-                        set.
-                    </p>
-                    <p class="time">Time Frame</p>
-                    <p class="time-info">2 weeks</p>
-                    <p class="tools">Tools</p>
-                    <p class="tools-info">MSU Library, Adobe Xd, Adobe Illustrator</p>
-                </summary>
-
-
-
-                <main class="content">
-                    <a name="Overview"></a>
-                    <article>
-                        <h1>Overview</h1>
-                        <p>
-                            My primary motivation to create this case study was the frustration I felt when using Apple
-                            Music
-                            compared to Spotify. I had used both before and gone through a bit of an on and off cycle
-                            with both
-                            products. Throughout this time I noticed many differences between them that made one better
-                            than the
-                            other. Unfortunately, Spotify was the service I preferred. This is unfortunate only because
-                            I am a
-                            die-hard Apple fan and user. I've wanted so badly to use Apple Music because of its tight
-                            integration with iOS but I can't overlook its downfalls when put head to head with the
-                            competition.
-
-                            <br>
-                            <br>
-
-                            Along with this, among peers and friends, Spotify was the preferred choice. I didn't have to
-                            look
-                            hard to find someone using Spotify who was also using an iPhone. Just walking down any
-                            hallway all I
-                            needed to do was glance at someone who was on their phone listening to music and 8 out of 10
-                            times
-                            it would be Spotify. This made me wonder why would someone, who bought into the Apple
-                            ecosystem with
-                            an iPhone, still chose a music service that required multiple steps to set up and pay for
-                            outside of
-                            the native Music app.
-
-                            <br>
-                            <br>
-
-                            Throughout this study, I'll look for answers to issues that Apple has created with their
-                            On-Demand
-                            Music service Apple Music. Along with how Apple can create features to entice more of the 18
-                            - 24
-                            year old age group to switch from Spotify.
-                        </p>
-                    </article>
-                    <a name="age"></a>
-                    <article>
-                        <h1>Problem</h1>
-                        <h4>The Age Disparity</h4>
-                        <p>
-                            The most obvious metric that shows concern is the number of users that are
-                            between 18
-                            and 24 using Apple Music. According to Statista, in 2018 Apple Music had a total of 49.5
-                            million
-                            users in the US and only 17% of those users were in this age bracket.
-                        </p>
-                        <svg style="width: 100% - 1rem; padding:1rem" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 1257.554 371.897">
-                            <g id="newchart" transform="translate(-237 -2595.103)">
-                                <rect id="Rectangle_25" data-name="Rectangle 25" width="983" height="27"
-                                    transform="translate(409 2751)" fill="#1db954"></rect>
-                                <rect id="Rectangle_24" data-name="Rectangle 24" width="81" height="27"
-                                    transform="translate(409 2665.999)" fill="#fc3c44"></rect>
-                                <path id="Path_17" data-name="Path 17" d="M4354,4628.1v268.926H5439.554"
-                                    transform="translate(-3945 -2033)" fill="none" stroke="#707070" stroke-width="1">
-                                </path>
-                                <text id="Apple_Music" data-name="Apple Music" transform="translate(312 2689)"
-                                    font-size="30" font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-74.865" y="0">Apple Music</tspan>
-                                </text>
-                                <text id="Spotify" transform="translate(345 2774)" font-size="30"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-42.345" y="0">Spotify</tspan>
-                                </text>
-                                <text id="Amount_of_Users_Ages_18_-_24_in_2018_millions_"
-                                    data-name="Amount of Users Ages 18 - 24 in 2018 (millions)"
-                                    transform="translate(926 2958)" font-size="30"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-285.24" y="0">Amount of Users Ages 18 - 24 in 2018 (millions)</tspan>
-                                </text>
-                                <text id="_10.5" data-name="10.5" transform="translate(526 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-18.69" y="0">10.5</tspan>
-                                </text>
-                                <text id="_13" data-name="13" transform="translate(585 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-10.36" y="0">13</tspan>
-                                </text>
-                                <text id="_8" data-name="8" transform="translate(467 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-5.68" y="0">8</tspan>
-                                </text>
-                                <text id="_5.5" data-name="5.5" transform="translate(417 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-13.76" y="0">5.5</tspan>
-                                </text>
-                                <text id="_15.5" data-name="15.5" transform="translate(643 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-18.31" y="0">15.5</tspan>
-                                </text>
-                                <text id="_18" data-name="18" transform="translate(701 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-10.24" y="0">18</tspan>
-                                </text>
-                                <text id="_20.5" data-name="20.5" transform="translate(760 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.44" y="0">20.5</tspan>
-                                </text>
-                                <text id="_23" data-name="23" transform="translate(820 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.36" y="0">23</tspan>
-                                </text>
-                                <text id="_25.5" data-name="25.5" transform="translate(880 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.21" y="0">25.5</tspan>
-                                </text>
-                                <text id="_28" data-name="28" transform="translate(940 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.01" y="0">28</tspan>
-                                </text>
-                                <text id="_30.5" data-name="30.5" transform="translate(1000 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.44" y="0">30.5</tspan>
-                                </text>
-                                <text id="_33" data-name="33" transform="translate(1060 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.36" y="0">33</tspan>
-                                </text>
-                                <text id="_35.5" data-name="35.5" transform="translate(1120 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.44" y="0">35.5</tspan>
-                                </text>
-                                <text id="_38" data-name="38" transform="translate(1180 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.36" y="0">38</tspan>
-                                </text>
-                                <text id="_40.5" data-name="40.5" transform="translate(1240 2893)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.44" y="0">40.5</tspan>
-                                </text>
-                                <text id="_43" data-name="43" transform="translate(1300 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.36" y="0">43</tspan>
-                                </text>
-                                <text id="_45.5" data-name="45.5" transform="translate(1360 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-19.44" y="0">45.5</tspan>
-                                </text>
-                                <text id="_48" data-name="48" transform="translate(1420 2892)" font-size="20"
-                                    font-family="FuturaPT-Medium, Futura PT" font-weight="500">
-                                    <tspan x="-11.36" y="0">48</tspan>
-                                </text>
-                            </g>
-                        </svg>
-                        <p>
-                            This is a small percentage, especially compared to Spotify's 26%, of users each month that
-                            are not
-                            being properly catered to. To be more precise, for Apple Music, this number from 2018 comes
-                            to
-                            around 8.42 million users. For Spotify in that same year, the numbers boil down to 46.8
-                            million
-                            users in this age bracket. This is over 5x the amount of young Spotify users compared Apple
-                            Music
-                            users. While it looks like Spotify's growth in this age range is not slowing down, there are
-                            a few
-                            simple solutions that can be implemented to put Apple ahead.
-                        </p>
-                        <h4>Where'd All the Features Go?</h4>
-                        <p>
-                            Let's be honest, if you've ever used Apple Music, you've noticed the absence of new features
-                            that enhance the user experience. The service launched way back in 2015. Since then,
-                            features have been taken away instead of added. When it launched, one of its headlining
-                            features was 'Connect.' </p>
-                        <div class="quote">It's going to be very powerful for musicians. Can you imagine being an up and
-                            coming artist and being able to share your music on the biggest platform in the world that
-                            people already have?
-                            <span>Jimmy Iovine — Apple WWDC 2015</span>
-                        </div>
-                        <p>
-                            A way for you to easily keep up to date with your favorite artists. It was pretty much a
-                            social media just for artists. Only a year later, the feature was replaced by the browse
-                            tab, pulled, and never seen again. This seemed like such a knee-jerk reaction. Putting so much emphasis on a feature during the keynote and pulling it just because in one year it wasn't seeing the engagement or numbers Apple expected. It is definitely concerning. Even though there have been UI shuffles, new features
-                            have been few and far between. The only notable feature that I can even think of from using
-                            Apple Music for the past 7+ years is the introduction of spacial and lossless audio, and
-                            that's only if you have compatible headphones and good enough bandwidth. That's it.
-                        </p>
-                    </article>
-                    <a name="people"></a>
-                    <article>
-                        <h1>Process</h1>
-                        <h4>Hearing from the People</h4>
-                        <p>
-                            I asked friends and peers that use both services to compare the two services on a Google
-                            Jamboard so
-                            they could freely add whatever they felt was prevalent. After about a week I got a board
-                            that
-                            outlined key differences between the two.
-                        </p>
-                        <figure>
-                            <img src="/assets/Apple Music vs. Spotify Case Study 1.png" alt=""><br>
-                            <figcaption>
-                                Screenshot of completed Jamboard (<a
-                                    href="https://jamboard.google.com/d/1XSMhXNB6id-eNYo5ODZKLDVMP6YpNGx9kFHpw6Fzh8s/edit?usp=sharing"
-                                    target="_blank">source</a>)
-                            </figcaption>
-                        </figure>
-                        <p>
-                            I looked at these differences and tried to put them in priority order from most to least
-                            important.
-                            Then, I decided to also create a list of the most achievable desired features from most
-                            desired to
-                            least. These lists are from Apple's point of view.
-                        </p>
-
-                        <section id="importance-achievability">
-                            <article id="importance">
-                                <ul>
-                                    <li id="header">Importance</li>
-                                    <li>Podcasts built in</li>
-                                    <li>Easily keep track of songs you like and discover</li>
-                                    <li>Discovery</li>
-                                    <li>Playlists more curated and play what you expect based on titles</li>
-                                    <li>Group sessions</li>
-                                    <li>Daily playlists for different moods</li>
-                                    <li>Spotify wrapped playlist</li>
-                                    <li>Better UI that encourages listening and finding new songs</li>
-                                    <li>Easieer to share songs/albums</li>
-                                </ul>
-                            </article>
-                            <article id="achievability">
-                                <ul>
-                                    <li id="header">Achievability</li>
-                                    <li>Playlists more curated and play what you expect based on titles</li>
-                                    <li>Daily playlists for different moods</li>
-                                    <li>Podcasts built in</li>
-                                    <li>Easily keep track of songs you like and discover</li>
-                                    <li>Group sessions</li>
-                                    <li>Better UI that encourages listening and finding new songs</li>
-                                    <li>Discovery</li>
-                                </ul>
-                            </article>
-                        </section>
-                        <p>
-                            Using these two lists, I created a system that allowed me to determine which problems to
-                            tackle
-                            in this study. Per list, each item receives points based on how far up or down they are on
-                            the
-                            list. The first item gets 1 point, the second item gets 2 points, and so on. After each item
-                            received its points, you subtract the items that have the same name, and the items that were
-                            closest to 0 were the most important and most achievable objectives, so I worked on the
-                            first
-                            two: Likes and Group Sessions.
-                        </p>
-                    </article>
-                    <a name="love"></a>
-                    <article>
-                        <h1>Solution</h1>
-                        <h4>Where's the Love?</h4>
-                        <p>
-                            In this day and age of social media, we are constantly liking and loving posts from a wide
-                            range of
-                            accounts. On pretty much every platform you can view your liked posts and look back through
-                            them.
-                            Now, Apple Music does allow you to 'Love' a song, album, or playlist, but there is nowhere
-                            to view
-                            everything you loved. This is a major miss for its users as some leave just for this one
-                            feature.
-                        </p>
-                        <figure>
-                            <img src="/assets/apple-music-tabs.png" alt="" style="width: 100%;">
-                            <img src="/assets/ipad-listenNow.png" alt="">
-                        </figure>
-                        <p>
-                            The solution I devised for this problem was to create a new bottom row tab called 'Loves.'
-                            No longer
-                            would the user be clueless about where their mysterious loved songs went. This gave a clear
-                            home for
-                            everything that you love inside Apple Music. Now, what happens to the radio section that was
-                            just
-                            wiped away from our user's home bar? It moves into the browse page. And there is a clear
-                            back button
-                            so the user doesn't get stuck or confused on this new page. When you think about looking for
-                            music
-                            to listen to, sometimes you want that radio. Keeping it in the app and putting it in a
-                            subcategory
-                            that fits it is why it was moved. Of course, all the same, algorithmically generated
-                            suggestions for
-                            radio in 'Listen Now' will be present.
-                        </p>
-                        <figure>
-                            <img src="/assets/browse-radio-render.png" alt=""
-                                style="float: left; width: 50%; margin-top: 25%;">
-                            <img src="/assets/radio-tab.png" alt="" style="width: 50%;">
-                        </figure>
-
-                        <p>
-                            Now that our Radio friend is taken care of, let's look more into the new 'Loves' tab.
-                            Thinking
-                            solely about the user and what they would want right at their fingertips, the first
-                            suggestion
-                            they get is the 'On Rotation playlist. This playlist is procedurally generated from songs
-                            that
-                            they've loved and continue to come back to multiple times. This lets the user not only have
-                            a
-                            playlist that they will very likely love to listen to, but it will give an easy way to find
-                            songs that they want to play again without going to search.
-                        </p>
-                        <p>
-                            Digging through any UI, even the beautifully designed ones, is everyone's worst nightmare.
-                            Within a music app, users want to find music they want to listen to then close it and be
-                            done.
-                            That's why this next section is devoted to the most recently loved items. Whether it be
-                            Songs,
-                            Playlists, Albums, or Artists, they will show up in the carousel of 'Recently Loved.' This
-                            gives
-                            the user the ability to find what has been relevant to them recently and gives somewhat of a
-                            timeline of their recent preferences. Having the section within one click also keeps the
-                            decision path simple. Does a user want to find a song they loved just a couple of days ago?
-                            Great, all it takes is a tap or a swipe of the carousel and they've found it.
-                        </p>
-
-                        <figure>
-                            <img src="/assets/Loves - Default.png" alt="" style="width: 60%; float: left; ">
-                            <img src="/assets/Loves - Scroll.png" alt=""
-                                style="width: 40%; display: block; margin-top: 20%;">
-                        </figure>
-
-                        <p>
-                            One shortcoming of Apple Music has been its lackluster features. This brings us to the
-                            'Loved by
-                            Mood' area. This area will create procedurally generated playlists to coincide with an array
-                            of
-                            different moods. It would determine these mostly from scanning for the song's beats per
-                            minute
-                            (BPM). The BPM of a song is usually a good indicator of its mood and energy. The higher the
-                            BPM,
-                            the quicker the song feels, and most of the time more energetic. The playlists would contain
-                            songs the user has loved that fit the category as well as new songs that have similar
-                            attributes. This way the user can discover new songs within the category they are listening
-                            to
-                            and possibly add them to their library of loved songs.
-                        </p>
-                    </article>
-                    <a name="group"></a>
-                    <article>
-                        <h4>Two's Company, Three's a Crowd</h4>
-                        <p>
-                            Driving in a car with a group of people or maybe just with a partner is a great way to
-                            connect. More
-                            often than not someone else wants to play music from their Library to the current speaker.
-                            To do
-                            this, the first person has to disconnect from the speaker, then the second person has to
-                            pair and
-                            connect to it. Such a cumbersome and complicated process that it rarely ever happens. The
-                            solution I
-                            concluded was to add an iteration of SharePlay directly inside the Music app.
-                        </p>
-                        <p
-                            style="border-radius: 27px; background-color: #f3f3f3; padding: 1rem; color: rgb(80, 80, 80);">
-                            💡 ICYMI, SharePlay was released on iOS 15.1 in December 2021. It allows users to share
-                            their
-                            screen, tv show, or music all through FaceTime. It is mostly known for its screen sharing
-                            ability
-                            after coming at the end of a video call (Zoom dominated) year. Nonetheless, Apple did
-                            present it
-                            with the other features of music and select tv show sharing capabilities.
-                        </p>
-                        <p>
-                            Currently, SharePlay is already built into the music menu. The only issue is that if you try
-                            to add
-                            someone to your SharePlay it says that the media type is unable to SharePlay. Although this
-                            is not
-                            the truth, what they want you to do is be on a FaceTime Audio or Video call in order to use
-                            this
-                            feature.
-                        </p>
-                        <p>
-                            The implementation that I would have built allows for users to create a SharePlay session,
-                            no matter
-                            the context, and share it with up to 15 people. If you weren't the source user, you would be
-                            able to
-                            add songs to the queue but not skip or reverse songs. This still allows for control over
-                            what the
-                            source user's phone is playing and eliminates a potential headache for all the users. If
-                            everyone
-                            was given the ability to switch songs, human nature would kick in and there would be a race
-                            to get
-                            to the song they added.
-                        </p>
-                        <figure>
-                            <img src="/assets/shareplay-source.png" alt=""
-                                style="float: left; width: 40%; margin-top: 20%;">
-                            <img src="/assets/shareplay-user.png" alt="" style=" width: 60%;">
-                        </figure>
-                        <p>
-                            When creating a new system that relies so heavily on the song queue, you have to reconsider
-                            how it
-                            looks and feels. When looking at the queue, all users are able to see the names of who added
-                            which
-                            song. Adding a bit of personalization to the queue will create a sense of community and
-                            bonding. The
-                            queue for the users that don't have the source phone, will be slightly different. Their
-                            queue will
-                            show a three dotted menu next to each song in order to get more information on it, add it to
-                            their
-                            library and, of course, love it. Non-souce users are also not able to change the order of
-                            the queue.
-                            This gives a fair chance for each user to play the song they like and have it heard. But,
-                            the queue
-                            for the source user will look the same and be the 'admin' in a sense, able to change the
-                            order of
-                            songs, delete them from the queue and remove users from the SharePlay session if need be.
-                        </p>
-                    </article>
-                    <a name="conclusion"></a>
-                    <article>
-                        <h1>Conclusion</h1>
-                        <p>
-                            From these proposed changes, I hope more thought is provoked around Apple Music and its
-                            potential to
-                            overtake Spotify and its dominance. I truly believe that these changes would have a positive
-                            impact
-                            on everyone that uses Apple Music and elevate their interactive experience with the service.
-                            Unfortunately, it seems like Apple has become complacent with requests from users since the
-                            service
-                            has launched back in 2015 just because they can and people will still subscribe. These
-                            findings and
-                            solutions have been created to showcase my ability to problem solve and go through the
-                            process of
-                            the decisions I felt were necessary.
-                            <br><br>
-                            <sub style="color: grey;">
-                                If you'd like to take a closer look at all assets made for this Case Study, find them <a
-                                    href="https://drive.google.com/drive/folders/1RzXB2DrYao-EvgNwBs5toWMQSySbgFQk?usp=sharing"
-                                    target="_blank" style="font-style: italic;">here</a>.
-                            </sub>
-                        </p>
-                    </article>
-                </main>
-            </section>
-            <footer>
-                <p>Coded and UX designed by hand © Noah Veenstra 2022. </p>
-                <div class="social">
-                    <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
-                            alt=""></a>
-                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img
-                            src="/assets/linkedin-logo.png" alt=""></a>
-                    <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png"
-                            alt=""></a>
-                </div>
-            </footer>
-        </div>
+              <p>
+                One shortcoming of Apple Music has been its lackluster features.
+                This brings us to the 'Loved by Mood' area. This area will
+                create procedurally generated playlists to coincide with an
+                array of different moods. It would determine these mostly from
+                scanning for the song's beats per minute (BPM). The BPM of a
+                song is usually a good indicator of its mood and energy. The
+                higher the BPM, the quicker the song feels, and most of the time
+                more energetic. The playlists would contain songs the user has
+                loved that fit the category as well as new songs that have
+                similar attributes. This way the user can discover new songs
+                within the category they are listening to and possibly add them
+                to their library of loved songs.
+              </p>
+            </article>
+            <a name="group"></a>
+            <article>
+              <h4>Two's Company, Three's a Crowd</h4>
+              <p>
+                Driving in a car with a group of people or maybe just with a
+                partner is a great way to connect. More often than not someone
+                else wants to play music from their Library to the current
+                speaker. To do this, the first person has to disconnect from the
+                speaker, then the second person has to pair and connect to it.
+                Such a cumbersome and complicated process that it rarely ever
+                happens. The solution I concluded was to add an iteration of
+                SharePlay directly inside the Music app.
+              </p>
+              <p
+                style="
+                  border-radius: 27px;
+                  background-color: #f3f3f3;
+                  padding: 1rem;
+                  color: rgb(80, 80, 80);
+                "
+              >
+                💡 ICYMI, SharePlay was released on iOS 15.1 in December 2021.
+                It allows users to share their screen, tv show, or music all
+                through FaceTime. It is mostly known for its screen sharing
+                ability after coming at the end of a video call (Zoom dominated)
+                year. Nonetheless, Apple did present it with the other features
+                of music and select tv show sharing capabilities.
+              </p>
+              <p>
+                Currently, SharePlay is already built into the music menu. The
+                only issue is that if you try to add someone to your SharePlay
+                it says that the media type is unable to SharePlay. Although
+                this is not the truth, what they want you to do is be on a
+                FaceTime Audio or Video call in order to use this feature.
+              </p>
+              <p>
+                The implementation that I would have built allows for users to
+                create a SharePlay session, no matter the context, and share it
+                with up to 15 people. If you weren't the source user, you would
+                be able to add songs to the queue but not skip or reverse songs.
+                This still allows for control over what the source user's phone
+                is playing and eliminates a potential headache for all the
+                users. If everyone was given the ability to switch songs, human
+                nature would kick in and there would be a race to get to the
+                song they added.
+              </p>
+              <figure>
+                <img
+                  src="/assets/shareplay-source.png"
+                  alt=""
+                  style="float: left; width: 40%; margin-top: 20%"
+                />
+                <img
+                  src="/assets/shareplay-user.png"
+                  alt=""
+                  style="width: 60%"
+                />
+              </figure>
+              <p>
+                When creating a new system that relies so heavily on the song
+                queue, you have to reconsider how it looks and feels. When
+                looking at the queue, all users are able to see the names of who
+                added which song. Adding a bit of personalization to the queue
+                will create a sense of community and bonding. The queue for the
+                users that don't have the source phone, will be slightly
+                different. Their queue will show a three dotted menu next to
+                each song in order to get more information on it, add it to
+                their library and, of course, love it. Non-souce users are also
+                not able to change the order of the queue. This gives a fair
+                chance for each user to play the song they like and have it
+                heard. But, the queue for the source user will look the same and
+                be the 'admin' in a sense, able to change the order of songs,
+                delete them from the queue and remove users from the SharePlay
+                session if need be.
+              </p>
+            </article>
+            <a name="conclusion"></a>
+            <article>
+              <h1>Conclusion</h1>
+              <p>
+                From these proposed changes, I hope more thought is provoked
+                around Apple Music and its potential to overtake Spotify and its
+                dominance. I truly believe that these changes would have a
+                positive impact on everyone that uses Apple Music and elevate
+                their interactive experience with the service. Unfortunately, it
+                seems like Apple has become complacent with requests from users
+                since the service has launched back in 2015 just because they
+                can and people will still subscribe. These findings and
+                solutions have been created to showcase my ability to problem
+                solve and go through the process of the decisions I felt were
+                necessary.
+                <br /><br />
+                <sub style="color: grey">
+                  If you'd like to take a closer look at all assets made for
+                  this Case Study, find them
+                  <a
+                    href="https://drive.google.com/drive/folders/1RzXB2DrYao-EvgNwBs5toWMQSySbgFQk?usp=sharing"
+                    target="_blank"
+                    style="font-style: italic"
+                    >here</a
+                  >.
+                </sub>
+              </p>
+            </article>
+          </main>
+        </section>
+        <footer>
+          <p>Coded and UX designed by hand © Noah Veenstra 2022.</p>
+          <div class="social">
+            <a href="https://medium.com/@veenstranoah" target="_blank"
+              ><img src="/assets/medium-logo.png" alt=""
+            /></a>
+            <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"
+              ><img src="/assets/linkedin-logo.png" alt=""
+            /></a>
+            <a href="https://github.com/noahveenstra" target="_blank"
+              ><img src="/assets/github-logo.png" alt=""
+            /></a>
+          </div>
+        </footer>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

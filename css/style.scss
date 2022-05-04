@@ -796,12 +796,12 @@ a:hover:after {
   display: grid;
   grid-template-columns: 15% 5% 60% 5% 15%;
   grid-template-rows: auto;
-  grid-template-areas: "sidebar hero hero hero ." "sidebar info info info ." "sidebar . content . .";
+  grid-template-areas: "sidebar hero hero hero ." "sidebar tags tags tags ." "sidebar info info info ."  "sidebar . content . .";
 
   @media (max-width: 1000px) {
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: ". hero ." ". info ." "content content content";
+    grid-template-areas: ". hero ." ". tags ." ". info ."  "content content content";
   }
 }
 
@@ -864,6 +864,26 @@ a:hover:after {
 
   @media (max-width: 767px) {
     font-size: 2.5vw;
+  }
+}
+
+.tags {
+  grid-area: tags;
+  margin-left: 15%;
+  .tag {
+    font-weight: 500;
+    font-size: 1.5rem;
+    background: linear-gradient(#f1f1f1, #f1f1f1 50%, #4215e6 50%, #4215e6);
+    background-size: 100% 200%;
+    transition: background .5s, color .5s ease-in-out;
+    border-radius: 15px;
+    float: left;
+    padding: .75rem;
+    margin-right: .5rem;
+  }
+  .tag:hover {
+    background-position: 100% 100%;
+    color: white;
   }
 }
 
