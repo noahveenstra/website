@@ -1125,6 +1125,14 @@ a:hover:after {
   margin-right: .5rem;
 }
 
+@media (max-width: 800px) {
+  .tags .tag {
+    font-size: .75rem;
+    padding: .4rem;
+    font-weight: 300;
+  }
+}
+
 .tags .tag:hover {
   background-position: 100% 100%;
   color: white;

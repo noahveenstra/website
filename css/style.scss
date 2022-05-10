@@ -880,6 +880,12 @@ a:hover:after {
     float: left;
     padding: .75rem;
     margin-right: .5rem;
+  
+    @media (max-width: 800px) {
+      font-size: .75rem;
+      padding: .4rem;
+      font-weight: 300;
+    }
   }
   .tag:hover {
     background-position: 100% 100%;
