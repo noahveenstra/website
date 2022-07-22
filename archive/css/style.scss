@@ -1,0 +1,1074 @@
+// General Formatting
+
+* {
+  margin: 0;
+  font-family: futura-pt, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+::selection {
+  background: #4215e6;
+  color: white;
+}
+
+html:not([data-scroll="0"]) {
+  .nav {
+    // top: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.5);
+  }
+}
+
+// Sections
+
+.nav {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10vh;
+  grid-template-areas: "logo links";
+  font-weight: 700;
+  position: sticky;
+  align-items: center;
+  height: 100px;
+  top: 0px;
+  z-index: 5;
+  transition: box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
+
+  @media (max-width: 767px) {
+    grid-template-areas: "logo burger";
+  }
+
+  .logo {
+    grid-area: logo;
+    margin-left: 30px;
+    font-weight: 700;
+    font-size: 50px;
+
+    a {
+      font-weight: 700;
+      font-size: 50px;
+
+      span {
+        color: #4215e6;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.about-body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.main-header {
+  display: grid;
+  margin-top: 7vw;
+  row-gap: 10px;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto;
+  grid-template-areas: ". name ." ". label ." ". desc .";
+  padding-bottom: 5vw;
+}
+
+.case-studies {
+  display: grid;
+  grid-template-areas: ". study1 ." ". study2 .";
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto;
+  row-gap: 10vw;
+
+  .cell1 {
+    display: grid;
+    grid-template-rows: 51px 34px auto auto;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "name visual" "label visual" "desc visual" "button visual";
+    row-gap: 10px;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 100%;
+      grid-template-rows: 5vw 4vw auto 7vw 70vw;
+      grid-template-areas: "name" "label" "desc" "button" "visual";
+    }
+  }
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+  row-gap: 35px;
+  grid-template-rows: 56px 35px auto 75px;
+  grid-template-areas: ". visual name ." ". visual label ." ". visual desc ." ". visual button.";
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 15% 70% 15%;
+    grid-template-areas: ". name ." ". label ." ". desc ." ". button ." ". visual .";
+    row-gap: 4vw;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "social info";
+
+  p {
+    font-size: 20px;
+    grid-area: info;
+    align-self: center;
+    justify-self: center;
+    @media (max-width: 1000px) {
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+
+  .social {
+    grid-area: social;
+    display: grid;
+    width: 30%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "medium linkedin github";
+    justify-self: center;
+    align-self: center;
+    @media (max-width: 1000px) {
+      width: 50%;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      @media (max-width: 1000px) {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    a:hover:after {
+      transform: scaleX(0);
+    }
+  }
+}
+
+// Global classes
+
+figure {
+  display: inline-block;
+  padding: 1rem;
+  // justify-content: center;
+
+  img {
+    // vertical-align: top;
+    // justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input {
+  margin: -1000%;
+  position: fixed;
+  // display: none;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #e6802c;
+  @media (max-width: 1000px) {
+    font-size: 2.7vw;
+    padding-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 4vw;
+    padding-top: 0;
+    margin-right: 0;
+  }
+}
+
+li {
+  padding: 0.5rem;
+  font-size: 20px;
+}
+
+.nav-fullscreen {
+  position: absolute;
+  display: flex;
+  z-index: 10;
+  line-height: 80px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0.4s;
+  &_items {
+    font-size: 50px;
+    font-weight: 700;
+  }
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+  }
+}
+
+.links {
+  grid-area: links;
+  font-size: 35px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 250px 200px;
+  grid-template-rows: auto;
+  grid-template-areas: "work case-studies contact";
+
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  .work {
+    grid-area: work;
+    text-align: right;
+  }
+
+  .studies {
+    grid-area: case-studies;
+    text-align: center;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+  span {
+    color: #4215e6;
+    font-weight: 700;
+  }
+}
+
+.name {
+  grid-area: name;
+  font-size: 56px;
+  font-weight: 500;
+
+  span {
+    color: #4215e6;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 6vw;
+  }
+}
+
+.label {
+  font-size: 22px;
+  font-weight: 400;
+  grid-area: label;
+
+  @media (max-width: 1000px) {
+    font-size: 4vw;
+  }
+
+  span {
+    color: #e6802c;
+  }
+}
+
+.desc {
+  font-size: 30px;
+  grid-area: desc;
+
+  @media (max-width: 1000px) {
+    font-size: 2.7vw;
+    padding-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 4vw;
+    padding-top: 0;
+    margin-right: 0;
+  }
+}
+
+.btns {
+  grid-area: button;
+  font-size: 23px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  border: none;
+  width: 197px;
+  height: 71px;
+  border-radius: 27px;
+  align-self: center;
+  transition: 0.4s;
+  margin-top: 20px;
+
+  @media (max-width: 767px) {
+    width: 25vw;
+    height: 10vw;
+    font-size: 3.5vw;
+  }
+}
+
+.btns:hover {
+  cursor: pointer;
+  background-color: #4215e6;
+  color: white;
+  box-shadow: none;
+}
+
+.visual {
+  grid-area: visual;
+  width: 100%;
+  height: 50vw;
+  left: 0;
+  align-self: center;
+  justify-self: center;
+  border-radius: 27px;
+  font-weight: 500px;
+  font-size: 26px;
+  text-align: center;
+  transition: box-shadow ease-in-out 0.5s;
+  box-shadow: none;
+
+  @media (max-width: 767px) {
+    margin-top: 5vw;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.visual:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.visual-background {
+  z-index: -1;
+  height: 45vw;
+  width: 30vw;
+  grid-area: visual;
+  align-self: center;
+  justify-self: center;
+  border-radius: 27px;
+  background-color: #4215e6;
+
+  @media (max-width: 1000px) {
+    width: 70vw;
+    height: 90vw;
+    max-width: 455px;
+    max-height: 587px;
+    margin-top: 5vw;
+  }
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #4215e6;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+// Mobile menu elements
+
+.menu {
+  display: none;
+  @media (max-width: 767px) {
+    grid-area: burger;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    z-index: 10;
+    padding: 0;
+    top: 25px;
+    right: 45px;
+    width: 37px;
+    height: 37px;
+  }
+}
+
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+  stroke: black;
+}
+.line2 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+  stroke: black;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+  stroke: black;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+  stroke: black;
+  z-index: 5;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+  stroke: black;
+  z-index: 5;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+  stroke: black;
+  z-index: 5;
+}
+
+// Index IDs
+
+#case {
+  color: #e6802c;
+  font-weight: 700;
+  font-size: 40px;
+
+  @media (max-width: 1000px) {
+    font-size: 5vw;
+  }
+}
+
+#apple-music {
+  background: url("/assets/new-apple-music-hero.png") no-repeat;
+  background-size: contain;
+  height: 30vw;
+  width: 20vw;
+  background-position: center;
+
+  @media (max-width: 1000px) {
+    height: 60vw;
+    width: 50vw;
+  }
+}
+
+#about-label {
+  @media (max-width: 1000px) {
+    font-size: 2.5vw;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 3vw;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 3.5vw;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 4vw;
+  }
+}
+
+#about-visual {
+  background: url("/assets/about.jpeg") no-repeat;
+  background-size: contain;
+  height: 45vw;
+  width: 30vw;
+  background-position: center center;
+  background-size: cover;
+  align-self: center;
+  justify-self: center;
+  transition: transform ease-in-out 0.5s, box-shadow ease-in-out 0.5s;
+  border-radius: 27px;
+
+  @media (max-width: 1000px) {
+    width: 70vw;
+    height: 90vw;
+    max-width: 455px;
+    max-height: 587px;
+    margin-top: 5vw;
+  }
+}
+
+#about-visual:hover {
+  transform: translateX(-25px) translateY(-25px);
+}
+
+#linkedin {
+  display: inline-block;
+  a:hover:after {
+    transform: scaleX(0);
+  }
+}
+
+#404 {
+  h4 {
+    font-size: 30px;
+
+    @media (max-width: 1000px) {
+      font-size: 2.7vw;
+      padding-top: 0;
+    }
+
+    @media (max-width: 700px) {
+      font-size: 4vw;
+      padding-top: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 15.5rem;
+}
+
+#importance-achievability {
+  margin-bottom: 10vw;
+
+  @media (max-width: 1000px) {
+    margin-bottom: 20vw;
+  }
+
+  @media (max-width: 600px) {
+    margin-bottom: 30vw;
+  }
+
+  #importance {
+    float: left;
+    width: 50%;
+  }
+
+  #header {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+#cert-head {
+  margin-left: 15%;
+  margin-bottom: 20px;
+  @media (max-width: 1000px) {
+    margin-left: 5%;
+  }
+}
+
+#certifications {
+  // padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 15%;
+  padding-right: 15%;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  column-gap: 4.688%;
+  @media (max-width: 1000px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  a {
+    bottom: 15px;
+    right: 3%;
+    position: absolute;
+    color: white;
+    font-size: 25px;
+    @media (max-width: 1000px) {
+      font-size: 3vw;
+      right: 10%;
+    }
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 30pt;
+    color: black;
+
+    @media (max-width: 1000px) {
+      font-size: 4vw;
+    }
+  }
+  h2 {
+    font-weight: 400;
+    font-size: 25pt;
+    color: #4d4d4d;
+
+    @media (max-width: 1000px) {
+      font-size: 3vw;
+    }
+  }
+}
+// -----------------------------------------------------------------------
+// Case Study Page
+
+// Sections
+
+.header {
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: auto;
+  grid-template-areas: ". name ." ". label .";
+
+  @media (max-width: 767px) {
+    grid-template-columns: 5% 90% 5%;
+  }
+}
+
+.objects {
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-rows: auto auto;
+  grid-template-areas: ". apple-music website ." ". more more .";
+
+  @media (max-width: 767px) {
+    grid-template-areas:
+      ". apple-music ."
+      ". website ." ". more .";
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 60vw 10vw 20vw auto;
+  }
+
+  .apple-music {
+    grid-area: apple-music;
+  }
+}
+
+// Classes
+
+.btn {
+  border: none;
+  background: none;
+  padding: 1rem;
+  font-size: 25px;
+
+  @media (max-width: 767px) {
+    font-size: 3.5vw;
+  }
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #555555;
+}
+
+.title {
+  a {
+    font-weight: 700;
+    font-size: 40px;
+    color: #e6802c;
+
+    @media (max-width: 676px) {
+      font-size: 6vw;
+    }
+  }
+}
+
+.coming-soon {
+  grid-area: more;
+  margin-top: 40px;
+  align-self: center;
+  justify-self: center;
+  font-weight: 700;
+  font-size: 40px;
+
+  @media (max-width: 767px) {
+    font-size: 4vw;
+  }
+}
+
+// IDs
+
+#buttons {
+  grid-area: label;
+  justify-self: left;
+  align-self: center;
+  text-align: left;
+  font-size: 25px;
+  color: #e6802c;
+
+  @media (max-width: 767px) {
+    font-size: 3.5vw;
+  }
+}
+
+#study-apple {
+  border-radius: 27px;
+  height: 23vw;
+  transition: box-shadow ease-in-out 0.5s;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 27px;
+  }
+
+  @media (max-width: 767px) {
+    height: 60vw;
+  }
+
+  a:hover:after {
+    transform: scaleX(0);
+  }
+}
+
+#study-apple:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+// ------------------------------------------------------------------
+// Apple Music Study Page
+
+// Sections
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 15% 5% 60% 5% 15%;
+  grid-template-rows: auto;
+  grid-template-areas: "sidebar hero hero hero ." "sidebar tags tags tags ." "sidebar info info info ." "sidebar . content . .";
+
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: ". hero ." ". tags ." ". info ." "content content content";
+  }
+}
+
+.hero {
+  grid-area: hero;
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 15vw 15vw;
+  row-gap: 2vw;
+  grid-template-areas: ". hero-top ." ". hero-bottom hero-bottom";
+
+  .visual {
+    grid-area: hero-bottom;
+    z-index: -1;
+    height: 40vw;
+    width: 40vw;
+    border-radius: 27px;
+    justify-self: end;
+    align-self: end;
+    background: url("/assets/new-apple-music-hero.png") no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.sidebar {
+  grid-area: sidebar;
+  position: fixed;
+  margin-top: 30vh;
+  text-align: center;
+  z-index: 2;
+
+  @media (max-width: 1000px) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-bottom: 7px;
+      padding-top: 7px;
+    }
+
+    hr {
+      height: 1px;
+      background-color: #555555;
+    }
+  }
+}
+
+.info {
+  grid-area: info;
+  display: grid;
+  margin-top: 5vw;
+  grid-template-columns: 15% 1fr 3fr 15%;
+  grid-template-areas: ". goal goal-info ." ". time time-info ." ". tools tools-info .";
+  row-gap: 7px;
+  font-size: 22px;
+
+  @media (max-width: 767px) {
+    font-size: 2.5vw;
+  }
+}
+
+.tags {
+  grid-area: tags;
+  margin-left: 15%;
+  .tag {
+    font-weight: 500;
+    font-size: 1.5rem;
+    background: linear-gradient(#f1f1f1, #f1f1f1 50%, #4215e6 50%, #4215e6);
+    background-size: 100% 200%;
+    transition: background 0.5s, color 0.5s ease-in-out;
+    border-radius: 15px;
+    float: left;
+    padding: 0.75rem;
+    margin-right: 0.5rem;
+
+    @media (max-width: 800px) {
+      font-size: 0.75rem;
+      padding: 0.4rem;
+      font-weight: 300;
+    }
+  }
+  .tag:hover {
+    background-position: 100% 100%;
+    color: white;
+  }
+}
+
+.content {
+  grid-area: content;
+
+  h1 {
+    font-size: 44px;
+    color: black;
+    margin-top: 10vw;
+
+    @media (max-width: 767px) {
+      font-size: 6vw;
+    }
+
+    @media (max-width: 1000px) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+  }
+
+  h2 {
+    @media (max-width: 1000px) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+  }
+  h3 {
+    @media (max-width: 1000px) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+  }
+  h4 {
+    @media (max-width: 1000px) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+  }
+
+  p {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+    font-size: 25px;
+
+    @media (max-width: 1000px) {
+      margin-right: 15%;
+      margin-left: 15%;
+    }
+
+    @media (max-width: 767px) {
+      font-size: 4vw;
+    }
+  }
+
+  .quote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-style: italic;
+    color: #555555;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #4215e6;
+    line-height: 1.6;
+    position: relative;
+    background: #ededed;
+  }
+
+  .quote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #4215e6;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+  }
+
+  .quote::after {
+    content: "";
+  }
+
+  .quote span {
+    display: block;
+    color: #333333;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+  }
+}
+
+// Classes
+
+h1 {
+  grid-area: hero-top;
+  font-size: 5vw;
+  align-self: end;
+  justify-self: left;
+  color: #e6802c;
+  font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 6vw;
+  }
+}
+
+h2 {
+  grid-area: hero-bottom;
+  font-weight: 500;
+  font-size: 2.5vw;
+  justify-self: left;
+  margin-right: 10vw;
+
+  @media (max-width: 767px) {
+    font-size: 3vw;
+  }
+
+  span {
+    font-weight: 700;
+  }
+}
+
+sub {
+  text-align: center;
+  font-style: italic;
+  color: #555555;
+}
+
+// Info classes
+.goal {
+  grid-area: goal;
+  border-bottom: 2px solid #4215e6;
+  padding-bottom: 7px;
+  align-self: end;
+}
+.goal-info {
+  grid-area: goal-info;
+  border-bottom: 2px solid #4215e6;
+  text-align: right;
+}
+.time {
+  grid-area: time;
+  border-bottom: 2px solid #4215e6;
+  padding-bottom: 7px;
+}
+.time-info {
+  grid-area: time-info;
+  border-bottom: 2px solid #4215e6;
+  text-align: right;
+}
+.tools {
+  grid-area: tools;
+}
+.tools-info {
+  grid-area: tools-info;
+  text-align: right;
+}
+
+// Contact Form
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #5dade2;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+//Image Zoom

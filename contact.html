@@ -10,6 +10,8 @@
     <script defer src="/scroll-animation.js"></script>
     <script defer src="/mobile-menu.js"></script>
     <script defer src="/copy-email.js"></script>
+    <script defer src="/darktoggle.js"></script>
+
     <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
     <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
     <title>Noah Veenstra — Contact</title>
@@ -52,82 +54,62 @@
                     <div class="work"><a href="/about.html">about.</a></div>
                     <div class="studies"><a href="/case-studies.html">case studies.</a></div>
                     <div class="contact"><a href="/contact.html">contact<span>.</span></a></div>
+                    <div class="archive"><a href="/archive.html">archive.</a></div>
+                    <button class="light" onclick="darktoggle()"></button>
                 </div>
             </section>
-            <section class="main-header">
-                <header class="name">let's <span>connect</span>.</header>
-                <summary style="margin-top: 2vw;" class="label">veenstranoah@gmail.com
-                    <button onclick="copy()" id="copy" style="vertical-align: middle;">
-                        <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
-                            viewBox="0 0 25 33">
-                            <g id="Group_12" data-name="Group 12" transform="translate(-164 -114)">
-                                <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(164 120)" fill="none"
-                                    stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                    <rect width="19" height="27" stroke="none" />
-                                    <rect x="1" y="1" width="17" height="25" fill="none" />
+            <div id='circular-text'>summer '22 edition&nbsp;</div>
+            <script src="circle.js"></script>
+            <p class="marquee">
+                <span>
+                    summer '22 edition
+                </span>
+            </p>
+            <div class="wrapper">
+                <div class="main-header">
+                    <header class="name">let's <span>connect</span>.</header>
+                    <summary style="margin-top: 2vw;" class="label">veenstranoah@gmail.com
+                        <button onclick="copy()" id="copy" style="vertical-align: middle;">
+                            <svg style="vertical-align: middle;" xmlns="http://www.w3.org/2000/svg" width="25"
+                                height="25" viewBox="0 0 25 33">
+                                <g id="Group_12" data-name="Group 12" transform="translate(-164 -114)">
+                                    <g id="Rectangle_26" data-name="Rectangle 26" transform="translate(164 120)"
+                                        fill="none" stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2">
+                                        <rect width="19" height="27" stroke="none" />
+                                        <rect x="1" y="1" width="17" height="25" fill="none" />
+                                    </g>
+                                    <g id="Rectangle_27" data-name="Rectangle 27" transform="translate(170 114)"
+                                        fill="none" stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2">
+                                        <rect width="19" height="29" stroke="none" />
+                                        <rect x="1" y="1" width="17" height="27" fill="none" />
+                                    </g>
                                 </g>
-                                <g id="Rectangle_27" data-name="Rectangle 27" transform="translate(170 114)" fill="none"
-                                    stroke="#4215e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-                                    <rect width="19" height="29" stroke="none" />
-                                    <rect x="1" y="1" width="17" height="27" fill="none" />
-                                </g>
-                            </g>
-                        </svg>
-                    </button>
-                    <input id=email value="veenstranoah@gmail.com">
-                    <span>/</span>
-                    <figure id="linkedin">
-                        <a href="https://linkedin.com/in/noahveenstra" target="_blank">
-                            <img src="/assets/linkedin-logo.png" alt="" style="width: 35px; vertical-align: middle;">
-                        </a>
-                    </figure>
-                </summary>
-                <main style="margin-top: 2vw;" class="desc">
-                    The best way to get in touch with me is through email. But, if you'd like to connect with me on
-                    LinkedIn
-                    please feel free!
-                </main>
-                <!-- <main>
-            <form is="fcf-form-id" class="fcf-form-class" method="post" action="contact-form.php"></form>
-
-            <label for="Name" class="fcf-label">Your name</label>
-            <div class="fcf-input-group">
-                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                            </svg>
+                        </button>
+                        <input id=email value="veenstranoah@gmail.com">
+                        <span>/</span>
+                        <figure id="linkedin">
+                            <a href="https://linkedin.com/in/noahveenstra" target="_blank">
+                                <img src="/assets/linkedin-logo.png" alt=""
+                                    style="width: 35px; vertical-align: middle;">
+                            </a>
+                        </figure>
+                    </summary>
+                    <main style="margin-top: 2vw;" class="desc">
+                        The best way to get in touch with me is through email. But, if you'd like to connect with me on
+                        LinkedIn
+                        please feel free!
+                    </main>
+                </div>
             </div>
-            <div class="fcf-form-group">
-                <label for="Email" class="fcf-label">Your email address</label>
-                <div class="fcf-input-group">
-                    <input type="email" id="Email" name="Email" class="fcf-form-control" required>
-                </div>
-                <label for="contact reason">Contact Reason</label>
-                <select id="contact reason" name="contact reason">
-                    <option value="sales">Information</option>
-                    <option value="help">Help</option>
-                    <option value="billing">Billing</option>
-                </select>
-                <div class="fcf-form-group">
-                    <label for="Message" class="fcf-label">Your message</label>
-                    <div class="fcf-input-group">
-                        <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000"
-                            required></textarea>
-                    </div>
-                </div>
-                <div class="fcf-form-group">
-                    <button type="submit" id="fcf-button"
-                        class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send</button>
-                </div>
-                </form>
-        </main> -->
-            </section>
             <footer>
-                <p>Coded and UX designed by hand © Noah Veenstra 2022. </p>
+                <p>Coded and UX designed by hand © Noah Veenstra, July 2022.</p>
                 <div class="social">
-                    <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
-                            alt=""></a>
-                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img
-                            src="/assets/linkedin-logo.png" alt=""></a>
-                    <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png"
-                            alt=""></a>
+                    <a href="https://medium.com/@veenstranoah" target="_blank" class="medium"></a>
+                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank" class="linkedin"></a>
+                    <a href="https://github.com/noahveenstra" target="_blank" class="github"></a>
                 </div>
             </footer>
         </div>

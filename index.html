@@ -1,139 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/case-studies/css/style.css" />
-    <script defer src="/scroll-animation.js"></script>
-    <script defer src="/mobile-menu.js"></script>
-    <script defer src="/circle-text.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css" />
-    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
-    <title>Noah Veenstra — Home</title>
-  </head>
 
-  <body>
-    <div class="nav-fullscreen">
-      <div class="nav-fullscreen_items">
-        <div class="nav-fullscreen_item">
-          <a href="/about.html">about.</a>
-        </div>
-        <div class="nav-fullscreen_item">
-          <a href="/case-studies.html">case studies.</a>
-        </div>
-        <div class="nav-fullscreen_item">
-          <a href="/contact.html">contact.</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/case-studies/css/style.css" />
+  <script defer src="/scroll-animation.js"></script>
+  <script defer src="/mobile-menu.js"></script>
+  <script defer src="/darktoggle.js"></script>
+  <script defer src="/circle-text.js"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
+  <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
+  <title>Noah Veenstra — Home</title>
+</head>
+
+<body>
+  <div class="nav-fullscreen">
+    <div class="nav-fullscreen_items">
+      <div class="nav-fullscreen_item">
+        <a href="/about.html">about.</a>
       </div>
+      <div class="nav-fullscreen_item">
+        <a href="/case-studies.html">case studies.</a>
+      </div>
+      <div class="nav-fullscreen_item">
+        <a href="/contact.html">contact.</a>
+      </div>
+      <div class="nav-fullscreen_item">
+        <a href="/archive.html">archive.</a>
+      </div>
+      <div class="nav-fullscreen_item">
+        <a><img src="/assets/lightbulb.svg" alt=""></a>
+      </div>
+
     </div>
-    <button
-      class="menu"
-      onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
-      aria-label="Main Menu"
-    >
-      <svg width="37" height="37" viewBox="0 0 100 100">
-        <path
-          class="line line1"
-          d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
-        />
-        <path class="line line2" d="M 20,50 H 60" />
-        <path
-          class="line line3"
-          d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
-        />
-      </svg>
-    </button>
-    <div id="page-container">
-      <div id="content-wrap">
-        <section class="nav">
-          <div class="logo">
-            <a href="/index.html">nv<span>.</span></a>
+  </div>
+  <button class="menu"
+    onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+    aria-label="Main Menu">
+    <svg width="37" height="37" viewBox="0 0 100 100">
+      <path class="line line1"
+        d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+      <path class="line line2" d="M 20,50 H 60" />
+      <path class="line line3"
+        d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+    </svg>
+  </button>
+  <div id="page-container">
+    <div id="content-wrap">
+      <section class="nav">
+        <div class="logo">
+          <a href="/index.html">nv<span>.</span></a>
+        </div>
+        <div class="links">
+          <div class="work"><a href="/about.html">about.</a></div>
+          <div class="studies">
+            <a href="/case-studies.html">case studies.</a>
           </div>
-          <div class="links">
-            <div class="work"><a href="/about.html">about.</a></div>
-            <div class="studies">
-              <a href="/case-studies.html">case studies.</a>
-            </div>
-            <div class="contact"><a href="/contact.html">contact.</a></div>
-          </div>
-        </section>
-        <section class="main-header">
-          <header class="name">hey, I'm <span>Noah</span>.</header>
+          <div class="contact"><a href="/contact.html">contact.</a></div>
+          <div class="archive"><a href="/archive.html">archive.</a></div>
+          <button class="light" onclick="darktoggle()"></button>
+        </div>
+      </section>
+      <div id='circular-text'>summer '22 edition&nbsp;</div>
+      <script src="circle.js"></script>
+      <p class="marquee">
+        <span>
+          summer '22 edition
+        </span>
+      </p>
+      <div class="wrapper">
+        <div class="main-header">
+          <header class="name">hey, I'm <span>Noah</span> 👋🏼</header>
           <summary class="label">
-            ux architect <span>/</span> ui designer
           </summary>
           <main class="desc">
-            Currently, I'm studying how to craft user experiences at Michigan
-            State University, pursuing a B. S. in User Experience Architecture
-            with a focus on Web Development and UI Design. I'm passionate about
-            bringing positive user experiences to all users and being able to
-            flex my creativity.
+            <span><a style=" color: #4215e6;" href="/about.html">This summer,</a></span> I'm working as a Data Analysis
+            Intern at RMR Solutions where I'm tasked with
+            aggregating Social and E-Commerce data into
+            visualizations. <br>
           </main>
-        </section>
-        <section class="case-studies">
-          <article class="cell1" style="grid-area: study1">
-            <header class="name" id="case">Apple Music</header>
-            <summary class="label">
-              <a href="/case-studies.html">Case Studies</a>
-              <span>/</span> Mobile Apps
-            </summary>
-            <p class="desc">
-              I've always wanted to use Apple Music as my main music player, but
-              there are just too many shortcomings to justify this commitment.
-              Through this case study, I explore how Apple can remedy its issues
-              and bring changes to its service that will benefit all users.
-            </p>
-            <button
-              class="btns"
-              onclick="window.location.href = '/case-studies/apple-music.html';"
-            >
-              Read More...
-            </button>
-            <figure class="visual" id="apple-music"></figure>
-          </article>
-        </section>
-        <section class="about">
-          <header class="name">Who am I?</header>
-          <summary class="label" id="about-label">
-            UX Architect <span style="color: #e6802c">/</span> UI Designer
-            <span style="color: #e6802c">/</span> Web Developer
-            <span style="color: #e6802c">/</span> Techie
-            <span style="color: #e6802c">/</span> Sports Enthusiast
-          </summary>
-          <p class="desc">
-            Growing up, I kind of knew I would end up somewhere around
-            technology for the rest of my life. My dad worked as a software
-            developer therefore I was exposed to new technology very early. I
-            still remember the first time he showed me the original iPhone. I
-            was in awe of its new technology but most of all the screen. Even
-            now, a screen is what connects us to everything and everyone we love
-            and how we interact with them is immensely important. This is why
-            I'm interested in UX Architecture. Creating experiences that will be
-            useful and impact others positively is my goal.
+        </div>
+        <div class="case-study-lander-grid">
+          <header style="grid-area: header; margin: none; padding: none;" class="name" id="case">
+            <a href="/case-studies/disney.html">
+              My Disney Experience mobile app
+            </a>
+          </header>
+          <p style="grid-area: lab; margin: none;" class="desc">
+            Last spring at WWDC, Apple introduced Live Activity notifications a new type of notification. Through this
+            case study, I create and explore ultra high fidelity mockups and talk about why Disney can't miss this ship.
           </p>
-          <button class="btns" onclick="window.location.href = '/about.html';">
-            Learn More...
-          </button>
-          <figure class="visual" id="about-visual"></figure>
-          <figure class="visual-background"></figure>
-        </section>
-        <footer>
-          <p>Coded and UX designed by hand © Noah Veenstra 2022.</p>
-          <div class="social">
-            <a href="https://medium.com/@veenstranoah" target="_blank"
-              ><img src="/assets/medium-logo.png" alt=""
-            /></a>
-            <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"
-              ><img src="/assets/linkedin-logo.png" alt=""
-            /></a>
-            <a href="https://github.com/noahveenstra" target="_blank"
-              ><img src="/assets/github-logo.png" alt=""
-            /></a>
+          <a href="/case-studies/disney.html" class="disney" style="grid-area: im; position: relative;">
+          </a>
+          <span style="font-size: 20px; grid-area: desc;">
+            <a style=" color: #4215e6; text-align: left;" href="/case-studies/nike.html">Read More</a></span>
+        </div>
+        <div class="side-by-side" id="lander">
+          <img src="/assets/IMG_2219.jpeg" alt="" style="height: auto; width:100%; border-radius: 27px;">
+          <div>
+            <h1 style="font-weight: 600; font-size:2.5rem;">What am I usually doing?</h1>
+            <h3 style="margin-top: 1rem;">UX Architect / UI Designer / Web Developer / Techie / Golfer / Sports
+              Enthusiast</h3>
+            <p>
+              During the school year, I'm pursing a B.S. in User Experience Architecture at Michigan
+              State University.Growing up, I kind of knew I would end up somewhere around technology for the rest of my
+              life. My dad worked as a
+              software developer therefore I was exposed to new technology very early. I still remember the first time
+              he showed me
+              the original iPhone. I was in awe of its new technology but most of all the screen. Even now, a screen is
+              what connects
+              us to everything and everyone we love and how we interact with them is immensely important. This is why
+              I'm interested
+              in UX Architecture. Creating experiences that will be useful and impact others positively is my goal.
+            </p>
           </div>
-        </footer>
+
+        </div>
       </div>
+      <footer>
+        <p>Coded and UX designed by hand © Noah Veenstra, July 2022.</p>
+        <div class="social">
+          <a href="https://medium.com/@veenstranoah" target="_blank" class="medium"></a>
+          <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank" class="linkedin"></a>
+          <a href="https://github.com/noahveenstra" target="_blank" class="github"></a>
+        </div>
+      </footer>
     </div>
-  </body>
+
+  </div>
+</body>
+
 </html>

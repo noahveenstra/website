@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/case-studies/css/style.css"> -->
+    <script src="/scroll-animation.js"></script>
+    <script src="/mobile-menu.js"></script>
+    <script src="/image-zoom.js"></script>
+    <script defer src="/darktoggle.js"></script>
+    <script defer src="/circle.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
+    <title>Noah Veenstra — Disney Mobile</title>
+</head>
+
+<body>
+    <div class="nav-fullscreen">
+        <div class="nav-fullscreen_items">
+            <div class="nav-fullscreen_item">
+                <a href="/index.html">home.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/about.html">about.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/case-studies.html">case studies.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/contact.html">contact.</a>
+            </div>
+            <div class="archive"><a href="/archive.html">archive.</a></div>
+            <button class="light" onclick="darktoggle()"></button>
+        </div>
+    </div>
+    <button class="menu"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="37" height="37" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 60" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+    <div id="page-container">
+
+        <div id="content-wrap">
+            <section class="nav">
+                <div class="logo"><a href="/index.html">nv.</a></div>
+                <div class="links">
+                    <div class="work"><a href="/about.html">about.</a></div>
+                    <div class="studies">
+                        <a href="/case-studies.html">case studies<span>.</span></a>
+                    </div>
+                    <div class="contact"><a href="/contact.html">contact.</a></div>
+                    <div class="archive"><a href="/archive.html">archive.</a></div>
+                    <button class="light" onclick="darktoggle()"></button>
+                </div>
+            </section>
+            <div style="right: 10%; position: fixed;" id='circular-text'>summer '22 edition&nbsp;</div>
+            <script src="circle.js"></script>
+            <p class="marquee">
+                <span>
+                    summer '22 edition
+                </span>
+            </p>
+
+            <section class="wrapper">
+                <aside>
+                    <ul>
+                        <li>
+                            <a href="#Background">Background</a>
+                        </li>
+                        <li>
+                            <a href="#Mobile Ordering">Mobile Ordering</a>
+                        </li>
+                        <li>
+                            <a href="#Lightning Lanes">Lightning Lanes</a>
+                        </li>
+                        <li>
+                            <a href="#Preferences">Preferences</a>
+                        </li>
+                        <li>
+                            <a href="#Conclusion">Conclusion</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <div class="hero">
+                    <h1>Disney Mobile</h1>
+                    <h2>
+                        How Disney World can utilize <span>Live Activity</span> notifications this fall
+                    </h2>
+                    <figure class="disney"></figure>
+                </div>
+                <div class="info">
+                    <p>Goal</p>
+                    <p id="desc">Create realistic mockups of Live Activity notifications for the My Disney Experience
+                        app in the parks.</p>
+                    <p>Time Frame</p>
+                    <p id="desc">12 hours</p>
+                    <p>Tools</p>
+                    <p id="desc">The Internet, Adobe Xd, Adobe Illustrator</p>
+                </div>
+                <div class="featured">
+                    <center>
+                        <img src="/assets/uxcol-logo.jpg" alt="">
+                        <a href="https://medium.com/user-experience-design-1/how-disney-world-can-capitalize-on-live-activity-notifications-this-fall-ab82942188d2"
+                            target="_blank">
+                            Published in the UX Collective
+                        </a>
+                    </center>
+                </div>
+                <a name="Background"></a>
+                <section>
+                    <h1>Background</h1>
+                    <p>
+                        This year at Apple’s WWDC, they announced a new feature called Live Activity. This feature
+                        allows app developers to
+                        create a more persistent notification experience. From tracking the score of your favorite
+                        sports team to knowing
+                        exactly when your Uber will arrive without unlocking your phone. This is a powerful feature for
+                        the usability and user
+                        experience of certain apps. It allows you to not have to unlock your phone, search for the app,
+                        wait for it to load, and
+                        finally get the information you want. With Live Activities, you simply just glance at your lock
+                        screen and know the
+                        status of what you’re waiting on or the event you’re following.
+                    </p>
+                </section>
+                <a name="Mobile Ordering"></a>
+                <section>
+                    <h1>Mobile Ordering</h1>
+                    <p>
+                        This is where Disney World, along with their app, My Disney Experience, comes into play. I
+                        decided to make a concept as
+                        to what these Live Activity Notifications could look like while keeping the same style as the
+                        app. The first integration
+                        was with the mobile ordering experience. Mobile ordering took Disney World by storm within the
+                        last year and a half due
+                        to the COVID pandemic and this has brought about some friction among users. Most users think the
+                        process of ordering
+                        food and picking it up is too cumbersome and confusing, so they opt for waiting in line, now
+                        that COVID restrictions
+                        have been lifted. Meaning, that all the time and money invested into the mobile ordering
+                        experience has gone unnoticed.
+                        This feature added to the app may pour some grease to reduce the friction and make it more
+                        usable.
+                    </p>
+                    <center>
+                        <img src="/assets/disney1.png" alt="">
+                    </center>
+                    <p>
+                        The current UI for checking the status of your order is very similar to my solution in Live
+                        Activities. But the
+                        advantages, come with not having to open your phone and find the button to press. It’s right in
+                        front of you. This
+                        prompt appears right after you place your order. I thought of the idea of only showing it after
+                        you were within a
+                        certain radius of the restaurant. But, the decision was made to disregard this choice because of
+                        finicky GPS signals and
+                        the failure case where someone could be inside the restaurant but their GPS is off and therefore
+                        wouldn’t be able to
+                        start the order.
+                    </p>
+                    <center>
+                        <img src="/assets/disney2.png" alt="">
+                    </center>
+                    <p>
+                        The second step is really just a status. For the user to know that the order is being made. And
+                        for the user to know
+                        that the notification isn’t stuck, or crashing, the illustration on left will animate, and flip
+                        the burger every now and
+                        then. Also, the greyed-out progress bar will have a pulsing lighter grey going from left to
+                        right. Just some visual
+                        queues to make sure the user knows, “Ok, my food is cooking and this notification is continually
+                        updating and is alive
+                        so I just need to wait until the whole progress bar is green.”
+                    </p>
+                    <div class="side-by-side">
+                        <img src="/assets/disney3.png" alt="">
+                        <img src="/assets/disney4.png" alt="">
+                    </div>
+                    <p>
+                        The third and final step is the confirmation screen. This tells the user that their food is
+                        ready and where to pick it
+                        up quickly and easily. This screen expires after 20 minutes, or if you dismiss it. You can also
+                        look at granular details
+                        in the order summary. If you tap on the bottom section anywhere, you get a breakdown of the
+                        costs per item.
+                    </p>
+                </section>
+                <a name="Lightning Lanes"></a>
+                <section>
+                    <h1>Lightning Lanes</h1>
+                    <p>
+                        The other implementation I saw that this brand new feature of iOS could be used is with
+                        Lightning Lanes. Some of the
+                        same issues have been present since the introduction of Lightning Lanes versus what was
+                        previously available, FastPass+.
+                        Users have complained about waking up early just to reserve two passes for the day of. Now,
+                        there are multiple issues
+                        with the user’s flow when looking at Lightning Lanes, but I’m only going to focus on the user’s
+                        flow after a reservation
+                        is made. What can be enhanced within the park? How can it be even easier to use the technology
+                        available and sprinkle a
+                        bit of pixie dust on every user’s day?
+                    </p>
+                    <center>
+                        <img src="/assets/disney5.png" alt="">
+                    </center>
+                    <p>
+                        The implementation is very similar to mobile ordering. But there are a few differences when you
+                        “Check In.” So, once
+                        again, the ability to check in is not tied to GPS. Because you can’t use the Lightning Lane on
+                        anything but the ride
+                        it’s assigned to, you can check in wherever so long as it’s within the time frame of your
+                        reservation.
+                    </p>
+                    <center>
+                        <img src="/assets/disney6.png" alt="">
+                    </center>
+                    <p>
+                        After you check in, your phone acts as an NFC ticket for the Lightning Lane just like when
+                        entering the park at the tap
+                        styles. This would be a small animation on the left similar to when using Apple Pay. And the
+                        dots in the middle would
+                        pulse from left to right.
+                    </p>
+                </section>
+                <a name="Preferences"></a>
+                <section>
+                    <h1>Preferences</h1>
+                    <p>
+                        As I began exploring these new features and this brand new user flow, I knew that I needed to
+                        build in an introduction
+                        on how to use this new feature that will take up a lot of screen real estate for potentially a
+                        long time. And I needed
+                        to build a way to disable it completely.
+                    </p>
+                    <div class="side-by-side">
+                        <img src="/assets/disney7.png" alt="">
+                        <img src="/assets/disney8.png" alt="">
+                    </div>
+                    <p>
+                        So, I brought it to the user plain and simple. When they tap on the burger, where all the
+                        settings are, for the first
+                        time since the update, they see this splash screen. It gives a preview of what these
+                        notifications will look like, what
+                        they do, and exactly how to turn them off. The ability to be completely transparent with new app
+                        features I believe is
+                        critical to building trust and allowing for the acceptance of new features that could come
+                        later.
+                    </p>
+                </section>
+                <a name="Conclusion"></a>
+                <section>
+                    <h1>Conclusion</h1>
+                    <p>
+                        Whether you like it or not, Live Activity notifications are coming. Soon, we'll see how much
+                        large companies and businesses prioritize user experiences and start implementing easier ways to
+                        interact with their app. This is one of the many ways that Disney can show care and deliver an
+                        elevated experience, something they've prided their parks on for decades.
+                    </p>
+                    <p style="color: gray; font-size: 20px">Look at a the live prototype <a
+                            href="https://xd.adobe.com/view/73b131f1-b13e-46d8-8b57-5e615110fae2-26e2/"
+                            target="_blank">here</a>.</p>
+                </section>
+            </section>
+            <footer>
+                <p>Coded and UX designed by hand © Noah Veenstra 2022.</p>
+                <div class="social">
+                    <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
+                            alt="" /></a>
+                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img
+                            src="/assets/linkedin-logo.png" alt="" /></a>
+                    <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png"
+                            alt="" /></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

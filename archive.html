@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/style.css">
+    <script defer src="/scroll-animation.js"></script>
+    <script defer src="/mobile-menu.js"></script>
+    <script defer src="/copy-email.js"></script>
+    <script defer src="/darktoggle.js"></script>
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function () { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
+    <title>Noah Veenstra — Archive</title>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="nav-fullscreen">
+        <div class="nav-fullscreen_items">
+            <div class="nav-fullscreen_item">
+                <a href="/index.html">home.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/about.html">about.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/case-studies.html">case studies.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/contact.html">contact.</a>
+            </div>
+        </div>
+    </div>
+    <button class="menu"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="37" height="37" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 60" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+
+    <div id="page-container">
+        <div id="content-wrap">
+            <section class="nav">
+                <div class="logo"><a href="/index.html">nv.</a></div>
+                <div class="links">
+                    <div class="work"><a href="/about.html">about.</a></div>
+                    <div class="studies"><a href="/case-studies.html">case studies.</a></div>
+                    <div class="contact"><a href="/contact.html">contact.</a></div>
+                    <div class="archive"><a href="/archive.html">archive<span>.</span></a></div>
+                    <button class="light" onclick="darktoggle()"></button>
+                </div>
+            </section>
+            <!-- <div id='circular-text'>summer '22 edition&nbsp;</div> -->
+            <script src="circle.js"></script>
+            <p class="marquee">
+                <span>
+                    summer '22 edition
+                </span>
+            </p>
+            <!-- <div class="wrapper"> -->
+            <div class="wrapper">
+                <h1>Welcome to the <span style="font-weight: 600;">Archive</span>. This is where users, and myself, are
+                    able to look back at past iterations of this site. Feel free to explore!
+                </h1>
+            </div>
+            <main>
+                <nav class="menu1">
+                    <div class="menu__item">
+                        <a class="menu__item-link" href="/archive/spr22.html">v1.0 - Spr '22</a>
+                        <img class="menu__item-img" src="/assets/ogsite.png" alt="Some image" />
+                        <div class="marquee1">
+                            <div class="marquee__inner" aria-hidden="true" style="color: black;">
+                                <span>v1.0 - Spr '22</span>
+                                <span>v1.0 - Spr '22</span>
+                                <span>v1.0 - Spr '22</span>
+                                <span>v1.0 - Spr '22</span>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                </nav>
+            </main>
+        </div>
+        <footer>
+            <p>Coded and UX designed by hand © Noah Veenstra, July 2022.</p>
+            <div class="social">
+                <a href="https://medium.com/@veenstranoah" target="_blank" class="medium"></a>
+                <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank" class="linkedin"></a>
+                <a href="https://github.com/noahveenstra" target="_blank" class="github"></a>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+</body>
+
+</html>

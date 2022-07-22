@@ -2,26 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- <link rel="stylesheet" href="/css/case-studies/css/style.css"> -->
-    <script src="/scroll-animation.js"></script>
-    <script src="/mobile-menu.js"></script>
-    <script src="/filter.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/case-studies/css/style.css" />
+    <script defer src="/scroll-animation.js"></script>
+    <script defer src="/mobile-menu.js"></script>
+    <script defer src="/darktoggle.js"></script>
     <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css">
-    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
     <title>Noah Veenstra — Case Studies</title>
 </head>
 
 <body>
     <div class="nav-fullscreen">
         <div class="nav-fullscreen_items">
-            <div class="nav-fullscreen_item">
-                <a href="/index.html">home.</a>
-            </div>
             <div class="nav-fullscreen_item">
                 <a href="/about.html">about.</a>
             </div>
@@ -31,6 +27,13 @@
             <div class="nav-fullscreen_item">
                 <a href="/contact.html">contact.</a>
             </div>
+            <div class="nav-fullscreen_item">
+                <a href="/archive.html">archive.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a><img src="/assets/lightbulb.svg" alt=""></a>
+            </div>
+
         </div>
     </div>
     <button class="menu"
@@ -47,54 +50,42 @@
     <div id="page-container">
         <div id="content-wrap">
             <section class="nav">
-                <div class="logo"><a href="/index.html">nv.</a></div>
+                <div class="logo">
+                    <a href="/index.html">nv.</a>
+                </div>
                 <div class="links">
                     <div class="work"><a href="/about.html">about.</a></div>
-                    <div class="studies"><a href="/case-studies.html">case studies<span>.</span></a></div>
+                    <div class="studies">
+                        <a href="/case-studies.html">case studies<span>.</span></a>
+                    </div>
                     <div class="contact"><a href="/contact.html">contact.</a></div>
+                    <div class="archive"><a href="/archive.html">archive.</a></div>
+                    <button class="light" onclick="darktoggle()"></button>
                 </div>
             </section>
 
-            <section class="header">
-                <header class="name">
-                    case <span>studies</span>.
-                </header>
-                <summary id="buttons">
-                    Tags /
-                    <button class="btn" onclick="filterObjects('all')">All</button> /
-                    <button class="btn" onclick="filterObjects('mobile')">Mobile Apps</button> /
-                    <button class="btn" onclick="filterObjects('website')">Websites</button>
-                </summary>
-            </section>
-            <section class="objects">
-                <article class="study apple-music mobile">
-                    <figure class="visual" id="study-apple">
-                        <a href="/case-studies/apple-music.html">
-                            <img src="/assets/apple-music-visual.png" alt="">
-                        </a>
-                    </figure>
-                    <header class="title">
-                        <a href="/case-studies/apple-music.html">
-                            Apple Music
-                        </a>
-                    </header>
-                </article>
-                <article class="coming-soon">
-                    More coming soon...
-                </article>
-            </section>
+            <div class="case-studies">
+                <a href="/case-studies/nike.html" class="nike"></a>
+                <a href="/case-studies/disney.html" class="disney" id="case-study">
+                    <!-- <p>Disney Mobile</p> -->
+                </a>
+                <a class="apple" href="/case-studies/apple-music.html">
+                    <!-- <div class="apple"></div> -->
+                </a>
+                <div class="more">
+                    <p>More Coming Soon...</p>
+                </div>
+            </div>
 
             <footer>
-                <p>Coded and UX designed by hand © Noah Veenstra 2022. </p>
+                <p>Coded and UX designed by hand © Noah Veenstra, July 2022.</p>
                 <div class="social">
-                    <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
-                            alt=""></a>
-                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img
-                            src="/assets/linkedin-logo.png" alt=""></a>
-                    <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png"
-                            alt=""></a>
+                    <a href="https://medium.com/@veenstranoah" target="_blank" class="medium"></a>
+                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank" class="linkedin"></a>
+                    <a href="https://github.com/noahveenstra" target="_blank" class="github"></a>
                 </div>
             </footer>
+
         </div>
     </div>
     </div>

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/case-studies/css/style.css"> -->
+    <script src="/scroll-animation.js"></script>
+    <script src="/mobile-menu.js"></script>
+    <script src="/image-zoom.js"></script>
+    <script defer src="/darktoggle.js"></script>
+    <script defer src="/circle.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/olp4acv.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/Favicon.png" />
+    <title>Noah Veenstra — Nike</title>
+</head>
+
+<body>
+    <div class="nav-fullscreen">
+        <div class="nav-fullscreen_items">
+            <div class="nav-fullscreen_item">
+                <a href="/index.html">home.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/about.html">about.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/case-studies.html">case studies.</a>
+            </div>
+            <div class="nav-fullscreen_item">
+                <a href="/contact.html">contact.</a>
+            </div>
+            <div class="archive"><a href="/archive.html">archive.</a></div>
+            <button class="light" onclick="darktoggle()"></button>
+        </div>
+    </div>
+    <button class="menu"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
+        <svg width="37" height="37" viewBox="0 0 100 100">
+            <path class="line line1"
+                d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 60" />
+            <path class="line line3"
+                d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+        </svg>
+    </button>
+    <div id="page-container">
+        <div id="content-wrap">
+            <section class="nav">
+                <div class="logo"><a href="/index.html">nv.</a></div>
+                <div class="links">
+                    <div class="work"><a href="/about.html">about.</a></div>
+                    <div class="studies">
+                        <a href="/case-studies.html">case studies<span>.</span></a>
+                    </div>
+                    <div class="contact"><a href="/contact.html">contact.</a></div>
+                    <div class="archive"><a href="/archive.html">archive.</a></div>
+                    <button class="light" onclick="darktoggle()"></button>
+                </div>
+            </section>
+            <div style="right: 10%; position: fixed;" id='circular-text'>summer '22 edition&nbsp;</div>
+            <script src="circle.js"></script>
+            <p class="marquee">
+                <span>
+                    summer '22 edition
+                </span>
+            </p>
+            <section class="wrapper">
+                <aside>
+                    <ul>
+                        <li>
+                            <a href="#Empathy">Empathy</a>
+                        </li>
+                        <li>
+                            <a href="#Products">Products Speak</a>
+                        </li>
+                        <li>
+                            <a href="#Graphic">Graphic Design</a>
+                        </li>
+                        <li>
+                            <a href="#Stores">Stores</a>
+                        </li>
+                        <li>
+                            <a href="#Athletes">Athletes</a>
+                        </li>
+                        <li>
+                            <a href="#Conclusion">Conclusion</a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="hero">
+                    <h1>NIKE</h1>
+                    <h2>
+                        How Nike <span>transformed</span> from Japanese shoe distributor to largest athletic company in
+                        the world.
+                    </h2>
+                    <figure class="nike"></figure>
+                </div>
+                <div class="info">
+                    <p>Goal</p>
+                    <p id="desc">Analyze how Nike considered their users/consumers to elevate their business to new
+                        heights.</p>
+                    <p>Time Frame</p>
+                    <p id="desc">24 hours</p>
+                    <p>Tools</p>
+                    <p id="desc">The Internet, Adobe Xd, Adobe Illustrator</p>
+                </div>
+                <a name="Empathy"></a>
+                <section>
+                    <h1>Empathy is Everything</h1>
+                    <h2>There is no finish line.</h2>
+                    <p>
+                        After Blue Ribbon Sports separated from Onitsuka in 1971, they quickly rebranded to Nike and
+                        launched their first shoe.
+                        By 1980, Nike had captured 50% market share in the U.S. athletic shoe market. This was thanks to
+                        their very first
+                        marketing campaign “There is no finish line.”
+                    </p>
+                    <img src="/assets/nofinishline.jpeg" alt="">
+                    <figcaption>Original ad for "There is no finish line."</figcaption>
+                    <p>
+                        This first campaign featured no products from Nike. So why did this work to capture half the
+                        entire U.S. market? Well,
+                        Nike understood something that Adidas and Puma didn’t. Knowing your audience. Blue Ribbon Sports
+                        had created a
+                        grassroots community in Oregon. They interacted day in and day out with their consumers. What
+                        they liked, who they where
+                        and why they wanted good sports equipment, especially for running. With this information, along
+                        with collaboration from
+                        a marketing firm, they created an immensely effective campaign. Taking very simple photos of
+                        people running in a couple
+                        different environments. The main one of a man on a plain, empty road, encapsulated by nature
+                        giving the feeling of how
+                        running, especially running with Nike, will make you feel. How it will affect your mindset to
+                        believe that the finish
+                        line never truly approaches. It showed the attitude and lifestyle of the athlete, overcoming
+                        obstacles, trying hard to
+                        win. This ad is clearly aimed at runners and defined Nike’s ethos with customers. Because Nike
+                        emphasized with its
+                        potential customers this ad was a hit.
+                    </p>
+                    <h2 style="padding-top: 5rem;">Just do it.</h2>
+                    <p>
+                        The second round of ad campaigns was the Just Do It ad. This campaign aimed to target a much
+                        broader audience, all
+                        Americans. Regardless of age, gender or physical fitness level, Nike’s objective was to
+                        represent that all demographics
+                        can be athletes.
+                    </p>
+                    <img src="/assets/jdi.jpeg" alt="">
+                    <figcaption>Just Do It campaign featuring Jordan</figcaption>
+                    <p>
+                        Nike saw the shifting tides of modern fashion and started to produce streetwear. With the
+                        success of this campaign, Nike
+                        started to associate it with regular clothes they started to produce as well. This created a
+                        staple in their current
+                        business today. Nike no longer associated itself with just sports gear and activewear but now
+                        they were premier
+                        streetwear producers as well. This cracked open their business. From only a niche of highly
+                        active athletes to anyone
+                        who believed they can be more active.
+                    </p>
+                </section>
+                <a name="Products"></a>
+                <section>
+                    <h1>Products Speak for Themselves</h1>
+                    <h2>Running</h2>
+                    <p>
+                        The first product ever released for Nike was the Waffle Trainer. A shoe inspired by a waffle
+                        iron of co-founder Bill
+                        Bowerman. Although the shoe had its issues, being too tight and didn’t have any support, you
+                        can’t expect to strike gold
+                        on your first swing. It took another 14 years of iterations and communicating with top athletes
+                        and consumers to finally
+                        create a flagship model, the Pegasus. To this day, the Pegasus is the top of the line running
+                        shoe produced by Nike.
+                    </p>
+                    <div class="side-by-side">
+                        <img src="/assets/leftpeg.png" alt="">
+                        <img src="/assets/rightpeg.jpeg" alt="">
+                    </div>
+                    <figcaption>The first iteration of the Pegasus(left) and the latest iteration of the Pegasus
+                        (right)</figcaption>
+                    <p>
+                        This was the first product Nike made that was accessible enough for an average person. Not an
+                        athlete, not an enthusiast
+                        but for anyone. Whether that be a father who works at a desk all day or a single mother who
+                        wants to be more active.
+                        Every day consumers finally had access to the same technology that top athletes who won Olympic
+                        Gold medals were using.
+                        This spoke volumes for consumers, especially runners. This distinction established Nike as not
+                        only a premier sports
+                        outfitter but also a sports research company.
+                    </p>
+                    <h2 style="margin-top: 5rem;">Basketball</h2>
+                    <p>
+                        Soon, Nike expanded to other sports, first being basketball. In 1972, they produced their first
+                        two shoes. The Nike
+                        Bruin and Blazer. Since their release, the Blazer has become a streetwear icon and it has
+                        remained constant.
+                    </p>
+                    <img src="/assets/basketball.png" alt="">
+                    <figcaption>The original Blazer</figcaption>
+                    <p>
+                        There are a lot more elements to consider when creating a basketball shoe compared to a running
+                        shoe. You have to worry
+                        more about ankle stability, creating friction so you can stop on a dime, and complete foot
+                        lockdown so you don’t cause
+                        any injuries. There are also different technologies that provide advantages for different
+                        positions. This is why
+                        creating a model that would stand the test of time took longer than 14 years. Currently, there
+                        are three main shoes the
+                        Lebron, KD, and Freak (for Giannis). All three of these have different technologies that allow
+                        players to have different
+                        play styles on the court. This develops a unique relationship between Nike and its athletes
+                        buying these shoes. Not only
+                        do you get to chose which type of play style and technology is right for you, but you get to
+                        wear the exact shoes top
+                        athletes are wearing and winning in on the court right now. That influence is priceless.
+                    </p>
+                </section>
+                <a name="Graphic"></a>
+                <section>
+                    <h1>Graphic Design Changes Minds</h1>
+                    <h2>The Beginning</h2>
+                    <p>
+                        When Blue Ribbon Sports departed from Onitsuka, the first thing they did was change their name
+                        to Nike and create a new
+                        logo. The logo that was created was the infamous Swoosh.
+                    </p>
+                    <img src="/assets/ogswoosh.png" alt="">
+                    <figcaption>The original Nike logo</figcaption>
+                    <p>
+                        Commissioned by Nike to Carolyn Davidson for only $35, the Swoosh is now one of the most
+                        recognizable brand logos in the
+                        world, valued at $26 billion alone. Nike co-founder Phil Knight, was adamant that the logo
+                        needed to be a simple design
+                        that is fluid and conveys a sense of motion. The design also symbolized Nike’s, the Greek god of
+                        victory, wings. This
+                        allowed for a deeper meaning when looking at the logo. Not only does it have the impact and
+                        visualization of speed and
+                        movement, but it represented victory. The Swoosh made its debut on Nike’s first official track
+                        shoe, the Nike Cortez, at
+                        the U.S. Track and Field Olympic Trails in 1972. To grab attention, the logo was colored mainly
+                        in red and white on the
+                        shoe. The red is meant to exemplify passion, energy, and joy, while the white represented
+                        nobility, charm and purity.
+                    </p>
+                    <img src="/assets/rednikelogo.png" alt="">
+                    <figcaption>Red Nike Swoosh</figcaption>
+                    <h2 style="margin-top: 5rem;">Streetwear</h2>
+                    <p>
+                        Design principals are essential when entering a new space. Streetwear was definitely a new
+                        dimension for Nike at the
+                        time. They focused on pushing sneakers in the 80s as fashion statements. Some of the most iconic
+                        models were released
+                        such as the Air Force 1 and Air Max 1. But how did they break into this market? Piggybacking off
+                        of a marketing campaign
+                        so successful it’s still ongoing today, 40 years later, Just Do It (JDI). JDI can be considered
+                        the campaign that
+                        brought regular people into the fold of Nike’s universe. This was so successful because Nike
+                        showed regular people that
+                        you don’t have to be athletic in order to feel like an athlete. They revealed that you can be a
+                        part of this
+                        fitness/active journey without having a fitness background yourself. This was incredibly
+                        appealing to new customers. It
+                        also helped that Nike was pushing designs forwards. Trying new things. Being exposed and
+                        vulnerable with some choices
+                        they made.
+                    </p>
+                    <h2 style="margin-top: 5rem;">Other Services</h2>
+                    <p>
+                        From Nike Pro Services to consumer apparel, Nike’s graphics have kept those same principals.
+                        Even the influence of an
+                        app on your phone like Nike Run Club. The big bold font and simple icons allow you to not be
+                        bogged down by trying to
+                        figure it out and lets you just go. And if you need a little push, you can do guided runs. An
+                        incredible experience for
+                        first time runners or runners who need someone to guide them on how to run.
+                    </p>
+                    <div class="side-by-side">
+                        <img src="/assets/nikerunleft.png" alt="">
+                        <img src="/assets/nikerunright.png" alt="">
+                    </div>
+                    <figcaption>Nike Run Club app on Apple Watch (left) and Nike Run Club app on iPhone (right)
+                    </figcaption>
+                    <p>
+                        The same goes for bringing back old logos that aren’t used as often. When reviving a logo and
+                        putting it on different
+                        items it gives the sense of being a part of that time period. Since the foundation of Nike was
+                        built in the 70s, being
+                        able to wear something that represents that time period is priceless. Translating the feeling of
+                        creating something from
+                        the ground up. Creating something that’s completely new and excites people just from a different
+                        logo style.
+                    </p>
+                    <div class="side-by-side">
+                        <img src="/assets/brs.jpeg" alt="">
+                        <img src="/assets/reactelement.jpeg" alt="">
+                    </div>
+                    <div class="side-by-side">
+                        <img src="/assets/nyanks.png" alt="">
+                        <img src="/assets/usmnt.jpeg" alt="">
+                    </div>
+                    <p>
+                        By being consistent with the feeling of the logo, Nike is able to stamp their influence wherever
+                        their products are
+                        featured. When you see a Nike logo or article of clothing, you get the feeling that you have the
+                        potential to perform at
+                        the same level as top athletes, the only obstacle is you.
+                    </p>
+                </section>
+                <a name="Stores"></a>
+                <section>
+                    <h1>Futuristic In-Store Experiences</h1>
+                    <p>
+                        Nike does something very different with their retail spaces. When walking into a Nike store, you
+                        don’t feel like it’s a
+                        store. The way they’ve setup their products, hanging off the walls, big promotional setups,
+                        LEDs, and even lounging
+                        areas, it’s almost as if you’re there to evaluate new technology. The simple hangers and open
+                        spaces only add to that
+                        effect. As if you’ve just walked into your own personal sports lab. This creates such a unique
+                        experience for customers.
+                    </p>
+                    <img src="/assets/nikestore1.jpeg" alt="">
+                    <div class="side-by-side">
+                        <img src="/assets/nikestore2.jpeg" alt="">
+                        <img src="/assets/nikestore3.jpeg" alt="">
+                    </div>
+                    <figcaption>Nike Store in Chicago, IL</figcaption>
+                </section>
+                <a name="Athletes"></a>
+                <section>
+                    <h1>Top Athlete Influencers</h1>
+                    <h2>The Jordan Era</h2>
+                    <p>
+                        Let’s be honest, Nike wouldn’t be where it is today without the influence of top athletes
+                        wearing their gear. The most
+                        notable being Michael Jordan. This was around the time when Nike had just started getting into
+                        streetwear. They needed
+                        another way to empathize with their audience, a North Star. For basketball and streetwear, that
+                        was Jordan.
+                    </p>
+                    <img src="/assets/jordna.jpeg" alt="">
+                    <p>
+                        Because of this partnership, Nike was able to sell way over their projections of Air Jordan 1’s.
+                        In the first year, they
+                        sold $126 million versus the predicted $3 million. This changed Nike’s identity into a
+                        mainstream shoe, previously only
+                        thought of as a track shoe. Nike’s became a popular culture must have sneaker. Nike understood
+                        the impact that having a
+                        prominent figure would have on their business. They realized that people would connect to a
+                        standout basketball player
+                        and willingly come into the world of Nike.
+                    </p>
+                    <h2 style="margin-top: 5rem;">The New Golf</h2>
+                    <p>
+                        The other notable athlete that has been signed to Nike is Tiger Woods. Nike struck a deal with
+                        Woods in ’96 and their
+                        partnership continues today. Before this, Nike had created golf shoes starting back in 1984. It
+                        wasn’t until this modern
+                        era where Nike focused on golf apparel. Through the influence of Woods, Nike started designing
+                        new golf attire to allow
+                        for better performance. This allowed for the household name of Nike to be seen also on the golf
+                        course. Today, Nike is
+                        one of the top producers for golf apparel.
+                    </p>
+                    <img src="/assets/tiger.jpeg" alt="">
+                </section>
+                <a name="Conclusion"></a>
+                <section>
+                    <h1>Conclusion</h1>
+                    <p>
+                        Throughout the decades, Nike has been able to empathize and cater to its ever growing consumer
+                        base. Wether you only buy streetwear or sports jerseys, Nike has created a brand identity that
+                        allows you to participate in everything they are connected to. Now that, is something special.
+                    </p>
+                </section>
+            </section>
+            <footer>
+                <p>Coded and UX designed by hand © Noah Veenstra 2022.</p>
+                <div class="social">
+                    <a href="https://medium.com/@veenstranoah" target="_blank"><img src="/assets/medium-logo.png"
+                            alt="" /></a>
+                    <a href="https://www.linkedin.com/in/noahveenstra/" target="_blank"><img
+                            src="/assets/linkedin-logo.png" alt="" /></a>
+                    <a href="https://github.com/noahveenstra" target="_blank"><img src="/assets/github-logo.png"
+                            alt="" /></a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
