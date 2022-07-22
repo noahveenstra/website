@@ -12,7 +12,7 @@ steps:
   script: string
 - name: string
   ...
-- name: string
+- name: string:
   ...
 timeout: string (Duration format)
 queueTtl: string (Duration format)
