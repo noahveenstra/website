@@ -310,7 +310,7 @@ html:not([data-scroll="0"]) .nav {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: nike;
-  background-image: url("/assets/nikecover.svg");
+  background-image: url("/assets/nikecover.jpg");
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 25px;
@@ -937,7 +937,9 @@ a:hover:after {
       grid-template-columns: 50% 50%;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "header im" "lab im" "desc im";
+      grid-template-areas: "header im"
+ "lab im"
+ "desc im";
   -webkit-column-gap: 2rem;
           column-gap: 2rem;
 }
@@ -2080,13 +2082,17 @@ a:focus {
   height: 100px;
   top: 0px;
   z-index: 5;
-  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
-  transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out,
+ -webkit-backdrop-filter 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out,
+ -webkit-backdrop-filter 0.5s ease-in-out;
   -webkit-transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
   transition: -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out;
   transition: box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
-  transition: box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, -webkit-backdrop-filter 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out,
+ -webkit-box-shadow 0.5s ease-in-out,
+ -webkit-backdrop-filter 0.5s ease-in-out;
 }
 
 @media (max-width: 1000px) {
